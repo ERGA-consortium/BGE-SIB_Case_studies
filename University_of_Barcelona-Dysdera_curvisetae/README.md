@@ -93,10 +93,10 @@ The pipeline follows these steps, with scripts provided for each stage:
 
 ## Author
 
-Sara Guirao-Rico, University of Barcelona, sguirao@ub.edu
-Nuria Macías-Hernández, University of La Laguna, nemacias@ull.edu.es
-Julio Rozas, University of Barcelona, jrozas@ub.edu
-Silvia Garcia-Juan, University of Barcelona, silvia.garciaj@ub.edu
+Sara Guirao-Rico, University of Barcelona, sguirao@ub.edu  
+Nuria Macías-Hernández, University of La Laguna, nemacias@ull.edu.es  
+Julio Rozas, University of Barcelona, jrozas@ub.edu  
+Silvia Garcia-Juan, University of Barcelona, silvia.garciaj@ub.edu  
 
 # Acknowledgements
 This work was supported by the SIB Swiss Institute of Bioinformatics under the Biodiversity Genomics Europe project.
