@@ -1,4 +1,4 @@
-# A new reference genome for the conservation of coastal species in the face of anthropogenic change. _Dysdera curvisetae_ Genome Assembly and Annotation Pipeline
+# A new reference genome for the conservation of coastal species in the face of anthropogenic change. _Dysdera curvisetae_ genome assembly and annotation pipeline
 
 This repository contains a complete pipeline for genome assembly, scaffolding, quality assessment, repeat masking, gene prediction, and functional annotation for _Dysdera curvisetae_ or related organisms.  
 The pipeline is designed to be adapted to be run on HPC environments and uses PacBio HiFi reads, Hi-C data, RNA-seq, and protein evidence.
