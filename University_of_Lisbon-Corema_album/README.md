@@ -2,7 +2,11 @@
 This repository includes the pipeline used to annotate the genome of *Corema album*
 
 # Authors 
-Bruno Nevado, Faculty of Sciences, University of Lisbon, , [Country]
+Bruno Nevado, Vítor Sousa, Helena Trindade, Carla Alegria, João Jacinto, Manuela Sim-Sim:
+    CE3C, Centre for Ecology, Evolution and Environmental Changes & CHANGE—Global Change and Sustainability Institute, Faculdade de Ciências, Universidade de Lisboa, Lisboa, Portugal
+
+Christian de Guttry; Robert Waterhouse; Chiara Bortoluzzi:
+    SIB Swiss Institute of Bioinformatics, Lausanne, Switzerland
 
 # Corema-album-annotation
 
