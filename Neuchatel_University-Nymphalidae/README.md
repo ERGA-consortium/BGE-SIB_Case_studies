@@ -3,6 +3,7 @@ This repository includes all the scripts used to predict genes using the RNA-Seq
 
 # Authors 
 Camille Cornet, University of Neuchâtel, Rue Emile-Argand 11 2000 Neuchâtel, Switzerland
+
 Kay Lucek, University of Neuchâtel, Rue Emile-Argand 11 2000 Neuchâtel, Switzerland
 
 # Acknowledgements
