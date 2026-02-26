@@ -1,17 +1,16 @@
 #!/bin/bash -l
 
-#SBATCH -A hpc2n2025-120	
+#SBATCH -A hpc2n	
 #SBATCH -N 1
 #SBATCH -n 1
 #SBATCH -c 10
 #SBATCH -t 3-00:00:00
 #SBATCH -J stairwayplot2
-#SBATCH --output=/home/m/mimmie/projects/aspen_hpc2nstor2025-059/mimmi/NordAsp_40/reports/sbatch/stairwayplot2/sbatch_R-%x_%j.out
-#SBATCH --error=/home/m/mimmie/projects/aspen_hpc2nstor2025-059/mimmi/NordAsp_40/reports/sbatch/stairwayplot2/sbatch_R-%x_%j.err
+#SBATCH --output=reports/sbatch/stairwayplot2/sbatch_R-%x_%j.out
+#SBATCH --error=reports/sbatch/stairwayplot2/sbatch_R-%x_%j.err
 
 ml Java/17.0.6
 
-cd /proj/nobackup/hpc2nstor2025-059/mimmi/NordAsp_40
 source .venv/bin/activate
 
 # make stairwayplot2 input file i.e. blueprint file
@@ -22,11 +21,11 @@ python3 scripts/python/build_stairway_bluprint.py \
     -m 0.0000000025 \
     -g 15 \
     -d "output_data/stairway/" \
-    -ds "/home/m/mimmie/software/stairway_plot_v2.2/" \
+    -ds "software/stairway_plot_v2.2/" \
     -o "output_data/stairway/NordAsp_40_r2.blueprint" 
 
 # configure stairwayplot2
-java -cp /home/m/mimmie/software/stairway_plot_v2.2/stairway_plot_es Stairbuilder output_data/stairway/NordAsp_40_r2.blueprint
+java -cp software/stairway_plot_v2.2/stairway_plot_es Stairbuilder output_data/stairway/NordAsp_40_r2.blueprint
 
 # run stairwayplot2
 bash output_data/stairway/NordAsp_40_r2.blueprint.sh

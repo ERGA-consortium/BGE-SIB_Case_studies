@@ -1,15 +1,13 @@
 #!/bin/bash -l
 
-#SBATCH -A hpc2n2025-120	
+#SBATCH -A hpc2n	
 #SBATCH -N 1
 #SBATCH -n 1
 #SBATCH -c 11
 #SBATCH -t 1-00:00:00
-#SBATCH --mail-user mimmi.eriksson@slu.se
-#SBATCH --mail-type=FAIL,END
 #SBATCH -J mapping
-#SBATCH --output=/proj/nobackup/hpc2nstor2025-059/mimmi/aspen_snp_call/reports/sbatch/mapping/sbatch_R-%x_%j-%a.out
-#SBATCH --error=/proj/nobackup/hpc2nstor2025-059/mimmi/aspen_snp_call/reports/sbatch/mapping/sbatch_R-%x_%j-%a.err
+#SBATCH --output=reports/sbatch/mapping/sbatch_R-%x_%j-%a.out
+#SBATCH --error=reports/sbatch/mapping/sbatch_R-%x_%j-%a.err
 #SBATCH -a 0-39
 
 ml GCC/13.2.0
@@ -17,9 +15,7 @@ ml BWA/0.7.18
 ml SAMtools/1.19.2
 ml picard/3.3.0-Java-17
 
-cd /proj/nobackup/hpc2nstor2025-059
-
-file_info=($(cat mimmi/aspen_snp_call/info_files/id_mapping_files.txt))
+file_info=($(cat info_files/id_mapping_files.txt))
 
 data_dir="data/fastq/aspen/NordAsp/trimmed/"
 output_dir="data/mapped/aspen/NordAsp/"
@@ -47,8 +43,8 @@ echo "bwa mem -t 10 -M ${ref} ${r1} ${r2} > ${output_dir}${outfile}.sam"
 bwa mem -t 10 -M ${ref} ${r1} ${r2} > ${output_dir}${outfile}.sam
 
 # step 2, flagstat
-echo "samtools flagstat -O tsv ${output_dir}${outfile}.sam > mimmi/aspen_snp_call/reports/samtools_flagstats/${outfile}.tsv"
-samtools flagstat -O tsv ${output_dir}${outfile}.sam > mimmi/aspen_snp_call/reports/samtools_flagstats/${outfile}.tsv
+echo "samtools flagstat -O tsv ${output_dir}${outfile}.sam > reports/samtools_flagstats/${outfile}.tsv"
+samtools flagstat -O tsv ${output_dir}${outfile}.sam > reports/samtools_flagstats/${outfile}.tsv
 
 # step 3, samtools sort
 echo "samtools view -b -u -F 4 -q 20 -@ 10 ${output_dir}${outfile}.sam | samtools sort -@ 10 - > ${output_dir}${outfile}_sorted.bam"
@@ -74,17 +70,17 @@ rm ${output_dir}${outfile}_sorted.bam
 rm ${output_dir}${outfile}_sorted.bai
 
 # step 5, picard alignment summary metrics
-echo "java -jar $EBROOTPICARD/picard.jar CollectAlignmentSummaryMetrics R=$ref I=${output_dir}${outfile}_sorted_RG.bam O=mimmi/aspen_snp_call/reports/picard_alignment_summary/${outfile}_alignment_metrics.txt"
+echo "java -jar $EBROOTPICARD/picard.jar CollectAlignmentSummaryMetrics R=$ref I=${output_dir}${outfile}_sorted_RG.bam O=reports/picard_alignment_summary/${outfile}_alignment_metrics.txt"
 java -jar $EBROOTPICARD/picard.jar CollectAlignmentSummaryMetrics \
     R=$ref \
     I=${output_dir}${outfile}_sorted_RG.bam \
-    O=mimmi/aspen_snp_call/reports/picard_alignment_summary/${outfile}_alignment_metrics.txt
+    O=reports/picard_alignment_summary/${outfile}_alignment_metrics.txt
 
 # step 6, picard mark duplicates
 java -Xmx48g -jar $EBROOTPICARD/picard.jar MarkDuplicates \
     INPUT=${output_dir}${outfile}_sorted_RG.bam \
     OUTPUT=${output_dir}${outfile}_sorted_RG_dedup.bam \
-    METRICS_FILE=mimmi/aspen_snp_call/reports/picard_mark_duplicates_metrics/${outfile}.picard_dup_metrics.txt \
+    METRICS_FILE=reports/picard_mark_duplicates_metrics/${outfile}.picard_dup_metrics.txt \
     CREATE_INDEX=true
 
 rm ${output_dir}${outfile}_sorted_RG.bam

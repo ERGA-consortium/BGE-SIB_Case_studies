@@ -1,23 +1,19 @@
 #!/bin/bash -l
 
-#SBATCH -A hpc2n2025-120
+#SBATCH -A hpc2n
 #SBATCH -N 1	
 #SBATCH -n 1
 #SBATCH -c 1
 #SBATCH -t 1-00:00:00
-#SBATCH --mail-user mimmi.eriksson@slu.se
-#SBATCH --mail-type=FAIL,END
 #SBATCH -J snp_calling_chrm
-#SBATCH --output=/proj/nobackup/hpc2nstor2025-059/mimmi/aspen_snp_call/reports/sbatch/snp_calling_chrm/sbatch_R-%x_%j-%a.out
-#SBATCH --error=/proj/nobackup/hpc2nstor2025-059/mimmi/aspen_snp_call/reports/sbatch/snp_calling_chrm/sbatch_R-%x_%j-%a.err
+#SBATCH --output=reports/sbatch/snp_calling_chrm/sbatch_R-%x_%j-%a.out
+#SBATCH --error=reports/sbatch/snp_calling_chrm/sbatch_R-%x_%j-%a.err
 #SBATCH -a 0-18
 
 ml GCCcore/12.3.0 
 ml GATK/4.5.0.0-Java-17
 
-cd /proj/nobackup/hpc2nstor2025-059
-
-chrm_ids=($(cat mimmi/aspen_snp_call/info_files/ids_chromosoms.txt))
+chrm_ids=($(cat info_files/ids_chromosoms.txt))
 
 sample=$1
 chrm=$(echo ${chrm_ids[$SLURM_ARRAY_TASK_ID]})

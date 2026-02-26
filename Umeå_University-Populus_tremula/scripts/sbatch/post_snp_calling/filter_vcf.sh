@@ -1,23 +1,20 @@
 #!/bin/bash -l
 
-#SBATCH -A hpc2n2025-120	
+#SBATCH -A hpc2n	
 #SBATCH -N 1
 #SBATCH -n 1
 #SBATCH -c 1
 #SBATCH -t 1-00:00:00
 #SBATCH -J filter_vcf
-#SBATCH --output=/home/m/mimmie/projects/aspen_hpc2nstor2025-059/mimmi/NordAsp_40/reports/sbatch/filter_vcf/sbatch_R-%x_%j.out
-#SBATCH --error=/home/m/mimmie/projects/aspen_hpc2nstor2025-059/mimmi/NordAsp_40/reports/sbatch/filter_vcf/sbatch_R-%x_%j.err
+#SBATCH --output=reports/sbatch/filter_vcf/sbatch_R-%x_%j.out
+#SBATCH --error=reports/sbatch/filter_vcf/sbatch_R-%x_%j.err
 
 ml GCC/13.2.0
 ml BCFtools/1.19
 ml VCFtools/0.1.16
 ml HTSlib/1.19.1
 
-cd /proj/nobackup/hpc2nstor2025-059/mimmi/NordAsp_40
-
-input_vcf="/proj/nobackup/hpc2nstor2025-059/data/populus_tremula/variation/NordAsp/NordAsp_H204SC25041259.vcf.gz"
-# output_vcf="output_data/vcf_filtered/NordAsp_biallelic-missing0.8-maf0.05_recoded.vcf.gz"
+input_vcf="variation/NordAsp/NordAsp_H204SC25041259.vcf.gz"
 output_vcf="output_data/vcf_filtered/NordAsp_biallelic_addedID.vcf.gz"
 
 # filter vcf file

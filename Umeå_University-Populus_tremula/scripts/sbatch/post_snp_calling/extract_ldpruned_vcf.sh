@@ -1,19 +1,17 @@
 #!/bin/bash -l
 
-#SBATCH -A hpc2n2025-120	
+#SBATCH -A hpc2n	
 #SBATCH -N 1
 #SBATCH -n 1
 #SBATCH -c 4
 #SBATCH -t 1-00:00:00
 #SBATCH -J extract_LD
-#SBATCH --output=/home/m/mimmie/projects/aspen_hpc2nstor2025-059/mimmi/NordAsp_40/reports/sbatch/extract_LD/sbatch_R-%x_%j.out
-#SBATCH --error=/home/m/mimmie/projects/aspen_hpc2nstor2025-059/mimmi/NordAsp_40/reports/sbatch/extract_LD/sbatch_R-%x_%j.err
+#SBATCH --output=reports/sbatch/extract_LD/sbatch_R-%x_%j.out
+#SBATCH --error=reports/sbatch/extract_LD/sbatch_R-%x_%j.err
 
 ml GCC/13.2.0
 ml BCFtools/1.19
 ml HTSlib/1.19.1
-
-cd /proj/nobackup/hpc2nstor2025-059/mimmi/NordAsp_40
 
 input_vcf="output_data/vcf_filtered/NordAsp_biallelic_addedID.vcf.gz"
 output_vcf="output_data/vcf_filtered/NordAsp_biallelic_LDpruned.vcf.gz"
