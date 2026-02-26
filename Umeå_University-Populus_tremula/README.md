@@ -9,7 +9,9 @@ This repository includes all the scripts used:
 # Authors
 
 Kathryn M. Robinson, Umeå Plant Science Centre (UPSC), Department of Plant Physiology, Umeå University, Umeå, Sweden 
+
 Nathaniel R. Street, Umeå Plant Science Centre (UPSC), Department of Plant Physiology, Umeå University, Umeå, Sweden 
+
 Mimmi C. Eriksson, Umeå Plant Science Centre (UPSC), Department of Plant Physiology, Umeå University, Umeå, Sweden 
 
 # Acknowledgements
