@@ -1,4 +1,4 @@
-# Title of the case study
+# Enhancing Corema album reference genome annotation for comprehensive genomic insights
 This repository includes the pipeline used to annotate the genome of *Corema album*
 
 # Authors 
