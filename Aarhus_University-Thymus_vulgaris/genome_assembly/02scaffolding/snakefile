@@ -1,0 +1,24 @@
+import os
+
+OUTMAIN = config["outmain"]
+OUTPRE = config["outpre"]
+
+# Which hap assemblies to scaffold
+HAPS = [str(h) for h in config.get("haps", ["1", "2"])]
+REVIEW_ASSEMBLY = config.get("review_assembly", {})
+if not isinstance(REVIEW_ASSEMBLY, dict):
+    raise ValueError("Config key review_assembly must be a dict like {\"1\": \"/path/hap1.review.assembly\"}")
+HAPS_POST = [h for h in HAPS if h in REVIEW_ASSEMBLY]
+
+if "refs" not in config:
+    raise ValueError("Config must define refs: {\"1\": \"/path/to/hap1.fasta\", \"2\": \"/path/to/hap2.fasta\"}")
+
+def REF(wc):
+    # Use a staged symlink under OUTMAIN so index files are created in OUTMAIN.
+    return os.path.join(OUTMAIN, "mapping", "input", OUTPRE + f".hap{wc.hap}.ref.fasta")
+
+include: "rules/stage_refs.smk"
+include: "rules/indexing.smk"
+include: "rules/map_qc.smk"
+include: "rules/yahs.smk"
+include: "rules/juicebox.smk"
