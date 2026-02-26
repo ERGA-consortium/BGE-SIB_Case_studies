@@ -1,0 +1,100 @@
+HAPS = ["hap1", "hap2"]
+
+rule all:
+    input:
+        expand("contact_map/GouPig1.{haps}.yahs_scaffolds_final.hic",  haps = HAPS),
+        expand("contact_map/alignments_sorted_{haps}.txt", haps = HAPS),
+        #expand("yahs/yahs_scaffolding.hap{haps}.done", haps = HAPS),
+
+rule index_ref:
+    input:
+        "assembly_v1_hifiasm/ONT_fGouPig_hifiasm_ONT.asm.bp.p_ctg.fa"
+    output:
+        "check/index_ref.done"
+    shell:
+        """
+        bwa index {input}
+        samtools faidx {input}
+        touch {output}
+        """
+
+
+rule index_ref_hap:
+    input:
+        "assembly_v1_hifiasm/ONT_fGouPig_hifiasm_ONT.asm.bp.hap{haps}.p_ctg.fna"
+    output:
+        "check/index_ref.hap{haps}.done"
+    shell:
+        """
+        bwa index {input}
+        samtools faidx {input}
+        touch {output}
+        """
+
+rule map_hic_haps:
+    input:
+        index = "check/index_ref.hap{haps}.done",
+        fa = "assembly_v1_hifiasm/ONT_fGouPig_hifiasm_ONT.asm.bp.hap{haps}.p_ctg.fna",
+        r1 = "../raw_data/Hi-C/FGou1_250729_MKDL250010713-1A_233KVWLT4_L4_1.fq.gz",
+        r2 = "../raw_data/Hi-C/FGou1_250729_MKDL250010713-1A_233KVWLT4_L4_2.fq.gz"
+    output:
+        "alignments/hic.sorted.hap{haps}.bam"
+    threads: 16
+    shell:
+        """
+        mkdir -p alignments
+        bwa mem -5S -t {threads} {input.fa} {input.r1} {input.r2} \
+        | samtools view -bS - \
+        | samtools sort -@ {threads} -o {output}
+        samtools index {output}
+        """
+
+
+
+
+
+rule map_hic:
+    input:
+        index =  "check/bwa_index.done",
+        fa = "assembly_v1_hifiasm/ONT_fGouPig_hifiasm_ONT.asm.bp.p_ctg.fa",
+        r1 = "../raw_data/Hi-C/FGou1_250729_MKDL250010713-1A_233KVWLT4_L4_1.fq.gz",
+        r2 = "../raw_data/Hi-C/FGou1_250729_MKDL250010713-1A_233KVWLT4_L4_2.fq.gz"
+    output:
+        "alignments/hic.sorted.bam"
+    threads: 16
+    shell:
+        """
+        mkdir -p alignments
+        bwa mem -5S -t {threads} {input.fa} {input.r1} {input.r2} \
+        | samtools view -bS - \
+        | samtools sort -@ {threads} -o {output}
+        samtools index {output}
+        """
+
+rule yahs_scaffold_hap:
+    input:
+        fa = "assembly_v1_hifiasm/ONT_fGouPig_hifiasm_ONT.asm.bp.hap{haps}.p_ctg.fna",
+        bam = "alignments/hic.sorted.hap{haps}.bam"
+    output:
+        "yahs/yahs_scaffolding.hap{haps}.done"
+        #"scaffolded_assembly_v1/fGouPig1.yahs.scaffolds.fa"
+    threads: 16
+    shell:
+        """
+        bin/yahs {input.fa} {input.bam} -o yahs/GouPig1.hap{wildcards.haps}.yahs
+        touch {output}
+        """
+
+rule yahs_scaffold:
+    input:
+        fa = "assembly_v1_hifiasm/ONT_fGouPig_hifiasm_ONT.asm.bp.p_ctg.fa",
+        bam = "alignments/hic.sorted.bam"
+    output:
+        "yahs/yahs_scaffolding.done"
+        #"scaffolded_assembly_v1/fGouPig1.yahs.scaffolds.fa"
+    threads: 16
+    shell:
+        """
+        bin/yahs {input.fa} {input.bam} -o yahs/GouPig1.yahs
+        touch {output}
+        """
