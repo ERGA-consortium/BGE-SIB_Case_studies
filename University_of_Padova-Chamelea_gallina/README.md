@@ -1,10 +1,10 @@
 # Title of the case study
-This repository includes all the scripts used to [specify here the reason: taken from Notion].
+This repository includes all the scripts used to 33 - Padova University IT- Chamelea  gallina.
 
 # Authors 
-[Name of applicant], [Affiliation], [Address of affiliation], [Country]
-[Name of applicant], [Affiliation], [Address of affiliation], [Country]
-
+Bortoletto Enrico, Department of Biology, University of Padova, Padova, Italy.
+Rosani Umberto, Department of Biology, University of Padova, Padova, Italy.
+Venier Paola, Department of Biology, University of Padova, Padova, Italy.
 # Acknowledgements
 This work was supported by the SIB Swiss Institute of Bioinformatics under the Biodiversity Genomics Europe project.
 
