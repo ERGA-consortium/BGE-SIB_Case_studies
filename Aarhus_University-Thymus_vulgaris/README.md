@@ -4,6 +4,8 @@ This repository includes all the scripts used to assemble and annotate the Thymu
 # Authors 
 Genís Garcia-Erill, Aarhus University, Bioinformatics Research Center, Denmark
 
+Thomas Bataillon, Aarhus University, Bioinformatics Research Center, Denmark
+
 # Acknowledgements
 This work was supported by the SIB Swiss Institute of Bioinformatics under the Biodiversity Genomics Europe project.
 
