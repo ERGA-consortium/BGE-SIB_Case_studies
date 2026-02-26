@@ -1,0 +1,1 @@
+bin/hifiasm/hifiasm -t32 --ont -o assembly_v2_hifiasm_phased/ONT_fGouPig_hifiasm_phased_v2.asm ../raw_data/nanopore/fastq_pass/PBA47782_pass_fc268137_78fbc776_*.fastq.gz 2> assembly_v2_hifiasm_phased/ONT_fGouPig_hifiasm_phased_v2.log
