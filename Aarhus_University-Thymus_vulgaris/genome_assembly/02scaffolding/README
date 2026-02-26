@@ -1,0 +1,31 @@
+
+
+### test run manual curation only hap1
+
+snakemake do_post_jbat_curation \
+          --slurm --default-resources slurm_account=thymusvulgaris \
+          --configfile configs/config.yaml --use-conda -j 20 -c 60 -pn \
+          --rerun-triggers mtime
+
+###########################################
+#### RUN HIC SCAFFOLDING (HAP1 + HAP2) #####
+###########################################
+
+# This workflow produces YaHS scaffolds and a .hic file for manual curation (JBAT)
+# for each haplotype (hap1 + hap2). The final targets are controlled by:
+#   - configs/config.yaml
+#
+# Each config points to the upstream 01assembly config + a chosen filt (s045/s050/...).
+# If the hap FASTAs for that filt do not exist yet, this workflow can build them
+# via the 01assembly module (hifiasm + gfa->fasta) as dependencies.
+
+
+#######################################
+#### RUN GERANIOL 5 (HAPS) ############
+#######################################
+
+
+snakemake do_scaffolding \
+          --slurm --default-resources slurm_account=thymusvulgaris \
+          --configfile configs/config.yaml --use-conda -j 20 -c 60 -pn
+

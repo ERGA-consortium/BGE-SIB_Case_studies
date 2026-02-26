@@ -1,0 +1,4 @@
+channels:
+ - bioconda
+dependencies:
+ -  meryl=1.4.1

@@ -1,0 +1,6 @@
+channels:
+ - conda-forge
+ - bioconda
+ - genomedk
+dependencies:
+ - cutadapt=5.2

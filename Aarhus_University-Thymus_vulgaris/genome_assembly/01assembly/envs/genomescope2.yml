@@ -1,0 +1,6 @@
+channels:
+ - conda-forge
+ - bioconda
+ - genomedk
+dependencies:
+- genomescope2=2.1.0

@@ -1,0 +1,27 @@
+05gene_annotation
+
+This workflow prepares RNA and protein evidence for BRAKER3, then runs annotation.
+
+Main steps:
+- stage soft-masked genome FASTA files
+- map RNA (2-pass STAR), produce sorted/indexed BAMs and QC
+- concatenate + cluster protein evidence (mmseqs easy-linclust)
+- run BRAKER3 per assembly
+
+Main dry-run:
+snakemake do_all --slurm --default-resources slurm_account=thymusvulgaris \
+  --configfile configs/config.yaml --use-conda -j 40 -c 20 -pn
+
+Optional dry-runs by stage:
+snakemake do_prepare_proteins --slurm --default-resources slurm_account=thymusvulgaris \
+  --configfile configs/config.yaml --use-conda -j 20 -c 40 -pn
+
+snakemake do_map_rna_all --slurm --default-resources slurm_account=thymusvulgaris \
+  --configfile configs/config.yaml --use-conda -j 40 -c 80 -pn
+
+Single-assembly annotation target example:
+snakemake results/gene_annotation/ger5_hap1/braker/braker.gtf \
+  --slurm --default-resources slurm_account=thymusvulgaris \
+  --configfile configs/config.yaml --use-conda -j 20 -c 40 -pn
+
+For real runs, remove -n.

@@ -1,0 +1,8 @@
+channels:
+ - conda-forge
+ - bioconda
+ - defaults
+ - genomedk
+dependencies:
+ - seqtk=1.5
+

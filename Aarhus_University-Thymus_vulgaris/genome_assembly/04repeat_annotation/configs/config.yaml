@@ -1,0 +1,35 @@
+# Repeat annotation (RepeatModeler + RepeatMasker)
+#
+# This workflow builds ONE shared repeat library from all genomes listed under `genomes`,
+# then runs RepeatMasker for each genome/haplotype separately.
+#
+# Output layout:
+#   {outmain}/repeatmodels/{db_name}-families.fa
+#   {outmain}/repeatmasks/{db_name}/{genome}/{hap}/...
+#
+# Inputs are staged as symlinks under:
+#   {outmain}/inputs/genomes/{genome}.{hap}.fasta
+
+outmain: "results/repeat_annotation"
+db_name: "tVulg_4haps"
+
+# Nested dictionary: genomes -> genome_name -> hap -> path_to_fasta
+genomes:
+  ger5:
+    hap1: "/path/to/genome_assembly/03finalize_assemblies/results/finalized/ger5/release/ger5.hap1_plus_organelle.fa"
+    hap2: "/path/to/genome_assembly/03finalize_assemblies/results/finalized/ger5/release/ger5.hap2_nuclear.fa"
+
+# Optional knobs (wired in rules)
+repeatmodeler:
+  threads: 20
+  ltrstruct: true
+  # Free-form extra flags appended as-is (leave empty if not needed)
+  extra: ""
+
+repeatmasker:
+  threads: 20
+  sensitive: true
+  gff: true
+  xsmall: true
+  # Free-form extra flags appended as-is (leave empty if not needed)
+  extra: ""
