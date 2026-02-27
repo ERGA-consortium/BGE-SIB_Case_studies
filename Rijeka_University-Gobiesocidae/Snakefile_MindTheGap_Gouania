@@ -1,0 +1,575 @@
+import glob
+import os
+
+
+ID = ["YUFE_1", "YUFE_2", "YUFE_3", "YUFE_4", "YUFE_5", "YUFE_19", "YUFE_20", "YUFE_21", "YUFE_22", "YUFE_23"]
+# At the very top of Snakefile
+FASTQ_FILES = expand("input_files/raw_reads/{sample}_{read}.fq.gz",
+                     sample=["YUFE_1", "YUFE_2", "YUFE_3", "YUFE_4", "YUFE_5", 
+                             "YUFE_19", "YUFE_20", "YUFE_21", "YUFE_22", "YUFE_23"],
+                     read=["1", "2"])
+
+
+ASSEMBLIES = ["Gpigra_4616STDY8352654_ABYSS_ragtag.scaffolds", "GouPig1.hap1"]
+#BATCH_SIZE = 50  # number of contigs per shard; adjust based on memory
+
+
+wildcard_constraints:
+    sample = "[A-Za-z0-9_]+",
+    asm = "[A-Za-z0-9_.-]+"
+
+rule all:
+    input:
+        #expand("stats/{asm}/missing_het_{asm}.pdf", asm=ASSEMBLIES),
+        expand("stats/{asm}/pruned_{asm}.prune.in", asm=ASSEMBLIES),
+        expand("stats/{asm}/pca_{asm}.eigenvec", asm=ASSEMBLIES),
+        expand("stats/{asm}/pca_{asm}.pdf",  asm=ASSEMBLIES),
+        expand("stats/{asm}/pi_{asm}.done", asm=ASSEMBLIES),
+        expand("stats/{asm}/het_{asm}.het", asm=ASSEMBLIES),
+        expand("stats/{asm}/fst_{asm}.weir.fst", asm=ASSEMBLIES),
+        expand("VC/{asm}/COHORT_{asm}.final.recode.vcf.gz", asm = ASSEMBLIES),
+        expand("VC/{asm}/COHORT_{asm}.flt.vcf.gz", asm = ASSEMBLIES),
+        expand("VC/{asm}/COHORT_{asm}.g.vcf.gz", asm = ASSEMBLIES),
+        expand("VC/{asm}/{sample}.{asm}.g.vcf.gz", asm = ASSEMBLIES, sample = ID),
+        expand("qc/{sample}.{asm}.dup.txt", asm = ASSEMBLIES, sample = ID),
+        expand("VC/{asm}/{asm}.longest25.list", asm = ASSEMBLIES),
+        expand("alignment/{sample}.{asm}.flagstat.txt", asm = ASSEMBLIES, sample = ID),
+        #expand("assemblies/indexing_{asm}.done", asm = ASSEMBLIES),
+        #expand("assemblies/{asm}_repeatmaster.done", asm = ASSEMBLIES)
+        #expand("assemblies/{asm}.fasta.masked", asm = ASSEMBLIES)
+
+rule concatenate_reads:
+    input:
+        lambda wildcards: sorted(glob.glob(
+            f"/scratch/antwerpen/grp/asvardal/projects/clingfishes/raw_reads/"
+            f"YUFE_PopGenomics_Rijeka/F24A430002388_ANIyukjR_20250210223650/{wildcards.id}/*_{wildcards.read}.fq.gz"
+        ))
+    output:
+        "input_files/raw_reads/{id}_{read}.fq.gz"
+    shell:
+        """
+        mkdir -p input_files/raw_reads
+        cat {input} > {output}
+        """
+
+rule fastqc:
+    input:
+        "input_files/raw_reads/{sample}_{read}.fq.gz"
+    output:
+        html = "qc/fastqc/{sample}_{read}_fastqc.html",
+        zip = "qc/fastqc/{sample}_{read}_fastqc.zip"
+    conda:
+        "envs/qc.yaml"
+    params:
+        outdir = "qc/fastqc"
+    threads: 4
+    shell:
+        """
+        mkdir -p {params.outdir}
+        fastqc --threads {threads} --outdir {params.outdir} {input}
+        """
+
+rule multiqc:
+    input:
+        expand("qc/fastqc/{fq_file}_fastqc.zip", fq_file=[f.replace("input_files/raw_reads/", "").replace(".fq.gz", "") for f in FASTQ_FILES])
+    output:
+        "qc/multiqc/multiqc_report.html"
+    conda:
+        "envs/qc.yaml"
+    params:
+        outdir = "qc/multiqc"
+    shell:
+        """
+        mkdir -p {params.outdir}
+        multiqc results/qc/fastqc -o {params.outdir}
+        """
+
+rule repeatmasker:
+    input:
+        "assemblies/{asm}.fasta"
+    output:
+        check = "assemblies/{asm}_repeatmaster.done",
+        masked = "assemblies/{asm}.fasta.masked",
+        #gff = "assemblies/{asm}.fasta.out.gff",
+        soft = "assemblies/{asm}.soft.fasta"
+    params:
+        lib = "-species vertebrata",
+        #lib = "-lib /scratch/antwerpen/grp/asvardal/projects/clingfishes/BGE_genome_comparison/.snakemake/conda/e578b8e9c7e4f030486bacff9c83f4f7_/share/RepeatMasker/Libraries/CONS-Dfam_3.9/vertebrata/specieslib",
+        outdir = "assemblies/",
+    threads: 32
+    conda:
+        "envs/repeatmasker.yaml"
+    shell:
+                """
+        RepeatMasker \
+            -pa {threads} \
+            {params.lib} \
+            -xsmall \
+            -gff \
+            -dir {params.outdir} \
+            {input} > {params.outdir}/{wildcards.asm}.repeatmasker.log 2>&1
+
+        ln -sf {output.masked} {output.soft}
+
+        touch {output.check}
+        """
+
+        #"""
+        #RepeatMasker \
+                #    -pa {threads} \
+                #    {params.lib} \
+                #     -xsmall \
+                #     -gff \
+                #    -dir {params.outdir} \
+                #    {input}
+        
+       # ln -sf {output.masked} {output.soft}
+       # """
+
+rule fastp_trim:
+    input:
+        f = "input_files/raw_reads/{sample}_1.fq.gz",
+        r = "input_files/raw_reads/{sample}_2.fq.gz"
+    output:
+        f = "input_files/trimmed_reads/{sample}_trim_1.fq.gz",
+        r = "input_files/trimmed_reads/{sample}_trim_2.fq.gz",
+        html = "qc/{sample}_trim.fastp.html",
+        json = "qc/{sample}_trim_.fastp.json"
+    conda:
+        "envs/fastp.yaml"
+    shell:
+        """
+        fastp \
+        -i {input.f} \
+        -I {input.r} \
+        -o {output.f} \
+        -O {output.r} \
+        -q 20 \
+        -u 30 \
+        -l 50 \
+        -g \
+        -h {output.html} \
+        -j {output.json}
+        """
+
+# REMOVE '()' from alignemt folders
+#sed 's/[()]//g' Gpigra_4616STDY8352654_abyss_upperK-scaffolds.corrected.soft.fasta > Gpigra_4616STDY8352654_abyss_upperK-scaffolds.corrected.soft_reheader.fasta
+
+
+rule rename_headers:
+    input:
+        check = "assemblies/{asm}_repeatmaster.done",
+        soft = "assemblies/{asm}.soft.fasta"
+    output:
+        rename = "assemblies/{asm}.soft_renamed.fasta"
+    shell:
+        """
+        sed 's/[()]//g' {input.soft} > {output.rename}
+        """
+
+rule index_ref:
+    input:
+        "assemblies/{asm}.soft_renamed.fasta"
+        #"assemblies/{asm}_repeatmaster.done"
+        #"assemblies/{asm}.soft.fasta"
+    output:
+        #soft = "assemblies/{asm}.soft.fasta",
+        check = "assemblies/indexing_{asm}.done"
+    #params:
+    #    soft = "assemblies/{asm}.soft.fasta"
+#        masked = "assemblies/{asm}.fasta.masked"
+    conda:
+        "envs/index.yaml"
+    shell:
+        #ln -sf {wildcards.asm}.fasta.masked {output.soft}
+        """         
+        bwa index {input}
+        samtools faidx {input}
+        gatk CreateSequenceDictionary -R {input}
+        touch {output.check}
+        """
+
+rule align_reads:
+    input:
+        "assemblies/indexing_{asm}.done",
+        f = "input_files/trimmed_reads/{sample}_trim_1.fq.gz",
+        r = "input_files/trimmed_reads/{sample}_trim_2.fq.gz",
+        ref = "assemblies/{asm}.soft_renamed.fasta"
+    output:
+        bam = "alignment/{sample}.{asm}.bam",
+        flagstat = "alignment/{sample}.{asm}.flagstat.txt"
+    threads: 8
+    conda:
+        "envs/index.yaml"
+    shell:
+        """
+        bwa mem -M -t {threads} -R '@RG\\tID:{wildcards.sample}\\tSM:{wildcards.sample}\\tPL:illumina' {input.ref} {input.f} {input.r} |\
+            samtools sort -@{threads} -o {output.bam}
+        samtools flagstat {output.bam} > {output.flagstat}
+        """
+
+rule mark_duplicates:
+    input:
+        bam = "alignment/{sample}.{asm}.bam"
+    output:
+        dedup_bam = "alignment/{sample}.{asm}.dedup.bam",
+        #dedup_bam_index = "alignment/{sample}.{asm}.dedup.bam.bai",
+        metrics = "qc/{sample}.{asm}.dup.txt"
+    conda:
+        "envs/index.yaml"
+    shell:
+        """
+        gatk MarkDuplicates \
+            -I {input.bam} \
+            -O {output.dedup_bam} \
+            -M {output.metrics}
+        samtools index {output.dedup_bam}
+        """
+
+rule extract_longest_25_scaffolds:
+    input:
+        "assemblies/{asm}.soft_renamed.fasta"
+    output:
+        "VC/{asm}/{asm}.longest25.list"
+    shell:
+        """
+        sort -k2,2nr {input}.fai | head -n 25 | cut -f1 > {output}
+        """
+
+rule haplotypecaller:
+    input:
+        ref="assemblies/{asm}.soft_renamed.fasta",
+        bam="alignment/{sample}.{asm}.dedup.bam",
+        intervals="VC/{asm}/{asm}.longest25.list"
+    output:
+        gvcf="VC/{asm}/{sample}.{asm}.g.vcf.gz"
+    threads: 4
+    conda:
+        "envs/index.yaml"
+    shell:
+        """
+        gatk HaplotypeCaller \
+            -R {input.ref} \
+            -I {input.bam} \
+            -ERC GVCF \
+            -L {input.intervals} \
+            -O {output.gvcf} \
+            --native-pair-hmm-threads {threads}
+        """
+
+def get_chroms_from_file(wildcards):
+    with open(f"VC/{wildcards.asm}/{wildcards.asm}.longest25.list") as f:
+        return [l.strip() for l in f if l.strip()]
+
+
+rule GenomicsDBImport:
+    input:
+        ref="assemblies/{asm}.soft_renamed.fasta",
+        gvcfs=expand("VC/{{asm}}/{sample}.{{asm}}.g.vcf.gz", sample=ID),
+        chroms="VC/{asm}/{asm}.longest25.list"
+    output:
+        db=directory("VC/{asm}/chunks/{chrom}.db"),
+        check="VC/{asm}/chunks/{chrom}_db.check"
+    params:
+        gvcf_inputs=lambda wildcards, input: " ".join(f"-V {f}" for f in input.gvcfs)
+    conda:
+        "envs/index.yaml"
+    threads: 1
+    shell:
+        """
+        gatk --java-options "-Xmx16G" GenomicsDBImport \
+            {params.gvcf_inputs} \
+            --genomicsdb-workspace-path {output.db} \
+            --intervals {wildcards.chrom} \
+            --reader-threads {threads} \
+            -R {input.ref} --tmp-dir /tmp
+
+        # make a simple check file so Snakemake knows it's done
+        touch {output.check}
+        """
+
+
+rule GenotypeGVCFs_from_DB:
+    input:
+        ref="assemblies/{asm}.soft_renamed.fasta",
+        db="VC/{asm}/chunks/{chrom}.db",
+        check="VC/{asm}/chunks/{chrom}_db.check"
+    output:
+        check = "VC/{asm}/chunks_genotype/COHORT_{asm}.{chrom}.genotyped.check"
+    conda:
+        "envs/index.yaml"
+    params:
+        oufh = "VC/{asm}/chunks_genotype/COHORT_{asm}.{chrom}.genotyped.g.vcf.gz"
+    threads: 1 
+    shell:
+        #gatk --java-options "-Xmx32G -XX:ParallelGCThreads={threads} -XX:ConcGCThreads={threads}"
+        """
+        gatk GenotypeGVCFs \
+            -R {input.ref} \
+            -V gendb://{input.db} \
+            -O {params.oufh}
+        touch {output}
+        """
+
+
+
+rule merge_combined_gvcfs:
+    input:
+        lambda wildcards: expand(
+            "VC/{asm}/chunks_genotype/COHORT_{asm}.{chrom}.genotyped.check",
+            asm=wildcards.asm,
+            chrom=get_chroms_from_file(wildcards)
+        )
+    output:
+        "VC/{asm}/COHORT_{asm}.g.vcf.gz"
+    params:
+        tmpdir="/tmp/vsc20570",
+        inputvcfs=lambda wildcards: " ".join(
+            f"-I VC/{wildcards.asm}/chunks_genotype/COHORT_{wildcards.asm}.{chrom}.genotyped.g.vcf.gz"
+            for chrom in get_chroms_from_file(wildcards)
+        )
+    conda:
+        "envs/index.yaml"
+    threads: 1
+    shell:
+        """
+        gatk --java-options "-Xmx32G" MergeVcfs {params.inputvcfs} -O {output}
+        """
+
+
+rule variant_filtration:
+    input:
+        ref = "assemblies/{asm}.soft_renamed.fasta",
+        vcf = "VC/{asm}/COHORT_{asm}.g.vcf.gz"
+    output:
+        "VC/{asm}/COHORT_{asm}.flt.vcf.gz"
+    params:
+        filter_expr = "QD < 2.0 || FS > 60.0 || MQ < 40.0",
+        filter_name = "basic_snp_filter"
+    conda:
+        "envs/index.yaml"
+    threads: 1
+    shell:
+        """
+        gatk VariantFiltration \
+          -R {input.ref} \
+          -V {input.vcf} \
+          --filter-expression "{params.filter_expr}" \
+          --filter-name "{params.filter_name}" \
+          -O {output}
+        """
+
+
+rule filter_biallelic_snps:
+    input:
+        vcf = "VC/{asm}/COHORT_{asm}.flt.vcf.gz"
+    output:
+        vcf = "VC/{asm}/COHORT_{asm}.final.recode.vcf.gz",
+        tbi = "VC/{asm}/COHORT_{asm}.final.recode.vcf.gz.tbi"
+    #conda: # already correct versions on hscon6
+    threads: 1
+    shell:
+        """
+        bcftools view -f PASS -m2 -M2 -v snps {input.vcf} | \
+          vcftools --vcf - \
+            --max-missing 0.8 \
+            --maf 0.05 \
+            --min-alleles 2 --max-alleles 2 \
+            --recode --recode-INFO-all --out VC/{wildcards.asm}/COHORT_{wildcards.asm}.final
+
+        bgzip -c VC/{wildcards.asm}/COHORT_{wildcards.asm}.final.recode.vcf > {output.vcf}
+        tabix -p vcf {output.vcf}
+        rm VC/{wildcards.asm}/COHORT_{wildcards.asm}.final.recode.vcf
+        """
+
+
+#### POP STATS ####
+
+
+rule add_vcf_ids:
+    input:
+        vcf = "VC/{asm}/COHORT_{asm}.final.recode.vcf.gz"
+    output:
+        vcf = "VC/{asm}/COHORT_{asm}.final.recode.withID.vcf.gz",
+        tbi = "VC/{asm}/COHORT_{asm}.final.recode.withID.vcf.gz.tbi"
+    threads: 1
+    shell:
+        """
+        zcat {input.vcf} | \
+        awk 'BEGIN{{OFS="\\t"}} /^#/ {{print; next}} {{$3=$1":"$2":"$4":"$5; print}}' | \
+        bgzip -c > {output.vcf}
+        tabix -p vcf {output.vcf}
+        """
+
+
+# 5.1A LD pruning
+rule ld_prune:
+    input:
+        vcf = "VC/{asm}/COHORT_{asm}.final.recode.withID.vcf.gz"
+    output:
+        prune_in = "stats/{asm}/pruned_{asm}.prune.in",
+        prune_out = "stats/{asm}/pruned_{asm}.prune.out",
+    conda:
+        "envs/vcftools.yaml"
+    params:
+        log = "stats/{asm}/pruned_{asm}.log"
+    threads: 1
+    shell:
+        """
+        plink2 \
+            --vcf {input.vcf} \
+            --indep-pairwise 50 10 0.2 --allow-extra-chr --bad-ld  \
+            --out stats/{wildcards.asm}/pruned_{wildcards.asm} \
+            &> {params.log}
+        """
+
+# 5.1B PCA on pruned SNPs
+
+rule freq:
+    input:
+        vcf = "VC/{asm}/COHORT_{asm}.final.recode.withID.vcf.gz"
+    output:
+        freq = "stats/{asm}/{asm}.afreq"
+    conda:
+        "envs/vcftools.yaml"
+    params:
+        log = "stats/{asm}/{asm}.freq.log"
+    threads: 1
+    shell:
+        """
+        plink2 \
+            --vcf {input.vcf} \
+            --freq \
+            --allow-extra-chr \
+            --out stats/{wildcards.asm}/{wildcards.asm} \
+            &> {params.log}
+        """
+
+rule pca:
+    input:
+        vcf = "VC/{asm}/COHORT_{asm}.final.recode.withID.vcf.gz",
+        prune_in = "stats/{asm}/pruned_{asm}.prune.in",
+        freq = "stats/{asm}/{asm}.afreq"
+    output:
+        eigenvec = "stats/{asm}/pca_{asm}.eigenvec",
+    conda:
+        "envs/vcftools.yaml"
+    params:
+        log = "stats/{asm}/pca_{asm}.log"
+    threads: 1
+    shell:
+        """
+        plink2 \
+            --vcf {input.vcf} \
+            --extract {input.prune_in} \
+            --read-freq {input.freq} \
+            --pca 10 \
+            --allow-extra-chr \
+            --out stats/{wildcards.asm}/pca_{wildcards.asm} \
+            &> {params.log}
+        """
+
+
+# 5.2 Nucleotide diversity (π)
+rule nucleotide_diversity:
+    input:
+        vcf = "VC/{asm}/COHORT_{asm}.final.recode.withID.vcf.gz",
+        prune_in = "stats/{asm}/pruned_{asm}.prune.in"
+    output:
+        "stats/{asm}/pi_{asm}.done"
+    conda:
+        "envs/vcftools.yaml"
+    threads: 1
+    shell:
+        """
+        vcftools --gzvcf {input.vcf} \
+                 --snps {input.prune_in} \
+                 --site-pi \
+                 --out stats/{wildcards.asm}/pi_{wildcards.asm}
+        touch {output}
+        """
+
+# 5.3 Observed heterozygosity
+rule heterozygosity:
+    input:
+        vcf = "VC/{asm}/COHORT_{asm}.final.recode.withID.vcf.gz",
+        prune_in = "stats/{asm}/pruned_{asm}.prune.in"
+    output:
+        het = "stats/{asm}/het_{asm}.het"
+    conda:
+        "envs/vcftools.yaml"
+    threads: 1
+    shell:
+        """
+        vcftools --gzvcf {input.vcf} \
+                 --snps {input.prune_in} \
+                 --het \
+                 --out stats/{wildcards.asm}/het_{wildcards.asm}
+        """
+
+# 5.4 Pairwise FST
+rule pairwise_fst:
+    input:
+        vcf = "VC/{asm}/COHORT_{asm}.final.recode.withID.vcf.gz",
+        prune_in = "stats/{asm}/pruned_{asm}.prune.in",
+        pop1 = "input_files/pop1.txt",
+        pop2 = "input_files/pop2.txt"
+    output:
+        fst = "stats/{asm}/fst_{asm}.weir.fst"
+    conda:
+        "envs/vcftools.yaml"
+    threads: 1
+    shell:
+        """
+        vcftools --gzvcf {input.vcf} \
+                 --snps {input.prune_in} \
+                 --weir-fst-pop {input.pop1} \
+                 --weir-fst-pop {input.pop2} \
+                 --out stats/{wildcards.asm}/fst_{wildcards.asm}
+        """
+rule plot_pca:
+    input:
+        eigenvec = "stats/{asm}/pca_{asm}.eigenvec",
+        pop1 = "input_files/pop1.txt",
+        pop2 = "input_files/pop2.txt"
+    output:
+        pdf = "stats/{asm}/pca_{asm}.pdf"
+    run:
+        import pandas as pd
+        import matplotlib.pyplot as plt
+
+        # Read eigenvec, detect header
+        df = pd.read_csv(input.eigenvec, delim_whitespace=True, header=0)
+        # Rename #IID if present
+        if "#IID" in df.columns:
+            df = df.rename(columns={"#IID": "IID"})
+
+        # Identify PC columns automatically
+        pc_cols = [col for col in df.columns if col.startswith("PC")]
+        for col in pc_cols:
+            df[col] = pd.to_numeric(df[col], errors='coerce')
+
+        # Read populations
+        pop1 = set(pd.read_csv(input.pop1, header=None)[0].astype(str).str.strip())
+        pop2 = set(pd.read_csv(input.pop2, header=None)[0].astype(str).str.strip())
+
+        # Assign population labels
+        df["pop"] = "Other"
+        df.loc[df["IID"].isin(pop1), "pop"] = "Pop1"
+        df.loc[df["IID"].isin(pop2), "pop"] = "Pop2"
+
+        # Plot PC1 vs PC2
+        fig, ax = plt.subplots(figsize=(8,8))
+        colors = {"Pop1": "tab:blue", "Pop2": "tab:orange", "Other": "grey"}
+        for pop, g in df.groupby("pop"):
+            ax.scatter(g["PC1"], g["PC2"], c=colors[pop], label=pop, alpha=0.8, s=40)
+            # Add ID labels
+            for _, row in g.iterrows():
+                ax.text(row["PC1"] + 0.02, row["PC2"] + 0.02, row["IID"], fontsize=8, alpha=0.7)
+
+        ax.set_xlabel("PC1")
+        ax.set_ylabel("PC2")
+        ax.set_title(f"PCA – {wildcards.asm}")
+        ax.legend(frameon=False)
+        plt.tight_layout()
+        plt.savefig(output.pdf)
