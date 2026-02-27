@@ -1,0 +1,249 @@
+import glob
+import os
+
+ID = ["YUFE_7", "YUFE_8", "YUFE_9", "YUFE_10", "YUFE_11", "YUFE_12", "YUFE_13",
+      "YUFE_14", "YUFE_15", "YUFE_16", "YUFE_17", "YUFE_18",
+      "YUFE_36", "YUFE_37", "YUFE_38", "YUFE_39", "YUFE_40", "YUFE_41", "YUFE_42"]
+
+# Reference path (reuses your alignment reference)
+REF = "../../../../reference/Chromnames_Ref/GCF_900634775.1_fGouWil2.1_genomic_chromnames.fna"
+
+# Chromosome list (as requested)
+CHROMOSOMES = [str(i) for i in range(1, 25) if i not in [23]]  # + ['MT']
+
+
+DP_MIN = 8
+DP_MAX = 60
+GQ_MIN = 25
+QUAL_MIN = 30
+MAX_MISSING = 0.85
+MISS_MAX_FRAC = 1.0 - MAX_MISSING  # 0.15, we'll print as 0.150 below to be neat
+MAC_MIN = 3
+
+# Convenience
+SAMPLES = ID  # reuses your existing ID list
+BAM = lambda sample: f"alignment/{sample}.fGouWil2.1.bam"
+
+wildcard_constraints:
+    K = r"(2|3)"
+
+rule all:
+    input:
+        "results/adriatica/admixture/adriatica_admixture.done",
+        "results/adriatica/pca/adriatica_pca_pc1_pc2.pdf",
+        #"input_files/YUFE_adriatica_final.filtered.biallelic.vcf.gz",
+        #expand("alignment/{sample}.fGouWil2.1.alignment.done", sample=ID),
+        #expand("results/variants/{chrom}/final.filtered.biallelic.{chrom}.vcf.gz", chrom=CHROMOSOMES),
+        #expand("results/variants/{chrom}/final.filtered.biallelic.{chrom}.vcf.gz.tbi", chrom=CHROMOSOMES)
+
+#"input_files/YUFE_adriatica_final.filtered.biallelic.vcf.gz"
+
+# VCF -> PLINK bed/bim/fam (allow nonstandard chrom names)
+rule vcf_to_plink2_adriatica:
+    input:
+        "input_files/YUFE_adriatica_final.filtered.biallelic.vcf.gz"
+    output:
+        bed = "results/adriatica/pca/adriatica_cohort.bed",
+        bim = "results/adriatica/pca/adriatica_cohort.bim",
+        fam = "results/adriatica/pca/adriatica_cohort.fam"
+    threads: 4
+    shell:
+        r"""
+        mkdir -p results/adriatica/pca
+        plink2 \
+          --vcf {input} \
+          --double-id \
+          --set-missing-var-ids @:# \
+          --max-alleles 2 \
+          --allow-extra-chr \
+          --make-bed \
+          --threads {threads} \
+          --out results/adriatica/pca/adriatica_cohort
+        """
+
+# LD-prune to ~independent SNPs
+rule ld_prune_adriatica:
+    input:
+        bed = "results/adriatica/pca/adriatica_cohort.bed",
+        bim = "results/adriatica/pca/adriatica_cohort.bim",
+        fam = "results/adriatica/pca/adriatica_cohort.fam"
+    output:
+        prunelist = "results/adriatica/pca/adriatica_pruned.prune.in",
+        prunedout = "results/adriatica/pca/adriatica_pruned.prune.out"
+    threads: 4
+    shell:
+        r"""
+        plink2 \
+          --bfile results/adriatica/pca/adriatica_cohort \
+          --allow-extra-chr \
+          --indep-pairwise 200 50 0.2 \
+          --bad-ld \
+          --threads {threads} \
+          --out results/adriatica/pca/adriatica_pruned
+        """
+
+# Create pruned dataset
+rule make_pruned_bfile_adriatica:
+    input:
+        bed = "results/adriatica/pca/adriatica_cohort.bed",
+        bim = "results/adriatica/pca/adriatica_cohort.bim",
+        fam = "results/adriatica/pca/adriatica_cohort.fam",
+        prunelist = "results/adriatica/pca/adriatica_pruned.prune.in"
+    output:
+        bed = "results/adriatica/pca/adriatica_cohort.pruned.bed",
+        bim = "results/adriatica/pca/adriatica_cohort.pruned.bim",
+        fam = "results/adriatica/pca/adriatica_cohort.pruned.fam"
+    threads: 4
+    shell:
+        r"""
+        plink2 \
+          --bfile results/adriatica/pca/adriatica_cohort \
+          --allow-extra-chr \
+          --extract {input.prunelist} \
+          --make-bed \
+          --threads {threads} \
+          --out results/adriatica/pca/adriatica_cohort.pruned
+        """
+
+
+# Build allele frequency file from the pruned dataset
+rule afreq_adriatica:
+    input:
+        bed = "results/adriatica/pca/adriatica_cohort.pruned.bed",
+        bim = "results/adriatica/pca/adriatica_cohort.pruned.bim",
+        fam = "results/adriatica/pca/adriatica_cohort.pruned.fam"
+    output:
+        afreq = "results/adriatica/pca/adriatica_freq.afreq"
+    threads: 2
+    shell:
+        r"""
+        plink2 \
+          --bfile results/adriatica/pca/adriatica_cohort.pruned \
+          --allow-extra-chr \
+          --freq \
+          --threads {threads} \
+          --out results/adriatica/pca/adriatica_freq
+        """
+
+# PCA using approx algorithm with external afreq
+rule pca_compute_adriatica:
+    input:
+        bed   = "results/adriatica/pca/adriatica_cohort.pruned.bed",
+        bim   = "results/adriatica/pca/adriatica_cohort.pruned.bim",
+        fam   = "results/adriatica/pca/adriatica_cohort.pruned.fam",
+        afreq = "results/adriatica/pca/adriatica_freq.afreq"
+    output:
+        eigenvec = "results/adriatica/pca/adriatica_pca.eigenvec",
+        eigenval = "results/adriatica/pca/adriatica_pca.eigenval"
+    threads: 4
+    shell:
+        r"""
+        plink2 \
+          --bfile results/adriatica/pca/adriatica_cohort.pruned \
+          --allow-extra-chr \
+          --read-freq {input.afreq} \
+          --pca \
+          --threads {threads} \
+          --out results/adriatica/pca/adriatica_pca
+        """
+
+rule pca_plot_adriatica:
+    input:
+        eigenvec = "results/adriatica/pca/adriatica_pca.eigenvec",
+        popmap   = "input_files/popmap.tsv"
+    output:
+        pdf = "results/adriatica/pca/adriatica_pca_pc1_pc2.pdf"
+    threads: 1
+    shell:
+        r"""
+cat > results/adriatica/pca/_plot_adriatica_simple.R << 'RSCRIPT'
+suppressPackageStartupMessages({{
+  library(data.table); library(ggplot2)
+}})
+
+# Load PLINK eigenvectors (FID, IID, PC1..)
+eig <- fread("{input.eigenvec}", header = FALSE)
+setnames(eig, c("FID","ID",paste0("PC", 1:(ncol(eig)-2))))
+
+# Load population info (assumed correct: ID, population, species; tab-separated)
+meta <- fread("{input.popmap}", sep = "\t", header = TRUE)
+
+# Merge (keep all PCA samples)
+dt <- merge(eig, meta, by = "ID", all.x = TRUE, sort = FALSE)
+
+# Ensure numeric PCs for plotting
+dt[, PC1 := as.numeric(PC1)]
+dt[, PC2 := as.numeric(PC2)]
+
+# Plot
+p <- ggplot(dt, aes(x = PC1, y = PC2, color = population, shape = species)) +
+     geom_point(size = 2) +
+     theme_bw(base_size = 12) +
+     labs(title = "PCA (adriatica) — PC1 vs PC2", x = "PC1", y = "PC2")
+
+ggsave("{output.pdf}", p, width = 6.5, height = 5.2, units = "in")
+RSCRIPT
+
+Rscript results/adriatica/pca/_plot_adriatica_simple.R
+        """
+
+
+
+# ──────────────────────────────────────────────────────────────
+# ADMIXTURE analysis (K=2 and K=3)
+# ──────────────────────────────────────────────────────────────
+
+
+# Convert VCF → PLINK .bed set for ADMIXTURE
+rule vcf_to_plink_adriatica_admix:
+    input:
+        "input_files/YUFE_adriatica_final.filtered.biallelic.vcf.gz"
+    output:
+        bed = "results/adriatica/admixture/adriatica.bed",
+        bim = "results/adriatica/admixture/adriatica.bim",
+        fam = "results/adriatica/admixture/adriatica.fam"
+    threads: 4
+    shell:
+        r"""
+        mkdir -p results/adriatica/admixture
+        plink2 \
+          --vcf {input} \
+          --double-id \
+          --set-missing-var-ids @:# \
+          --max-alleles 2 \
+          --allow-extra-chr \
+          --make-bed \
+          --threads {threads} \
+          --out results/adriatica/admixture/adriatica
+        """
+
+K_LIST = [1, 2, 3]
+
+rule admixture_allK:
+    input:
+        bed = "results/adriatica/admixture/adriatica.bed",
+        bim = "results/adriatica/admixture/adriatica.bim",
+        fam = "results/adriatica/admixture/adriatica.fam"
+    output:
+        "results/adriatica/admixture/adriatica_admixture.done"
+    threads: 4
+    params:
+        ks = " ".join(str(k) for k in K_LIST)
+    shell:
+        r"""
+        set -euo pipefail
+        cd results/adriatica/admixture
+
+        # Make ADMIXTURE-safe copy (numeric chrom codes)
+        cp adriatica.bed adriatica_admix.bed
+        cp adriatica.fam adriatica_admix.fam
+        awk 'BEGIN{{OFS="\t"}}{{ if ($1 ~ /^[0-9]+$/) c=$1; else c=0; $1=c; print }}' \
+            adriatica.bim > adriatica_admix.bim
+
+        # Run ADMIXTURE for all requested Ks
+        for K in {params.ks}; do
+          admixture --cv -j{threads} adriatica_admix.bed "$K" | tee "adriatica_K${{K}}.log"
+          mv -f "adriatica_admix.${{K}}.Q" "adriatica_K${{K}}.Q"
+          mv -f "adriatica_admix.${{K}}.P" "adriatica_K${{K}}.P"
+        done
+        touch {output}
