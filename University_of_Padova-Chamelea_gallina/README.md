@@ -1,4 +1,4 @@
-# Title of the case study
+# Assessment of microplastic and nanoplastic exposure associated with the consumption of Chamelea gallina clam (PLASTICVONG)
 This repository includes all the scripts used to 33 - Padova University IT- Chamelea  gallina.
 
 # Authors 
