@@ -1,0 +1,1 @@
+RepeatMasker -pa 50  -species "Insecta"  -xsmall -gff GCF_910591885.1_iyBomTerr1.2_genomicCHROM.fna
