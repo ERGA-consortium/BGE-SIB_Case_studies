@@ -2,7 +2,7 @@
 This repository includes all the scripts used to perform a Population Connectivity Analysis for various Knipowischia species.
 
 # Authors 
-Lucija Novoselec, Faculty of Science, University of Zagreb, Regus Hoto Tower, Savska cesta 32, 10 000 Zagreb, Croatia
+Lucija Novoselec, Faculty of Science, University of Zagreb, Rooseveltov trg 6, Savska cesta 32, 10 000 Zagreb, Croatia
 
 [Name of applicant], [Affiliation], [Address of affiliation], [Country]
 
