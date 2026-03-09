@@ -1,0 +1,24 @@
+outmain: "results/ger5"
+prename: "tVulgGer5"
+
+infq: "/path/to/raw_data/2025_03_07_pacbiongi/DataDelivery_2025-03-07_12-10-08_ugc00393_download/files/pr_146/hifireads/pr_146_001/pr_146_001.hifireads.fastq.gz"
+
+cutadapt_params:
+ error: 0.1
+ minoverlap: 35
+ adapter1: "ATCTCTCTCAACAACAACAACGGAGGAGGAGGAAAAGAGAGAGAT"
+ adapter2: "ATCTCTCTCTTTTCCTCCTCCTCCGTTGTTGTTGTTGAGAGAGAT"
+ minlen: 10000
+ minqual: 30
+
+filter_settings:
+ s045: "--hg-size 750m -s 0.45"
+ s050: "--hg-size 750m -s 0.50"
+ s055: "--hg-size 750m -s 0.55"
+
+kmer_size: 21
+busco_db: "eudicotyledons_odb12"
+
+oatk:
+  mitodb: "resources/OatkDB/v20230921/embryophyta_mito.fam"
+  plstdb: "resources/OatkDB/v20230921/embryophyta_pltd.fam"

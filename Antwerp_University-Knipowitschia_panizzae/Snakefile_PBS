@@ -1,0 +1,79 @@
+jn = os.path.join
+
+configfile: "config.yaml"
+wildcard_constraints:
+
+data_dir = config['data_dir']
+
+########################################################
+sample_mt = pd.read_csv(config["sample_mt"], dtype=str, sep='\t', index_col=0)#.set_index("sequence_id", drop=False)
+
+trios = '...--...-...' #arangment of trio
+
+samples = list(sample_mt.index.values)
+
+########################################################
+def write_grp1(wildcards):
+    with open(f"{data_dir}/...",'w') as f:
+        for sequence_id in samples:
+            x = sample_mt.loc[sequence_id,'Species']
+            if x == '...':
+                f.write(sequence_id + '\n')
+
+def write_grp2(wildcards):
+    with open(f"{data_dir}/...",'w') as f:
+        for sequence_id in samples:
+            x = sample_mt.loc[sequence_id,'Species']
+            if x == '...':
+                f.write(sequence_id + '\n')
+
+def write_grp3(wildcards):
+    with open(f"{data_dir}/...",'w') as f:
+        for sequence_id in samples:
+            x = sample_mt.loc[sequence_id,'Species']
+            if x == '...':
+                f.write(sequence_id + '\n')
+
+def read_pop_fst(fn):
+    fst_df = pd.read_csv(fn,sep='\t',index_col=[0,1]).dropna().squeeze("columns")
+    fst_df.index = pd.MultiIndex.from_arrays([fst_df.index.droplevel(1),
+                                                 (fst_df.index.droplevel(0)+(fst_df['BIN_END']-fst_df.index.droplevel(0))/2).astype(int)])
+    return fst_df
+
+def read_pop_fst2(fn):
+    fst_df = pd.read_csv(fn,sep='\t',index_col=[0,1]).fillna(0).squeeze("columns")
+    return fst_df
+
+########################################################
+rule all:
+    input:
+        f"{data_dir}/PBS_{trios}.windowed.weir.fst"
+
+
+rule windowed_fst_for_pbs_concat:
+    input:
+        p12 = f"{data_dir}/...",
+        p13 = f"{data_dir}/...",
+        p23 = f"{data_dir}/..."
+    output:
+        out = f"{data_dir}/PBS_{trios}.windowed.weir.fst"
+    run:
+        fst12 = read_pop_fst2(input.p12)
+        fst13 = read_pop_fst2(input.p13)
+        fst23 = read_pop_fst2(input.p23)
+
+        fst12 = fst12[fst12['N_VARIANTS']>50]
+        fst13 = fst13[fst13['N_VARIANTS']>50]
+        fst23 = fst23[fst23['N_VARIANTS']>50]
+
+        fst12.rename({'BIN_END': '12_BIN_END', 'N_VARIANTS': '12_N_VARIANTS','WEIGHTED_FST': '12_WEIGHTED_FST', 'WEIGHTED_FST': '12_WEIGHTED_FST', 'MEAN_FST': '12_MEAN_FST'}, axis=1, inplace=True)
+        fst13.rename({'BIN_END': '13_BIN_END', 'N_VARIANTS': '13_N_VARIANTS','WEIGHTED_FST': '13_WEIGHTED_FST', 'WEIGHTED_FST': '13_WEIGHTED_FST', 'MEAN_FST': '13_MEAN_FST'}, axis=1, inplace=True)
+        fst23.rename({'BIN_END': '23_BIN_END', 'N_VARIANTS': '23_N_VARIANTS','WEIGHTED_FST': '23_WEIGHTED_FST', 'WEIGHTED_FST': '23_WEIGHTED_FST', 'MEAN_FST': '23_MEAN_FST'}, axis=1, inplace=True)
+
+        pw_3_pop = pd.concat([fst12, fst13, fst23], axis=1, join = 'inner')
+        PBS_mean_pop1 = 0.5*((-np.log(1-pw_3_pop['12_MEAN_FST']))+(-np.log(1-pw_3_pop['13_MEAN_FST']))-(-np.log(1-pw_3_pop['23_MEAN_FST'])))
+        pw_3_pop['PBS_mean_fst_pop1'] = PBS_mean_pop1
+        PBS_weight_pop1 = 0.5*((-np.log(1-pw_3_pop['12_WEIGHTED_FST']))+(-np.log(1-pw_3_pop['13_WEIGHTED_FST']))-(-np.log(1-pw_3_pop['23_WEIGHTED_FST'])))
+        pw_3_pop['PBS_weighted_fst_pop1'] = PBS_weight_pop1
+
+        pw_3_pop.to_csv(output.out, sep="\t")

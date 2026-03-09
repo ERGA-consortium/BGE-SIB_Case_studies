@@ -1,0 +1,21 @@
+outmain: "results/ger5"
+outpre: "tVulgGer5_hic"
+tmpdir: "/tmp"
+
+refs:
+  "1": "/path/to/genome_assembly/01assembly/results/ger5/assembly/hifiasm/tVulgGer5.s045.asm.bp.hap1.p_ctg.fasta"
+  "2": "/path/to/genome_assembly/01assembly/results/ger5/assembly/hifiasm/tVulgGer5.s045.asm.bp.hap2.p_ctg.fasta"
+
+fastq:
+  p1: "/path/to/raw_data/2026_01_14_omnic_ngi/DataDelivery_2026-01-14_12-14-11_ngisthlm02130_download/files/P37802/P37802_101/02-FASTQ/20251223_LH00188_0344_B23FLV5LT4/P37802_101_S1_L005_R1_001.fastq.gz"
+  p2: "/path/to/raw_data/2026_01_14_omnic_ngi/DataDelivery_2026-01-14_12-14-11_ngisthlm02130_download/files/P37802/P37802_101/02-FASTQ/20251223_LH00188_0344_B23FLV5LT4/P37802_101_S1_L005_R2_001.fastq.gz"
+
+downsample:
+  frac: 1
+
+haps: ["1", "2"]
+
+# Optional: set after manual JBAT curation is finished.
+review_assembly:
+  "1": "manual_curation/ger5/tVulgGer5_hic.hap1_curated.out_JBAT.review.assembly"
+  "2": "manual_curation/ger5/tVulgGer5_hic.hap2.out_JBAT.review.assembly"

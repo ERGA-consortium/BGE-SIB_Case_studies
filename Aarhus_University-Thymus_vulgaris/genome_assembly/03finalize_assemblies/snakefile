@@ -1,0 +1,23 @@
+import os
+
+if not isinstance(config.get("samples"), dict) or not config["samples"]:
+    raise ValueError("Config must define a non-empty samples dict")
+
+if not isinstance(config.get("reference"), dict):
+    raise ValueError("Config must define a reference block with sample and hap")
+
+if str(config["reference"].get("sample", "")) not in config["samples"]:
+    raise ValueError("reference.sample must be a key in samples")
+
+ref_sample = str(config["reference"]["sample"])
+ref_hap = str(config["reference"].get("hap", ""))
+if ref_hap not in [str(h) for h in config["samples"][ref_sample]["haps"].keys()]:
+    raise ValueError("reference.hap must be a key under samples.<reference.sample>.haps")
+
+include: "rules/stage_inputs.smk"
+include: "rules/harmonize.smk"
+include: "rules/organelle_screen.smk"
+include: "rules/contamination.smk"
+include: "rules/release_agp.smk"
+include: "rules/release_qc.smk"
+include: "rules/index_fasta.smk"

@@ -1,0 +1,273 @@
+import os
+from snakemake.io import glob_wildcards
+
+configfile: "config/config.yaml"
+
+# Expect Hi-C files like: {hic_dir}/{sample}_1.fastq.gz and {sample}_2.fastq.gz
+(SAMPLES, READS) = glob_wildcards(os.path.join(config["hic_dir"], "{sample}_{read}.fq.gz"))
+SAMPLES = sorted(set(SAMPLES))
+
+# Inputs from config
+PREFIX   = "fGouPig_combined" #config["prefix"]
+REF      = "/scratch/antwerpen/grp/asvardal/projects/clingfishes/projects/pigra_ref_genome/scaffolding/yahs/GouPig1.combined.yahs_scaffolds_final.fa"  #config["ref"]
+BAM = "mapped_reads/GouPig1.combined.bwa.sorted.bam" 
+HIC_DIR  = config["hic_dir"]
+TMP_DIR  = config["tmp_dir"]
+
+# Output dirs
+MAP_DIR  = "mapped_reads"
+os.makedirs(MAP_DIR, exist_ok=True)
+os.makedirs(TMP_DIR, exist_ok=True)
+
+# Final target (must match embed rule's output exactly)
+rule all:
+    input:
+        f"new_pretextmaps/{PREFIX}.withTracks.pretext",
+        #f"{PREFIX}.withTracks.pretext"
+
+
+# -----------------------
+# Reference indexing
+# -----------------------
+
+rule index_fasta:
+    input:
+        ref = REF
+    output:
+        pac   = REF + ".pac",
+        o123  = REF + ".0123",
+        amb   = REF + ".amb",
+        ann   = REF + ".ann",
+        bwt   = REF + ".bwt.2bit.64",
+        fai   = REF + ".fai",
+        genome= REF + ".genome"
+    conda: "bwamem2.yaml"
+    threads: 1
+    resources:
+        mem_mb=100000
+    shell:
+        r"""
+        samtools faidx {input.ref}
+        awk '{{print $1,$2}}' {input.ref}.fai | sed 's/ /\t/g' > {output.genome}
+        bwa-mem2 index {input.ref}
+        """
+
+
+# -----------------------
+# Mapping per sample
+# -----------------------
+
+rule map_reads:
+    input:
+        ref    = REF,
+        refidx = REF + ".pac",
+#        r1     = os.path.join(HIC_DIR, "{sample}_1.fq.gz"),
+#        r2     = os.path.join(HIC_DIR, "{sample}_2.fq.gz")
+    output:
+        bam    = BAM,
+        bai    = BAM + ".bai"
+    conda: "bwamem2.yaml"
+    threads: 24
+    params:
+        R1 = HIC_DIR + "/*_1.fq.gz",
+        R2 = HIC_DIR + "/*_2.fq.gz",
+        bam_tmp = f"mapped_reads/{PREFIX}.bwa.bam"
+    resources:
+        mem_mb=100000
+    shell:
+        r"""
+        bwa-mem2 mem -T0 -5SP -t {threads} {input.ref} {params.R1} {params.R2} \
+                | samtools view -b - \
+                > {params.bam_tmp}
+        
+        samtools sort -@ {threads} -o {output.bam} {params.bam_tmp}
+        samtools index {output.bam}
+        
+        rm -rf {params.bam_tmp}
+        """
+
+
+# -----------------------
+# Merge, sort, index
+# -----------------------
+
+
+#rule sort_index_merged_bam:
+#    input:
+#        merged = os.path.join(MAP_DIR, f"{PREFIX}.bwa.bam")
+#    output:
+#        sorted = os.path.join(MAP_DIR, f"{PREFIX}.bwa.sorted.bam"),
+#        bai    = os.path.join(MAP_DIR, f"{PREFIX}.bwa.sorted.bam.bai")
+#    conda: "bwamem2.yaml"
+#    threads: 12
+#    resources:
+#        mem_mb=100000
+ #   shell:
+        #        r"""
+       # samtools sort -@ {threads} -o {output.sorted} {input.merged}
+       # samtools index {output.sorted}
+       # """
+
+# -----------------------
+# Pretext map
+# -----------------------
+
+rule create_pretextMap_new:
+    input:
+        bam = BAM
+    output:
+        pretext_map = f"new_pretextmaps/{PREFIX}.pretext"
+    conda: "pretext.yaml"
+    threads: 1
+    resources:
+        mem_mb=20000
+    shell:
+        r"""
+        samtools view -h {input.bam} \
+          | PretextMap -o {output.pretext_map} --sortby nosort --mapq 0 --highRes
+        """
+
+
+
+rule depth_bedgraph:
+    input:
+        bam = BAM
+    output:
+        bedgraph = f"new_pretextmaps/{PREFIX}.depth.10kb.bedgraph"
+    threads: 4
+    shell:
+        r"""
+        set -euo pipefail
+
+        # Create 10 kb windows for each contig
+        samtools idxstats {input.bam} | cut -f1,2 | grep -v '\*' \
+          | awk -v W=10000 'BEGIN{{OFS="\t"}}{{for(i=0;i<$2;i+=W){{e=i+W;if(e>$2)e=$2;print $1,i,e}}}}' \
+          > windows_depth.bed
+
+        # Compute per-base coverage
+        samtools depth -a {input.bam} \
+          | awk 'BEGIN{{OFS="\t"}}{{print $1,$2-1,$2,$3}}' > depth.bed
+
+        # Average per 10 kb window, round to integer
+        bedtools map -a windows_depth.bed -b depth.bed -c 4 -o mean \
+          | awk 'BEGIN{{OFS="\t"}}{{if($4==".")$4=0; print $1,$2,$3,int($4+0.5)}}' \
+          | sort -k1,1 -k2,2n > {output.bedgraph}
+
+        rm -f windows_depth.bed depth.bed
+        """
+
+
+rule gaps_bedgraph:
+    input:
+        fasta = REF
+    output:
+        bedgraph = f"new_pretextmaps/{PREFIX}.gaps.bedgraph"
+    shell:
+        r"""
+        set -euo pipefail
+
+        echo "[+] Detecting long N/n gaps (≥50 bp) in {input.fasta}"
+
+        # Find all N/n runs (≥50 bp), merge overlaps, compute lengths
+        seqkit locate -i -r -P -p "\"[Nn]{{50,}}\"" {input.fasta} \
+          | awk 'NR>1{{print $1,$5-1,$6}}' OFS='\t' > gaps_raw.bed
+
+        bedtools sort -i gaps_raw.bed \
+          | bedtools merge -i - > gaps_merged.bed
+
+        # Compute gap lengths and filter for length ≥100 bp (optional)
+        awk 'BEGIN{{OFS="\t"}}{{len=$3-$2; if(len>=100) print $1,$2,$3,len}}' gaps_merged.bed \
+          > {output.bedgraph}
+
+        hits=$(wc -l < {output.bedgraph} || echo 0)
+        if [ "$hits" -gt 0 ]; then
+            echo "[✓] Found $hits gap regions (≥100 bp), written to {output.bedgraph}"
+        else
+            echo "[WARN] No long gaps detected."
+        fi
+
+        rm -f gaps_raw.bed gaps_merged.bed
+        """
+
+
+
+rule telomere_bedgraph:
+    input:
+        fasta = REF
+    output:
+        bedgraph = f"new_pretextmaps/{PREFIX}.telomere.TTAGGG.10kb.bedgraph"
+    shell:
+        r"""
+        set -euo pipefail
+        win=10000
+        workdir=$(pwd)
+
+        echo "[+] Scanning {input.fasta} for telomeric repeats (TTAGGG){{2,}}, case-insensitive"
+
+        # Generate scaffold lengths → make 10 kb windows
+        seqkit fx2tab -n -l {input.fasta} > seq_lengths.txt
+        awk -v W=$win 'BEGIN{{OFS="\t"}}{{for(s=0;s<$2;s+=W){{e=s+W;if(e>$2)e=$2;print $1,s,e}}}}' seq_lengths.txt > windows.bed
+
+        # Locate ≥2 consecutive TTAGGG repeats (regex mode, case-insensitive)
+        seqkit locate -i -r -P -p "\"(TTAGGG){{2,}}\"" {input.fasta} \
+          | awk 'NR>1{{print $1,$5-1,$6}}' OFS='\t' > telo_hits.bed
+
+        # Keep only proper numeric BED records
+        awk 'BEGIN{{FS=OFS="\t"}} ($2~/^[0-9]+$/ && $3~/^[0-9]+$/){{print}}' telo_hits.bed > telo_hits_clean.bed
+        echo "[INFO] $(wc -l < telo_hits_clean.bed) telomeric regions found."
+
+        # Compute telomeric density per 10 kb window
+        bedtools intersect -a windows.bed -b telo_hits_clean.bed -wao \
+          | awk -v W=$win 'BEGIN{{OFS="\t"}}{{cov[$1 FS $2 FS $3]+=$(NF)}} \
+                END{{for(k in cov){{split(k,a,FS); d=cov[k]/W*100; if(d>100)d=100; print a[1],a[2],a[3],int(d)}}}}' \
+          | sort -k1,1 -k2,2n > {output.bedgraph}
+
+        echo "[✓] Wrote telomeric density to {output.bedgraph}"
+
+        rm -f seq_lengths.txt windows.bed telo_hits.bed telo_hits_clean.bed
+        """
+
+
+
+rule annotate_pretext:
+    input:
+        pretext = f"new_pretextmaps/{PREFIX}.pretext",
+        depth   = f"new_pretextmaps/{PREFIX}.depth.10kb.bedgraph",
+        gaps    = f"new_pretextmaps/{PREFIX}.gaps.bedgraph",
+        telo    = f"new_pretextmaps/{PREFIX}.telomere.TTAGGG.10kb.bedgraph"
+    output:
+        pretext_with_tracks = f"new_pretextmaps/{PREFIX}.withTracks.pretext"
+    conda: "pretext2.yaml"   # your env with only pretextgraph
+    shell:
+        r"""
+        set -euo pipefail
+        echo "[+] Annotating {input.pretext} with depth, gaps, and telomeres..."
+
+        # start from a copy
+        cp {input.pretext} tmp.pretext
+
+        # add depth
+        if [ -s "{input.depth}" ]; then
+            echo "  • Adding depth track"
+            cat {input.depth} | PretextGraph -i tmp.pretext -n "Coverage (10kb)" -o tmp2.pretext
+            mv tmp2.pretext tmp.pretext
+        fi
+
+        # add gaps
+        if [ -s "{input.gaps}" ]; then
+            echo "  • Adding gaps track"
+            cat {input.gaps} | PretextGraph -i tmp.pretext -n "Assembly gaps (N≥50)" -o tmp2.pretext
+            mv tmp2.pretext tmp.pretext
+        fi
+
+        # add telomeres
+        if [ -s "{input.telo}" ]; then
+            echo "  • Adding telomere track"
+            cat {input.telo} | PretextGraph -i tmp.pretext -n "Telomeric repeats (TTAGGG)" -o tmp2.pretext
+            mv tmp2.pretext tmp.pretext
+        fi
+
+        # rename final
+        mv tmp.pretext {output.pretext_with_tracks}
+        echo "[✓] Annotation complete → {output.pretext_with_tracks}"
+        """

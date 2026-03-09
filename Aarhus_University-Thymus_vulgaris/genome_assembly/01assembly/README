@@ -1,0 +1,8 @@
+#######################################
+#### RUN GERANIOL 5 (HAPS) ###########
+#######################################
+snakemake all_hifi_qcs do_genome_profiling \
+          do_gfastats_haps do_busco_haps do_merqury_haps do_oatk \
+          --slurm --default-resources slurm_account=thymusvulgaris \
+          --configfile configs/config.yaml --use-conda -j 20 -c 60 -pn
+

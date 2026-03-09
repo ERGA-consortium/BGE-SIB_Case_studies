@@ -1,0 +1,40 @@
+outmain: "results/gene_annotation"
+tmpdir: "/tmp"
+
+protein_evidence:
+  input_fastas:
+    - "/path/to/resources/orthodb12/Viridiplantae.fa"
+    - "/path/to/genome_assembly/05gene_annotation/resources/proteins/thymusQuinquecostatus.fa"
+  cluster:
+    min_seq_id: 0.97
+    coverage: 0.9
+    cov_mode: 0
+    threads: 20
+species: "Thymus_vulgaris"
+
+assemblies:
+  ger5_hap1:
+    genome: "/path/to/genome_assembly/04repeat_annotation/results/repeat_annotation/repeatmasks/tVulg_4haps/ger5/hap1/ger5.hap1.fasta.masked"
+
+  ger5_hap2:
+    genome: "/path/to/genome_assembly/04repeat_annotation/results/repeat_annotation/repeatmasks/tVulg_4haps/ger5/hap2/ger5.hap2.fasta.masked"
+
+
+rna_libraries_tsv: "configs/rnaseq_libraries.tsv"
+
+star:
+  genome_sa_index_nbases: 13
+  read_files_command: "zcat"
+  pass1_extra: ""
+  pass2_extra: ""
+
+braker3:
+  genemark_bin: "/path/to/tools/GeneMark-ETP/bin"
+  prothint_bin: "/path/to/tools/ProtHint/bin"
+  useexisting: true
+  extra: ""
+
+annotation_qc:
+  busco_lineage: "eudicotyledons_odb12"
+  omamer_db: "/path/to/resources/oma_db/LUCA.h5"
+  omark_taxid: 49992

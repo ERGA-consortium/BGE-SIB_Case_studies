@@ -1,0 +1,113 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# Species-parametric SNP calling + alignment QC summaries from samtools stats
+# Uses popmap.tsv (ID, population, species) for grouping.
+# ──────────────────────────────────────────────────────────────────────────────
+
+
+import csv
+import glob
+
+# -------------------- Reference and chromosomes --------------------
+REF = "../../../../reference/Chromnames_Ref/GCF_900634775.1_fGouWil2.1_genomic_chromnames.fna"
+PIG_REF = "input_files/GouPig1.hap2.yahs_scaffolds_final.fa"
+CHROMOSOMES = [str(i) for i in range(1, 25) if i not in [23]]  # example; adjust if needed
+
+# -------------------- Filters (used via params in rules) --------------------
+DP_MIN = 8
+DP_MAX = 60
+QUAL_MIN = 30
+MAX_MISSING = 0.85
+MISS_MAX_FRAC = 1.0 - MAX_MISSING
+MAC_MIN = 3
+
+# -------------------- Sample/species metadata --------------------
+POPMAP = "input_files/popmap.tsv"
+
+samples = []
+species_map = {}
+with open(POPMAP) as fh:
+    rdr = csv.DictReader(fh, delimiter="\t")  # expects columns: ID, population, species
+    for row in rdr:
+        s = row["ID"]
+        samples.append(s)
+        species_map[s] = row["species"]
+
+def load_ids_by_species(popmap_path):
+    by_sp = {}
+    with open(popmap_path, encoding="utf-8") as f:
+        rdr = csv.DictReader(f, delimiter="\t")
+        for row in rdr:
+            sid = row["ID"].strip()
+            sp  = row["species"].strip()
+            by_sp.setdefault(sp, []).append(sid)
+    return by_sp
+
+IDS_BY_SPECIES = load_ids_by_species(POPMAP)
+ADRIATICA_IDS = IDS_BY_SPECIES.get("adriatica", [])
+PIGRA_IDS     = IDS_BY_SPECIES.get("pigra", [])
+
+
+
+# -------------------- Path helpers --------------------
+def bam_path(s):   return f"alignment/{s}.fGouWil2.1.bam"
+def bai_path(s):   return f"alignment/{s}.fGouWil2.1.bam.bai"
+def stats_path(s): return f"alignment/{s}.fGouWil2.1.stats.txt"
+def done_path(s):  return f"alignment/{s}.fGouWil2.1.alignment.done"
+def bam_path_pig(s):   return f"alignment/{s}.GouPig1.bam"
+def bai_path_pig(s):   return f"alignment/{s}.GouPig1.bam.bai"
+def done_path_pig(s):  return f"alignment/{s}.GouPig1.alignment.done"
+def flagstat_pig(s):   return f"alignment/{s}.GouPig1.flagstat.txt"
+
+# stats for BAMs mapped to the pigra reference (GouPig1)
+def bam_path_pig(s):   return f"alignment/{s}.GouPig1.bam"
+def stats_path_pig(s): return f"alignment/{s}.GouPig1.stats.txt"
+
+# adriatica mapping stats (already produced by your existing rule)
+def stats_path_adr(s): return f"alignment/{s}.fGouWil2.1.stats.txt"
+
+
+
+# ---------- Helpers you already have ----------
+# IDS_BY_SPECIES = load_ids_by_species(POPMAP)
+ADRIATICA_IDS = IDS_BY_SPECIES.get("adriatica", [])
+PIGRA_IDS     = IDS_BY_SPECIES.get("pigra", [])
+
+def stats_adr(sample): return f"alignment/{sample}.fGouWil2.1.stats.txt"  # mapped to adriatica ref
+def stats_pig(sample): return f"alignment/{sample}.GouPig1.stats.txt"     # mapped to pigra ref
+
+# ---------- Triplet aggregation (new, unique outputs) ----------
+
+
+rule all:
+    input:
+        # ... keep your other targets ...
+        "results_triplet/all_samples_triplet.tsv",
+        "results_triplet/group_summary_triplet.tsv",
+        "results_triplet/stats_triplet.pdf",
+        "results_triplet/stats_triplet.png",
+        "results_triplet/pairwise_ttests.tsv"
+
+rule aggregate_stats_triplet:
+    input:
+        popmap = POPMAP,
+        # AA: adriatica→adriatica
+        aa = expand(stats_adr("{s}"), s=ADRIATICA_IDS),
+        # PA: pigra→adriatica
+        pa = expand(stats_adr("{s}"), s=PIGRA_IDS),
+        # PP: pigra→pigra
+        pp = expand(stats_pig("{s}"), s=PIGRA_IDS)
+    output:
+        all  = "results_triplet/all_samples_triplet.tsv",
+        summ = "results_triplet/group_summary_triplet.tsv"
+    script:
+        "scripts/extract_stats_triplet.py"
+
+rule plot_stats_triplet:
+    input:
+        all  = "results_triplet/all_samples_triplet.tsv"
+    output:
+        pdf  = "results_triplet/stats_triplet.pdf",
+        png  = "results_triplet/stats_triplet.png",
+        tsv  = "results_triplet/pairwise_ttests.tsv"
+    script:
+        "scripts/plot_stats_triplet.py"

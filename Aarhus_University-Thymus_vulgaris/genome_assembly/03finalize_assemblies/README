@@ -1,0 +1,88 @@
+###########################################
+#### FINALIZE ASSEMBLIES ##################
+###########################################
+
+# This stage finalizes curated haplotypes by:
+# 1) harmonizing scaffold naming/order to one selected reference haplotype,
+# 2) screening each sample/haplotype for organelle-like contigs using sample-specific organelle assemblies,
+# 3) exporting sample releases:
+#    - hap1_plus_organelle
+#    - hap2_nuclear
+# Naming defaults:
+# - nuclear chromosomes: chr01, chr02, ...
+# - nuclear unplaced: unplaced001, unplaced002, ...
+# - organelles: chrC/chrM for complete assemblies, ptXX/mtXX for fragmented organelles
+
+
+###########################################
+#### CONFIG ###############################
+###########################################
+
+# Edit:
+#   configs/config.yaml
+#
+# Required blocks:
+# - reference: {sample, hap}
+# - samples.<sample>.haps.{hap1,hap2}
+# - samples.<sample>.organelle_refs.{plastid,mitochondria}
+# - harmonize
+# - organelle_screen
+#   - optional: organelle_screen.naming.{plastid_complete_name,mitochondria_complete_name,plastid_fragment_prefix,mitochondria_fragment_prefix}
+
+
+###########################################
+#### DRY RUNS #############################
+###########################################
+
+# Harmonization only
+snakemake do_harmonize_all \
+          --slurm --default-resources slurm_account=thymusvulgaris \
+          --configfile configs/config.yaml \
+          --use-conda -j 20 -c 60 -pn
+
+# Organelle screening + nuclear cleaned FASTA
+snakemake do_organelle_screen_all \
+          --slurm --default-resources slurm_account=thymusvulgaris \
+          --configfile configs/config.yaml \
+          --use-conda -j 20 -c 60 -pn
+
+# Full finalization (includes release FASTA outputs)
+snakemake do_finalize_all \
+          --slurm --default-resources slurm_account=thymusvulgaris \
+          --configfile configs/config.yaml \
+          --use-conda -j 20 -c 60 -pn
+
+
+###########################################
+#### RUN ##################################
+###########################################
+
+snakemake do_finalize_all \
+          --slurm --default-resources slurm_account=thymusvulgaris \
+          --configfile configs/config.yaml \
+          --use-conda -j 20 -c 60 -p
+
+
+###########################################
+#### KEY OUTPUTS ##########################
+###########################################
+
+# Harmonized nuclear FASTA:
+#   results/finalized/{sample}/{hap}/harmonized/{sample}.{hap}.harmonized.fa
+# Organelle screen reports:
+#   results/finalized/{sample}/{hap}/organelle_screen/{sample}.{hap}.summary.tsv
+# Nuclear without organelle-like contigs:
+#   results/finalized/{sample}/{hap}/final/{sample}.{hap}.nuclear.no_organelle.fa
+# Release files:
+#   results/finalized/{sample}/release/{sample}.hap1_plus_organelle.fa
+#   results/finalized/{sample}/release/{sample}.hap2_nuclear.fa
+# FAI indexes:
+#   all produced FASTA files also have a companion .fai index
+
+
+## dry test
+snakemake /path/to/genome_assembly/03finalize_assemblies/results/finalized/ger5/hap1/contamination/fcs_gx/ger5.hap1.fcs_gx_report.txt \
+  --allowed-rules run_fcs_gx \
+  --slurm --default-resources slurm_account=thymusvulgaris \
+  --configfile configs/config.yaml --use-conda \
+  -j 1 -c 20 -pn

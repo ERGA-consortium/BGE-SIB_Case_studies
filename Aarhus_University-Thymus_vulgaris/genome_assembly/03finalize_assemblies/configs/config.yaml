@@ -1,0 +1,58 @@
+outmain: "/path/to/genome_assembly/03finalize_assemblies/results/finalized"
+
+reference:
+  sample: "ger5"
+  hap: "hap1"
+
+samples:
+  ger5:
+    haps:
+      hap1: "/path/to/genome_assembly/02scaffolding/results/ger5/scaffolding/contact_maps/jbat/tVulgGer5_hic.hap1.out_JBAT.FINAL.fa"
+      hap2: "/path/to/genome_assembly/02scaffolding/results/ger5/scaffolding/contact_maps/jbat/tVulgGer5_hic.hap2.out_JBAT.FINAL.fa"
+    agp_refs:
+      hap1: "/path/to/genome_assembly/02scaffolding/results/ger5/scaffolding/tVulgGer5_hic.hap1.yahs_scaffolds_final.agp"
+      hap2: "/path/to/genome_assembly/02scaffolding/results/ger5/scaffolding/tVulgGer5_hic.hap2.yahs_scaffolds_final.agp"
+    organelle_refs:
+      plastid: "/path/to/genome_assembly/01assembly/results/ger5/organelles/tVulgGer5.pltd.ctg.fasta"
+      mitochondria: "/path/to/genome_assembly/01assembly/results/ger5/organelles/tVulgGer5.mito.ctg.fasta"
+
+
+harmonize:
+  # Scaffolds >= this length in the reference become chrXX.
+  lg_min_bp: 10000000
+  lg_prefix: "chr"
+  unplaced_prefix: "unplaced"
+
+  synteny:
+    minimap2_preset: "asm5"
+
+organelle_screen:
+  minimap2_preset: "asm5"
+  min_identity: 0.98
+  min_aln_bp: 5000
+  min_mapq: 20
+  min_cov_frac: 0.90
+  min_cov_bp: 50000
+  naming:
+    plastid_complete_name: "chrC"
+    mitochondria_complete_name: "chrM"
+    plastid_fragment_prefix: "pt"
+    mitochondria_fragment_prefix: "mt"
+  completeness:
+    plastid_min_complete_bp: 120000
+    mitochondria_min_complete_bp: 100000
+
+  # remove_contigs: drop contigs passing thresholds.
+  # keep_and_mask: keep all contigs and only report organelle-like hits.
+  mode: "remove_contigs"
+
+contamination:
+  fcs_gx_db_prefix: "/path/to/resources/fcs_ncbi_db/gxdb/all"
+  tax_id: 49992
+
+busco_db: "eudicotyledons_odb12"
+
+release_qc:
+  merqury:
+    meryl_db:
+      ger5: "/path/to/genome_assembly/01assembly/results/ger5/genome_profiling/kmers/tVulgGer5_hifis.meryl"

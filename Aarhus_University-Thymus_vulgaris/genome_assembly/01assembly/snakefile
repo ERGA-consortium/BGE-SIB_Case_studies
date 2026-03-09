@@ -1,0 +1,12 @@
+
+OUTMAIN=config["outmain"]
+PRENAME=config["prename"]
+FILTERS = list(config["filter_settings"].keys())
+
+include: "rules/hifireadsqc.smk"
+include: "rules/hifiasm.smk"
+include: "rules/gfastats.smk"
+include: "rules/busco.smk"
+include: "rules/genome_profiling.smk"
+include: "rules/merqury.smk"
+include: "rules/oatk.smk"

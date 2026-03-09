@@ -1,0 +1,28 @@
+import os
+
+OUTMAIN = config["outmain"]
+DB_NAME = config["db_name"]
+
+REPEATMODELER = config.get("repeatmodeler", {})
+REPEATMASKER = config.get("repeatmasker", {})
+
+def flag_if(cfg, key, flag, default=False):
+    # Return flag if cfg[key] is truthy; otherwise empty.
+    # Uses default if key is missing.
+    if bool(cfg.get(key, default)):
+        return flag
+    return ""
+
+def extra_flags(cfg, key="extra"):
+    val = str(cfg.get(key, "")).strip()
+    return val
+
+# Flatten nested dict config["genomes"][genome][hap] into a list of tuples.
+GENOME_HAPS = [
+    (genome, hap)
+    for genome, haps in config["genomes"].items()
+    for hap in haps.keys()
+]
+
+include: "rules/stage_inputs.smk"
+include: "rules/repeats.smk"

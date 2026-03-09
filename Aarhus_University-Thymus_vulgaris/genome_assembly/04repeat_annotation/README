@@ -1,0 +1,12 @@
+
+
+
+# Final release outputs:
+# - results/repeat_annotation/release/{genome}/{hap}/{genome}.{hap}.softmasked.fa
+# - results/repeat_annotation/release/{genome}/{hap}/{genome}.{hap}.softmasked.fa.fai
+# - results/repeat_annotation/release/{genome}/{hap}/{genome}.{hap}.repeats.bed
+
+snakemake do_release_all \
+          --slurm --default-resources slurm_account=thymusvulgaris \
+          --configfile configs/config.yaml \
+          --use-conda -j 20 -c 20 -pn

@@ -1,0 +1,121 @@
+VCF_DIR = "/..."
+OUTPUT_DIR = "/..."
+
+CLUSTERS = [...]
+
+MAF = [...]
+
+rule all:
+    input:
+        f"{OUTPUT_DIR}/...pruned.bed",
+        expand("/....distance_matrix.dist"),
+        expand("/....maf.{maf}.eigenvec", maf = MAF),
+        expand("/....{cluster}.out", cluster = CLUSTERS)
+
+rule make_plink_binary:
+     input:
+         vcf = f"{VCF_DIR}/..."
+     output:
+         bed = f"{OUTPUT_DIR}/....bed",
+         bim = f"{OUTPUT_DIR}/....bim",
+         fam = f"{OUTPUT_DIR}/....fam"
+     resources:
+         mem_gb=8,
+         walltime=1
+     threads: 2
+     params:
+         mem = lambda wildcards, resources: str(int(resources['mem_gb']*900)),
+         outbase = f"{OUTPUT_DIR}/..."
+     shell:
+         """
+         plink --double-id --threads {threads} --vcf {input.vcf} --out {params.outbase} --make-bed
+         """
+
+##########################
+####### LD PRUNING #######
+##########################
+
+rule ld_pruning:
+    input:
+        bed = f"{OUTPUT_DIR}/....bed"
+    output:
+        pruned = f"{OUTPUT_DIR}/...pruned.bed"
+    resources:
+        mem_gb=8,
+        walltime=1
+    threads: 2
+    params:
+        mem = lambda wildcards, resources: str(int(resources['mem_gb']*900)),
+        input_base = lambda wildcards, input: os.path.splitext(input['bed'])[0],
+        output_base = lambda wildcards, output: os.path.splitext(output['pruned'])[0]
+    shell:
+        """
+        plink --threads {threads} --memory {params.mem} --bfile {params.input_base} --indep-pairwise ... --out {params.output_base}
+        plink --threads {threads} --memory {params.mem} --bfile {params.input_base} --extract {params.output_base}.prune.in --make-bed --out {params.output_base}
+        """
+
+###################################
+####### PAIRWISE DIFFERENCE #######
+###################################
+
+rule distance:
+    input:
+        vcf = f"{VCF_DIR}/..."
+    output:
+        dist = f"{OUTPUT_DIR}/....distance_matrix.dist"
+    resources:
+        mem_gb=8,
+        walltime=1
+    threads: 2
+    params:
+        mem = lambda wildcards, resources: str(int(resources['mem_gb']*900)),
+        output_base = lambda wildcards, output: os.path.splitext(output['dist'])[0]
+    shell:
+        """
+        plink --double-id --threads {threads} --memory {params.mem} --vcf {input.vcf} --out {params.output_base} --distance square
+        """
+
+###################
+####### PCA #######
+###################
+
+rule pca:
+    input:
+        bed = f"{OUTPUT_DIR}/....pruned.bed"
+    output:
+        vec = f"{OUTPUT_DIR}/....maf.{{maf}}.eigenvec",
+        val = f"{OUTPUT_DIR}/....maf.{{maf}}.eigenval"
+    resources:
+        mem_gb=8,
+        walltime=1
+    threads: 2
+    params:
+        mem = lambda wildcards, resources: str(int(resources['mem_gb']*900)),
+        input_base = lambda wildcards, input: os.path.splitext(input['bed'])[0],
+        output_base = lambda wildcards, output: os.path.splitext(output['vec'])[0],
+        maf_flag = lambda wildcards: "--maf {}".format(wildcards.maf) if float(wildcards.maf) else ""
+    shell:
+        """
+        plink --threads {threads} --memory {params.mem} {params.maf_flag} --bfile {params.input_base} --pca --out {params.output_base}
+        """
+
+###################
+#### ADMIXTURE ####
+###################
+
+rule admixture:
+    input:
+        bed = os.path.join(OUTPUT_DIR, "plink", "....pruned.bed")
+    output:
+        os.path.join(OUTPUT_DIR, "admix", "....clusters.{cluster}.out")
+    resources:
+        walltime=24,
+        mem_gb=96
+    threads: 4
+    params:
+        out = os.path.join(OUTPUT_DIR, "admix", "....clusters.{cluster}.out")
+    shell:
+        """
+        admixture --cv -j{threads} {input.bed} {wildcards.cluster} > {params.out} 2> {params.out}.log
+        """
+

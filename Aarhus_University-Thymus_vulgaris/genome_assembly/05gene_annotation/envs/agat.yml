@@ -1,0 +1,6 @@
+name: agat
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - agat=1.6.1

@@ -1,0 +1,6 @@
+name: fcs-gx
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - ncbi-fcs-gx

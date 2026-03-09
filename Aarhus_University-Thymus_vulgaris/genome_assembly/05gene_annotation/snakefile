@@ -1,0 +1,75 @@
+import csv
+import os
+
+OUTMAIN = config["outmain"]
+
+rna_libraries_tsv = config["rna_libraries_tsv"]
+if not os.path.isabs(rna_libraries_tsv):
+    rna_libraries_tsv = os.path.join(workflow.basedir, rna_libraries_tsv)
+
+
+def load_rna_libraries_tsv(path):
+    libraries = {}
+    with open(path) as handle:
+        for row in csv.reader(handle, delimiter="\t"):
+            if not row or row[0].strip().startswith("#"):
+                continue
+            libraries[row[0].strip()] = {
+                "r1": row[1].strip(),
+                "r2": row[2].strip(),
+            }
+    return libraries
+
+
+config["rna_libraries"] = load_rna_libraries_tsv(rna_libraries_tsv)
+
+include: "rules/rna_mapping.smk"
+include: "rules/rna_qc.smk"
+include: "rules/protein_evidence.smk"
+include: "rules/braker3.smk"
+include: "rules/annotation_qc.smk"
+include: "rules/stage_fastas.smk"
+
+
+
+
+rule do_all:
+    input:
+        expand(
+            os.path.join(OUTMAIN, "{assembly}", "braker", "braker.gtf"),
+            assembly=config["assemblies"].keys(),
+        ),
+        expand(
+            os.path.join(OUTMAIN, "{assembly}", "annotation_qc", "{assembly}.annotation_qc.summary.tsv"),
+            assembly=config["assemblies"].keys(),
+        ),
+        os.path.join(OUTMAIN, "protein_evidence", "proteins.cluster_summary.tsv"),
+
+
+
+rule do_annotation:
+    input:
+        expand(
+            os.path.join(OUTMAIN, "{assembly}", "braker", "braker.gtf"),
+            assembly=config["assemblies"].keys(),
+        ),
+   
+rule do_prepare_proteins:
+    input:
+        os.path.join(OUTMAIN, "protein_evidence", "proteins.cluster_summary.tsv"),
+
+
+rule do_map_rna_all:
+    input:
+        expand(
+            os.path.join(OUTMAIN, "{assembly}", "qc", "multiqc", "multiqc_report.html"),
+            assembly=config["assemblies"].keys(),
+        ),
+
+
+rule do_annotation_qc_all:
+    input:
+        expand(
+            os.path.join(OUTMAIN, "{assembly}", "annotation_qc", "{assembly}.annotation_qc.summary.tsv"),
+            assembly=config["assemblies"].keys(),
+        ),

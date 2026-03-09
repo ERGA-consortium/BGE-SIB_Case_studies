@@ -1,0 +1,143 @@
+import glob
+import os
+
+ID = ["YUFE_7", "YUFE_8", "YUFE_9", "YUFE_10", "YUFE_11", "YUFE_12", "YUFE_13",
+      "YUFE_14", "YUFE_15", "YUFE_16", "YUFE_17", "YUFE_18",
+      "YUFE_36", "YUFE_37", "YUFE_38", "YUFE_39", "YUFE_40", "YUFE_41", "YUFE_42"]
+
+# Reference path (reuses your alignment reference)
+REF = "../../../../reference/Chromnames_Ref/GCF_900634775.1_fGouWil2.1_genomic_chromnames.fna"
+
+# Chromosome list (as requested)
+CHROMOSOMES = [str(i) for i in range(1, 25) if i not in [23]]  # + ['MT']
+
+
+DP_MIN = 8
+DP_MAX = 60
+GQ_MIN = 25
+QUAL_MIN = 30
+MAX_MISSING = 0.85
+MISS_MAX_FRAC = 1.0 - MAX_MISSING  # 0.15, we'll print as 0.150 below to be neat
+MAC_MIN = 3
+
+# Convenience
+SAMPLES = ID  # reuses your existing ID list
+BAM = lambda sample: f"alignment/{sample}.fGouWil2.1.bam"
+
+
+rule all:
+    input:
+        "input_files/YUFE_adriatica_final.filtered.biallelic.vcf.gz",
+        #expand("alignment/{sample}.fGouWil2.1.alignment.done", sample=ID),
+        #expand("results/variants/{chrom}/final.filtered.biallelic.{chrom}.vcf.gz", chrom=CHROMOSOMES),
+        #expand("results/variants/{chrom}/final.filtered.biallelic.{chrom}.vcf.gz.tbi", chrom=CHROMOSOMES)
+
+
+# Concatenate per-sample read files into a single R1/R2 each
+rule concatenate_reads:
+    input:
+        # finds all lanes/chunks for this sample/read
+        lambda wildcards: sorted(glob.glob(
+            f"/scratch/antwerpen/grp/asvardal/projects/clingfishes/raw_reads/"
+            f"YUFE_PopGenomics_Rijeka/F24A430002388_ANIyukjR_20250210223650/{wildcards.sample}/*_{wildcards.read}.fq.gz"
+        ))
+    output:
+        "input_files/raw_reads/{sample}_{read}.fq.gz"
+    shell:
+        r"""
+        mkdir -p input_files/raw_reads
+        cat {input} > {output}
+        """
+
+rule align_reads:
+    input:
+        f    = "input_files/raw_reads/{sample}_1.fq.gz",
+        r    = "input_files/raw_reads/{sample}_2.fq.gz",
+        ref = "../../../../reference/Chromnames_Ref/GCF_900634775.1_fGouWil2.1_genomic_chromnames.fna"
+    output:
+        "alignment/{sample}.fGouWil2.1.alignment.done"
+    params:
+        bam      = "alignment/{sample}.fGouWil2.1.bam",
+        flagstat = "alignment/{sample}.fGouWil2.1.flagstat.txt"
+    threads: 8
+    shell:
+        r"""
+        bwa mem -M -t {threads} -R '@RG\tID:{wildcards.sample}\tSM:{wildcards.sample}\tPL:illumina' \
+            {input.ref} {input.f} {input.r} \
+        | samtools sort -@ {threads} -o {params.bam}
+        samtools index -@ {threads} {params.bam}
+        samtools flagstat {params.bam} > {params.flagstat}
+        touch {output}
+        """
+
+rule make_bamlist:
+    input:  expand("alignment/{sample}.fGouWil2.1.bam", sample=SAMPLES)
+    output: "results/variants/bamlist.txt"
+    shell:  r"""
+        mkdir -p results/variants
+        printf "%s\n" {input} | tr ' ' '\n' > {output}
+    """
+
+
+rule mpileup_call_chr:
+    input:
+        ref = REF,
+        fai = REF + ".fai",
+        bamlist = "results/variants/bamlist.txt"
+    output:
+        "results/variants/{chrom}/raw.{chrom}.bcf",
+        "results/variants/{chrom}/raw.{chrom}.bcf.csi"
+    threads: 4
+    shell: r"""
+        mkdir -p results/variants/{wildcards.chrom}
+        # NOTE: mpileup/call compute are mostly single-threaded; --threads speeds compression
+        bcftools mpileup -f {input.ref} -b {input.bamlist} -r {wildcards.chrom} -Ou \
+            -a FORMAT/DP,FORMAT/ADF,FORMAT/ADR \
+        | bcftools call -mv --threads {threads} -Ou \
+        | bcftools +fill-tags --threads {threads} -Ou -- -t AC,AN,AF,MAF,F_MISSING,NS \
+        | bcftools norm --threads {threads} -f {input.ref} -Ob -o {output[0]}
+        bcftools index -f {output[0]}
+    """
+
+
+# Combine genotype-masking (by DP only) + site filters → final per-chromosome VCF
+rule filter_and_finalize_chr:
+    input:
+        "results/variants/{chrom}/raw.{chrom}.bcf"
+    output:
+        vcf = "results/variants/{chrom}/final.filtered.biallelic.{chrom}.vcf.gz",
+        tbi = "results/variants/{chrom}/final.filtered.biallelic.{chrom}.vcf.gz.tbi"
+    threads: 4
+    params:
+        miss = "{:.3f}".format(1.0 - MAX_MISSING)  # prints 0.150, not 0.15000000000000002
+    shell:
+        r"""
+        # 1) Mask per-sample genotypes to missing if DP outside [DP_MIN, DP_MAX]
+        # 2) Keep biallelic SNPs, enforce site QUAL, missingness, and MAC (via AC/AN)
+        bcftools +setGT --threads {threads} {input} -- \
+            -t q -n . -i 'FMT/DP<{DP_MIN} || FMT/DP>{DP_MAX}' \
+        | bcftools view --threads {threads} -v snps -m2 -M2 -Ou \
+        | bcftools filter --threads {threads} -s LowQual -e 'QUAL<{QUAL_MIN}' -Ou \
+        | bcftools +fill-tags --threads {threads} -Ou -- -t AC,AN,AF,MAF,F_MISSING,NS \
+        | bcftools view --threads {threads} -i 'F_MISSING<={params.miss} && AC>={MAC_MIN} && (AN-AC)>={MAC_MIN}' \
+            -Oz -o {output.vcf}
+
+        tabix -@ {threads} -f {output.vcf}
+        """
+
+
+# Merge all per-chromosome filtered VCFs → single cohort VCF
+rule merge_filtered_vcfs:
+    input:
+        expand("results/variants/{chrom}/final.filtered.biallelic.{chrom}.vcf.gz",
+               chrom=CHROMOSOMES)
+    output:
+        vcf = "input_files/YUFE_adriatica_final.filtered.biallelic.vcf.gz",
+        tbi = "input_files/YUFE_adriatica_final.filtered.biallelic.vcf.gz.tbi"
+    threads: 4
+    shell:
+        r"""
+        mkdir -p input_files
+        bcftools concat --threads {threads} -Oz -o {output.vcf} {input}
+        tabix -@ {threads} -f {output.vcf}
+        """

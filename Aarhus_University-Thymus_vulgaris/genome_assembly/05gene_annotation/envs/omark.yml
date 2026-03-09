@@ -1,0 +1,7 @@
+name: omark
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - omark=0.4.1
+  - omamer=2.1.2
