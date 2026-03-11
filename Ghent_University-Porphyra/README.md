@@ -4,7 +4,9 @@ This repository includes all the scripts used to generate chromosome-level genom
 
 # Authors 
 Jordi Morcillo-Baeza, Phycology Research Group, Ghent University, Krijgslaan 281 S8, 9000 Ghent, Belgium
+
 Jessica Knoop, Phycology Research Group, Ghent University, Krijgslaan 281 S8, 9000 Ghent, Belgium
+
 Olivier De Clerck, Phycology Research Group, Ghent University, Krijgslaan 281 S8, 9000 Ghent, Belgium
 
 # Software Versions Used
