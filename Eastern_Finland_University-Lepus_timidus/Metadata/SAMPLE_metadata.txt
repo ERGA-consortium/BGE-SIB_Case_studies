@@ -1,0 +1,1206 @@
+Sample #	Day	Month	Year	Place	ETRS-TM 35FIN		Cause of Death	Hunter's evaluation		Sex	Age	Sender	Notes	Tissue -80 deg	Extracted DNA -20 deg	Purified DNA	MtDNA	Results checked	Nuclear DNA					NGS/Vienna	SNP chip/Sweden
+					N	E		Species	Code 1-5								Cytb		Tshd	Tg	Mgf	Sptbn1	Prck1		
+2	22	12	2012	Outokumpu	6957923	601670	hunted	LE	4				pale	1	1		LE	1							
+3	2	2	2013	Liperi	6943826	621715	hunted	LE	5			J. Asikainen		1	1		LE	1							
+4	2	2	2013	Liperi	6943826	621715	hunted	LE	5			J. Asikainen		1	1		LE	1							
+5	6	2	2013	Hollola, Manskivi	6775385	411330	hunted	LE	5			Markus Pekkinen		1	1		LE	1							
+6	27	2	2013	Sotkamo, Kuolaniemi	7110264	565055	hunted	LE	5			Henkka		1	1		LT	1							1
+7	2	2	2013	Rantasalmi, Putkisalon saari	6876879	575339	hunted	LE	4			M. Kunnasranta		1	1		LE	1							
+8	9	2	2013	Rantasalmi, Putkisalon saari	6876879	575339	hunted	LE	3			M. Kunnasranta		1	1		LE	1							
+9	2	2	2013	Rantasalmi, Putkisalon saari	6876879	575339	hunted	LE	3			M. Kunnasranta		1	1		LE	1							
+10	10	2	2013	Iisalmi	7047963	509228	hunted	LE	5			Timo Varis		1	1		LT	1							
+11	26	2	2013	Rautalampi, Vaajasalmi	6953665	493610	hunted	LE	5			Kari Nenonen		1	1		LE	1							
+12	23	2	2013	Urjala, Menonen Lintulantie (31140)	6769516	310939	hunted	LE	5			Niko Saha		1	1		LE	1							1
+13	22	2	2013	Mjösund, Tolfsnäsintie (Kemiönsaari)	6779277	249713	hunted	LE	5			Kaj Eriksson		1	1		LE	1							
+14	22	2	2013	Mjösund, Tolfsnäsintie (Kemiönsaari)	6779277	249713	hunted	LE	5			Kaj Eriksson		1	1		LE	1							
+15	25	2	2013	Saarijärvi, Konttimäki	6942343	400829	hunted	LE	3			Seppo Mäntymaa		1	1		LE	1							
+16	9	3	2013	Saarijärvi, Mahlu	6947292	399237	hit by car	LE	4			Seppo Mäntymaa		1	1		LE	1							
+17	23	2	2013	Saarijärvi, Konttimäki	6942343	400829	hunted	LE	5			Seppo Mäntymaa		1	1		LE	1							
+18	21	2	2013	Saarijärvi, Konttimäki	6942343	400829	hunted	LE	5			Seppo Mäntymaa		1	1		LE	1							
+19	9	1	2013	Saarijärvi, Konttimäki	6942343	400829	hunted	LE	5			Seppo Mäntymaa		1	1		LE	1							
+20	19	2	2013	Pylkönmäki, Paajala	6953376	380610	hunted	LT	1			Seppo Mäntymaa		1	1		LT	1							
+21	10	3	2013	Liperi, Kirkonkylä	6943826	621715		LE	5			Henkka		1	1		LE	1							
+22	1	3	2013	Liperi, Ylämylly	6945613	631446		LE	5			Henkka		1	1		LE	1							
+23			2013	Oulu, Kiiminki	7223468	442425	hunted	LT	1			H. Gröhn		1	1		LT	1							
+24			2013	Oulu, Kiiminki	7223468	442425	hunted	LT	1			H. Gröhn		1	1		X	1							
+25			2013	Oulu, Kiiminki	7223468	442425	hunted	LT	1			H. Gröhn		1	1		LT	1							
+26			2013	Oulu, Kiiminki	7223468	442425	hunted	LT	1			H. Gröhn		1	1		LT	1							
+27			2013	Oulu, Kiiminki	7223468	442425	hunted	LT	1			H. Gröhn		1	1		LT	1							
+27			2013	Oulu, Kiiminki	7223468	442425	hunted	LT	1			H. Gröhn		1	1		LT	1							
+28	26	2	2013	Puumala	6822304	563016	hunted	LT	1			Pentti Husu		1	1		LT	1							
+29	15	3	2013	Imatra, Vuoksennniska	6789277	598317	hit by car	LE	5			Pentti Husu		1	1		LE	1							
+30	23	2	2013	Nurmes, Ylikylä	7057871	602339	hunted	LE	5			Petri Karjalainen		1	1		LE	1							
+31	23	2	2013	Nurmes, Ylikylä	7057871	602339	hunted	LE	5			Petri Karjalainen		1	1		LE	1							
+32	23	2	2013	Nurmes, Ylikylä	7057871	602339	hunted	LE	5			Petri Karjalainen		1	1		LE	1							
+33	23	2	2013	Nurmes, Ylikylä	7057871	602339	hunted	LE	5			Petri Karjalainen		1	1		LT	1							
+34	28	2	2013	Nurmes, Ylikylä	7057871	602339	hunted	LE	5			Petri Karjalainen		1	1		LE	1							
+35			2013	Nurmes, Ylikylä	7057871	602339	hunted	LE	5			Petri Karjalainen		1	1		LT	1							
+35	8	2	2013	Ruokolahti Sikiölä	6803710	599916	hunted	LE	1			Mauri Kaljunen	Was marked as LE, checked from RADseq	1	1		LT	1							
+36	15	2	2013	Ruokolahti Reinikkala	6812288	589751	hunted	LT	1			Mauri Kaljunen		1	1		LT	1							
+37	21	3	2013	Sotkamo, Kuolaniemi	7110264	565055		LE	5			Henkka		1	1	1	LE	1							
+38	29	3	2013	Liperi, Ylämylly	6945613	631446		LE	5			Henkka		1	1		LE	1							
+39	29	3	2013	Liperi, Ylämylly	6945613	631446		LE	5			Henkka		1	1		LE	1							
+40	10	4	2013	Joensuu, Keskusta	6944337	641472	found dead	LE	5				sairas? Eviralle	1	1		LE	1							
+41	5	4	2013	Kuhmo, Vepsän kylä 	7095241	611320	hit by car	LT	1			Mervi Kunnasranta		1	1		LT	1							
+42	24	2	2013	Kouvola, Kuusankoski	6752454	478495		LE	3			Risto Nyström 		1	1		LE	1							
+43	22	9	2013	Kotka, Kirkonmaan saari	6995336	501949	hunted	LT	2			Simo & Paula Laukkanen		1	1		LT	1							
+44	6	11	2013	Kotka, Kirkonmaan saari	6995336	501949		LT	1			Simo & Paula Laukkanen		1	1		LT	1							
+45	13	9	2013	Lieksa, Kelvä	6997923	656165		LE	5			Seppo Nesterinen		1	1		LE	1							
+46	13	9	2013	Lieksa, Kelvä	6997923	656165		LT	1			Seppo Nesterinen		1	1		LT								
+47	13	9	2013	Lieksa, Kelvä	6997923	656165		LT	1			Seppo Nesterinen		1	1		LT	1							
+48	27	2	2013	Ruokolahti, Talkkuna	6810749	575704		LE	4			Toni Tynkkynen		1	1		LE	1							
+49	8	10	2013	Ruokolahti, Talkkuna	6810749	575704		LE	4			Toni Tynkkynen		1	1		LE	1							
+50	7	10	2013	Ruokolahti, Talkkuna	6810749	575704		LE	3			Toni Tynkkynen		1	1		LE	1							
+51	7	10	2013	Ruokolahti, Talkkuna	6810749	575704		LE	3			Toni Tynkkynen		1	1		LE	1							
+52			2013	Kouvola	6749051	485180		LE	5			Evira	E20131004-084	1	1		LE	1							
+53	16	9	2013	Iitti	6750693	463367		LE	5			Evira	E20130918-056	1	1		LE	1							
+54	23	5	2013	Oulu	7210860	427991		LE	5			Evira	E20130523-103	1	1		LE	1							
+55	17	10	2013	Parikkala	6826974	631793		LE	5			Evira	E20131022-097	1	1		LE	1							
+56	24	8	2013	Heinävesi	6923142	583320		LT	1			Evira	E20130827-091	1	1		LT	1							
+57	9	9	2013	Kontiolahti	6962774	645191		LE	5			Evira	E20130912-037	1	1		LE	1							
+58	25	8	2013	Iisalmi	7047963	509228		LE	5			Evira	E20130827-084	1	1		LE	1							
+59	16	9	2013	Pori	6827488	224391		LE	5			Evira	E20130918-066	1	1		LE	1							
+60			2013	Kokkola	7086341	307353		LT	1			Evira	E20130919-099	1	1		LT	1							
+61	27	9	2013	Siilinjärvi	6994816	532103		LT	1			Evira	E20131002-127	1	1		LT	1							
+62	18	5	2013	Kaavi	6983872	575078		LT	1			Evira	E20130522-019	1	1		LT	1							
+63	11	4	2013	Oulu	7210860	427991		LE	5			Evira	E20130412-083	1	1		LE	1							
+64	19	8	2013	Rauma	6790411	204332		LE	5			Evira	E20130822-010	1	1		LE	1							1
+65	5	8	2013	Kolari	7471450	361845		LT	1			Evira	E20130806-066	1	1		LT	1							
+66			2013	Lieksa	7023933	650516		LT	1			Evira	E20130726-050	1	1		LT	1							1
+67	3	8	2013	Tervola	7330746	401315		LT	1			Evira	E20130806-067	1	1		LT	1							1
+68	10	5	2013	Paltamo	7142903	540104		LT	1			Evira	E20130515-129	1	1		LT	1							
+69			2013	Kouvola	6749051	485180		LE	5			Evira	E20130913-116	1	1		LE	1							
+70	5	8	2013	Savonlinna	6861104	598799		LE	5			Evira	E20130807-063	1	1		LE	1							1
+71			2013	Siilinjärvi	6994816	532103		LE	5			Evira	E20130903-007	1	1		LE	1							
+72	25	8	2013	Siilinjärvi	6994816	532103		LE	5			Evira	E20130827-089	1	1		LT	1							1
+73	26	4	2013	Pertunmaa	6818940	472541		LE	5			Evira	E20130430-053	1	1		LE	1							
+74	23	3	2013	Luvia	6805346	373413		LE	5			Evira	E20130326-121	1	1		LE	1							
+75	3	2	2013	Närpiö	6940101	208672		LE	5			Evira	E20130220-120	1	1		LE	1							1
+76	17	2	2013	Lemi	6770117	543587		LE	5			Evira	E20130227-134	1	1		LE	1							
+77	2	2	2013	Kempele	7200729	427825		LE	5			Evira	E20130227-007	1	1		LE	1							
+78	1	10	2013	Vieremä	7069149	500761		LE	5			Evira	E20131003-100	1	1		LT	1							
+79	20	6	2013	Kitee	6889664	664393		LE	5			Evira	E20130626-028	1	1		LE	1							
+80	17	5	2013	Maaninka	7003497	515743		LT	1			Evira	E20130521-073	1	1		LT	1							
+81	8	10	2013	Hailuoto	7211365	392117		LT	1			Evira	E20131010-047	1	1		LT	1							1
+82	12	10	2013	Kitee	6889664	664393		LT	1			Evira	E20131016-041	1	1		LT	1							1
+83	6	8	2013	Lappeenranta	6769424	563267		LE	5			Evira	E20130808-022	1	2	1	LT	1							1
+84			2013	Varkaus	6909918	545452		LE	5			Evira	E20131007-044	1	1		LT	1							
+85	10	10	2013	Savonlinna	6861104	598799		LE	5			Evira	E20131016-034	1	1		LE	1							
+86	29	9	2013	Mäntyharju	6810666	492770		LE	5			Evira	E20131002-122	1	2	1	X	1							
+87	27	8	2013	Kontiolahti	6962774	645191		LE	5			Evira	E20130830-031	1	1		LE	1							
+88	14	9	2013	Kotka	6703257	496763		LE	5			Evira	E20130917-109	1	1		LE	1							
+89			2013	Kemiönsaari	6677169	264237		LE	5			Evira	E20130521-127	1	1		LE	1							
+90			2013	Vieremä	7069149	500761		LE	5			Evira	E20130305-020	1	1		LE	1							
+91	3	3	2013	Pieksämäki	6907453	508063		LE	5			Evira	E20130314-028	1	1		LE	1							
+92			2013	Oulu	7210860	427991		LE	5			Evira	E20130226-020	1	1		LE	1							
+93	23	2	2013	Salo	6701088	285993		LE	5			Evira	E20130227-076	1	1		LE	1							
+94	23	2	2013	Siilinjärvi	6994816	532103		LE	5			Evira	E20130226-075	1	1		X	1							
+95	23	2	2013	Keitele	7005670	466819		LT	1			Evira	E20130228-104	1	1		LT	1							
+96	28	9	2013	Pielavesi	7011500	487718		LT	1			Evira	E20131001-112	1	1		LT	1							
+97	4	10	2013	Kitee	6889664	664393		LE	5			Evira	E20131009-102	1	1		LE	1							
+98	13	10	2013	Kitee	6889664	664393		LE	5			Evira	E20131016-040	1	1		LE	1							
+99	21	10	2013	Pori	6827488	224391		LE	5			Evira	E20131023-247	1	1		LE	1							
+100			2013	Saarijärvi	6954310	409790		LT	1			Evira	E20130910-027	1	1		LT	1							
+101	2	11	2013	Joensuu	6944337	641472		LT	1			Jani Kettunen		1	1		LT	1							
+102	3	11	2013	Joensuu	6944337	641472		LT	1			Jani Kettunen		1	1		LT	1							
+103	24	8	2013	Joensuu	6944337	641472		LE	5			Mia Valtonen	yliopistokatu	1	1		LE	1							
+104	19	10	2013	Ruokolahti, Talkkuna	6810749	575704		LE	5			Toni Tynkkynen		1	1		LE	1							
+105	6	11	2013	Ruokolahti, Honkalampi	6816438	406039		LT	1			Toni Tynkkynen		1	1		LT	1							
+106	9	11	2013	Joensuu	6944337	641472		LT	1			Jani Kettunen		1	1		LT	1							
+107	10	11	2013	Joensuu	6944337	641472		LT	1			Jani Kettunen		1	1		LT	1							
+108	23	10	2013	Lieksa, Kivivaara	7057582	658937	hunted	LT	1			040-7596802		1	1		LT	1							
+109	24	11	2013	Lieksa, Jamali	7027733	644318	hunted	LT	1			040-7596802		1	1		LT	1							
+110	24	10	2013	Lieksa	7023933	650516	hunted	LT	1			040-7596802		1	1		LT	1							
+111	31	10	2013	Lieksa, Kivivaara	7057582	658937	hunted	LT	1			040-7596802		1	1		LT	1							
+112	4	11	2013	Lieksa, Jamali	7027733	644318	hunted	LT	1			040-7596802		1	1		LT	1							
+113	4	11	2013	Lieksa, Jamali	7027733	644318	hunted	LT	1			040-7596802		1	1		LT	1							
+114	23	10	2013	Lieksa, Kivivaara	7057582	658937	hunted	LT	1			040-7596802		1	1		LT	1							
+115	26	10	2013	Lieksa, Jamali	7027733	644318	hunted	LE	5			040-7596802		1	1	1	LT	1							
+116	27	11	2013	Lieksa, Jamali	7027733	644318	hunted	LT	1			040-7596802		1	1		LT	1							
+117	5	11	2013	Lieksa, Jamali	7027733	644318	hunted	LT	1			040-7596802		1	1	1	LT	1							
+118	5	11	2013	Lieksa, Jamali	7027733	644318	hunted	LT	1			040-7596802		1	1		LT	1							
+119	18	11	2013	Taipalsaari, Illukansaari	6779045	550681	hunted	LT	1			Markku Kaulio		1	1		LT	1							
+120	6	1	2014	Ilomantsi	6955814	701293	hunted	LT	1			Ismo Pölönen		1	1		LT	1							
+121	24	11	2013	Urimolahti, Varpaisjärvi	7025929	537736	hunted	LT	1			Eila Järvinen		1	1		LT	1							
+122	24	11	2013	Urimolahti, Varpaisjärvi	7025929	537736	hunted	LT	1			Eila Järvinen		1	1		LT	1							
+123	24	11	2013	Urimolahti, Varpaisjärvi	7025929	537736	hunted	LT	1			Eila Järvinen		1	1		LT	1							
+124	24	11	2013	Urimolahti, Varpaisjärvi	7025929	537736	hunted	LT	1			Eila Järvinen		1	1		LT	1							
+125	6	12	2013	Urimolahti	7024669	545455	hunted	LT	1			Eila Järvinen		1	1		LT	1							
+126	6	10	2013	Varpaisjärvi, Ruunakorpi	7024013	543322	hunted	LE	5			Eila Järvinen		1	1		LT	1							
+127	29	11	2013	Varpaisjärvi	7025929	537736	hunted	LT	1			Eila Järvinen		1	1		LT	1							
+128	24	9	2013	Varpaisjärvi	7025929	537736	hunted	LT	1			Eila Järvinen		1	1		LT	1							
+129			2013	Lapinlahti	7025525	518596	hunted	LT	1			Eila Järvinen	Lähettäjä ei ilmoittanut kaikkia tietoja	1	1		LT	1							
+130	27	10	2013	Urimolahti, Varpaisjärvi	7025929	537736	hunted	LT	1			Eila Järvinen		1	1		LT	1							
+131	27	10	2013	Urimolahti, Varpaisjärvi	7025929	537736	hunted	LT	1			Eila Järvinen		1	1		LT	1							
+132	3	11	2013	Lapinlahti, Urimolahti	7024669	545455	hunted	LT	1			Eila Järvinen		1	1		LT	1							
+133	3	11	2013	Lapinlahti, Urimolahti	7024669	545455	hunted	LT	1			Eila Järvinen		1	1	1	LT	1							
+134	20	10	2013	Lapinlahti, Urimolahti	7024669	545455	hunted	LT	1			Pertti Järvinen		1	1		LT	1							
+135	20	10	2013	Lapinlahti, Urimolahti	7024669	545455	hunted	LT	1			Eila Järvinen		1	1		LT	1							
+136	6	10	2013	Varpaisjärvi, Ruunakorpi	7024013	543322	hunted	LT	1			Eila Järvinen		1	1		LT	1							
+137	26	10	2013	Lapinlahti, Urimolahti	7024669	545455	hunted	LT	1			Pertti Järvinen		1	1		LT	1							
+138	7	9	2013	Urimolahti, Varpaisjärvi	7025929	537736	hunted	LT	1			Tommi Järveläinen	Nuori yksilö	1	1		LT	1							
+139	20	10	2013	Lapinlahti, Urimolahti	7024669	545455	hunted	LT	1			Pertti Järvinen		1	1		LT	1							
+140	30	11	2013	Varpaisjärvi, Ruunakorpi	7024013	543322	hunted	LT	1			Eila Järvinen		1	1		LT	1							
+141	21	9	2013	Urimolahti	7024669	545455	hunted	LT	1			Eila Järvinen		1	1		LT	1							
+142	26	10	2013	Urimolahti	7024669	545455	hunted	LT	1			Pertti Järvinen		1	1		LT	1							
+143	8	11	2013	Varpaisjärvi, Ruunakorpi	7024013	543322	hunted	LT	1			Eila Järvinen		1	1		LT	1							
+144	8	11	2013	Varpaisjärvi, Ruunakorpi	7024013	543322	hunted	LT	1			Eila Järvinen	Lähettäjä ei ilmoittanut kaikkia tietoja	1	1	1	LT	1							
+145			2013	Lapinlahti	7025525	518596	hunted	LT	1			Eila Järvinen	Lähettäjä ei ilmoittanut kaikkia tietoja	1	1		LT	1							
+146			2013	Lapinlahti	7025525	518596	hunted	LT	1			Eila Järvinen	Lähettäjä ei ilmoittanut kaikkia tietoja	1	1		LT	1							
+147			2013	Lapinlahti	7025525	518596	hunted	LT	1			Eila Järvinen	Lähettäjä ei ilmoittanut kaikkia tietoja	1	1		LT	1							
+148			2013	Lapinlahti	7025525	518596	hunted	LT	1			Eila Järvinen	Lähettäjä ei ilmoittanut kaikkia tietoja	1	1		LT	1							
+149			2013	Lapinlahti	7025525	518596	hunted	LT	1			Eila Järvinen	Lähettäjä ei ilmoittanut kaikkia tietoja	1	1		LT	1							
+150			2013	Lapinlahti	7025525	518596	hunted	LT	1			Eila Järvinen	Lähettäjä ei ilmoittanut kaikkia tietoja	1			LT	1							
+151	29	9	2013	Ala-Temmes	7183186	431133	hunted	LT	3			Hannu Pietiläinen	Oli merkitty LE?	1	1		LE	1							
+152	29	9	2013	Ala-Temmes	7183186	431133	hunted	LT	3			Hannu Pietiläinen	Oli merkitty LE?	1	1		LT	1							
+153	23	11	2013	Ala-Temmes	7183186	431133	hunted	LE	5			Hannu Pietiläinen		1	1		LE	1							
+154	24	11	2013	Ala-Temmes	7183186	431133	hunted	LE	5			Hannu Pietiläinen		1	1		LE	1							
+155	5	11	2013	Iisalmi, Viitaa	7051147	517291	hunted	LE	5			Osmo Heikkinen		1	1		LE	1							
+156	11	10	2013	Iisalmi, Viitaa	7051147	517291	hunted	LT	2			Osmo Heikkinen		1	1		LT	1							
+157	10	11	2013	Iisalmi, Viitaa	7051147	517291	hunted	LE	5			Osmo Heikkinen		1	1		LE	1							
+158	10	11	2013	Iisalmi, Viitaa	7051147	517291	hunted	LT	1			Osmo Heikkinen		1	1		LT	1							
+159	10	11	2013	Iisalmi, Viitaa	7051147	517291	hunted	LT	1			Osmo Heikkinen		1	1		LE	1							1
+160	28	10	2013	Vieremä	7069150	500762	hunted	LT	1			Osmo Heikkinen		1	1		LT	1							
+161	28	10	2013	Vieremä	7069150	500762	hunted	LT	1			Osmo Heikkinen		1	1		LT	1							
+162	28	10	2013	Vieremä	7069150	500762	hunted	LT	1			Osmo Heikkinen		1	1		LT	1							
+163	11	10	2013	Iisalmi, Viitaa	7051147	517291	hunted	LT	1			Osmo Heikkinen		1	1		LT	1							
+164	11	10	2013	Iisalmi, Viitaa	7051147	517291	hunted	LT	1			Osmo Heikkinen		1	1		LT	1							
+165	12	11	2013	Vieremä	7069150	500762	hunted	LT	1			Osmo Heikkinen		1	1		LT	1							
+166	12	11	2013	Vieremä	7069150	500762	hunted	LT	1			Osmo Heikkinen		1	1		LT	1							
+167	2	11	2013	Iisalmi, Viitaa	7051147	517291	hunted	LT	1			Osmo Heikkinen		1	1		LT	1							
+168	2	11	2013	Iisalmi, Viitaa	7051147	517291	hunted	LT	1			Osmo Heikkinen		1	1		LT	1							
+169	2	11	2013	Iisalmi, Viitaa	7051147	517291	hunted	LT	1			Osmo Heikkinen		1	1		LT	1							
+170	2	11	2013	Iisalmi, Viitaa	7051147	517291	hunted	LT	1			Osmo Heikkinen		1	1	1	LT	1							
+171			2013	Puumala, Lieviskä	6825098	591705	hunted	LT	1			Osmo Siilin		1	1		LT	1							
+172			2013	Puumala, Lieviskä	6825098	591705	hunted	LT	1			Osmo Siilin		1	1		LT	1							
+173			2013	Puumala, Lieviskä	6825098	591705	hunted	LT	1			Osmo Siilin		1	2	1	LT	1							
+174			2013	Puumala, Lieviskä	6825098	591705	hunted	LT	1			Osmo Siilin		1	1		LT	1							
+175			2013	Ruokolahti, Virtoinmäki	6810674	578252	hunted	LT	1			Osmo Siilin		1	1		X	1							
+176			2013	Ruokolahti, Virtoinmäki	6810674	578252	hunted	LT	1			Osmo Siilin		1	1	1	LT	1							
+177			2013	Ruokolahti, Virtoinmäki	6810674	578252	hunted	LT	1			Osmo Siilin		1	1		LT	1							
+178			2013	Ruokolahti, Lökkiö	6817935	592606	hunted	LT	1			Osmo Siilin		1	1		LT	1							
+179			2013	Ruokolahti, Lökkiö	6817935	592606	hunted	LT	1			Osmo Siilin		1	1		LT	1							
+180			2013	Ruokolahti, Vihniälä	6797006	597740	hunted	LT	1			Osmo Siilin		1	1		LT	1							1
+181			2013	Ruokolahti, Vihniälä	6797006	597740	hunted	LT	1			Osmo Siilin		1	1		LT	1							
+182			2013	Ristiina, Lintuniemi	6813497	516751	hunted	LE	5			Osmo Siilin		1	1		LE	1							
+183			2013	Ristiina, Lintuniemi	6813497	516751	hunted	LT	1			Osmo Siilin		1	1	1	LT	1							
+184			2013	Ristiina, Lintuniemi	6813497	516751	hunted	LT	1			Osmo Siilin		1	1	1	LT	1							
+185			2013	Puumala, Lieviskä	6825098	591705	hunted	LT	1			Osmo Siilin		1	1		LT	1							
+186			2013	Ruokolahti, Lampila	6802426	597491	hunted	LE?	3			Osmo Siilin		1	1	1	LT	1							
+187			2013	Ruokolahti, Lampila	6802426	597491	hunted	LE?	3			Osmo Siilin		1	1		LT	1							
+188			2013	Ruokolahti, Lampila	6802426	597491	hunted	LE?	3			Osmo Siilin		1	1		LT	1							
+189			2013	Ruokolahti, Lampila	6802426	597491	hunted	LT	1			Osmo Siilin		1	1		LT	1							
+190	19	10	2013	Mikkeli, Vehmaskylä	6852997	521480	hunted	LE	5			Jarmo Liukkonen		1	1		LE	1							
+191	8	12	2013	Hirvensalmi, Hurrilan kylä	6839300	479438	hunted	LT	1			Juha Kämppi		1	1		LT	1							
+192	8	12	2013	Hirvensalmi, Hurrilan kylä	6839300	479438	hunted	LE	5			Juha Kämppi		1	1		LE	1							
+193	4	12	2013	Hirvensalmi, Hurrilan kylä	6839300	479438	hunted	LE	5			Juha Kämppi		1	1		LE	1							
+194	8	12	2013	Hirvensalmi, Hurrilan kylä	6839300	479438	hunted	LE	5			Juha Kämppi		1	1		LE	1							
+195	8	12	2013	Hirvensalmi, Hurrilan kylä	6839300	479438	hunted	LT	1			Juha Kämppi		1	1	1	LT	1							
+196	22	12	2013	Mikkeli, Rahula	6843316	522842	hunted	LT	1			Kari Hämäläinen		1	1	1	LT	1							
+197	22	12	2013	Mikkeli, Rahula	6843316	522842	hunted	LT	1			Kari Hämäläinen		1	1		LT	1							
+198	14	11	2013	Rautalampi, Hoikka	6944275	494889	hunted	LT	1			Vilho Hänninen		1	1		LT	1							
+199	3	12	2013	Rautalampi, Vihtalahti	6965794	483802	hunted	LT	1			Vilho Hänninen		1	1	1	LT	1							
+200	8	12	2013	Rautalampi, Tervaharju	6952383	484356	hunted	LT	1			Vilho Hänninen		1	1	1	LT	1							
+201	17	12	2013	Rautalampi, Harju	6952383	484356	hunted	LT	1			Vilho Hänninen		1	1		LT	1							1
+202	12	11	2013	Rautalampi, Kirppumäki	6939858	496730	hunted	LE	5			Vilho Hänninen		1	1		LT	1							
+203	2	12	2013	Pieksämäki, Vanaja, Alakylä	6915151	488180	hunted	LT	1			Vilho Hänninen		1	1		LE	1							
+204	29	11	2013	Pieksämäki, Vanaja, Alakylä	6915151	488180	hunted	LT	1			Vilho Hänninen		1	1		LT	1							
+205	20	11	2013	Pieksämäki, Vanaja, Alakylä	6915151	488180	hunted	LT	1			Vilho Hänninen		1	1		LT	1							
+206	11	12	2013	Sastamala, Koskikartano	6808564	281285	hunted	LT	1			Vilho Hänninen		1	1		LT	1							1
+207	16	10	2013	Juuka, Tanssikangas, Lehtolampi	7015139	585891	hunted	LE	5			L. Ruppa		1	1		LE	1							
+208		9	2013	Juuka, Raholajärvi	7008969	589104	hunted	LT	1			Pasi Räsänen		1	1		LT	1							
+209		9	2013	Juuka, Lehtolampi, 	7015713	586427	hunted	LT	1			Pasi Räsänen		1	1		LT	1							
+210		9	2013	"Juuka, ""Korkalainen"""	7014304	613232	hunted	LT	1			Pasi Räsänen		1	1		LT	1							
+211	29	9	2013	Jännevirta, Lyytilänmäki	6982452	541064	hunted	LE?	3			Teuvo Laitinen		1	1		LT	1							
+212	11	9	2013	Jännevirta, Uuhilahti	6981704	538122	hunted	LT	1			Teuvo Laitinen		1	1		LT	1							
+213	29	9	2013	Jännevirta, Lyytilänmäki	6982452	541064	hunted	LT	1			Teuvo Laitinen		1	1		LT	1							
+214	9	1	2014	Puumala, Suurpäänniemi	6821060	574808	hunted	LT	1			Toni Tynkkynen		1	1		LT	1							
+215	12	1	2014	Nousiainen, Valpperi, Sunintie	6734071	239166	hunted	LE	5			Olavi Salin		1	1		LE	1							
+216	16	2	2014	Joensuu, Noljakka	6947001	637687	hunted	LE	5			Jaakko Pohjoismäki		1	1		LE	1							
+217			2013	Siilinjärvi, Jännevirta	6982452	541064	hunted	LT	1			Teuvo Laitinen		1	1		LT	1							
+218			2013	Siilinjärvi, Jännevirta	6982452	541064	hunted	LT	1			Teuvo Laitinen		1	1		LT	1							
+219	16	9	2013	Siilinjärvi, Uuhilahti	6981704	538122	hunted	LT	1			Teuvo Laitinen		1	1		LT	1							
+220	16	9	2013	Siilinjärvi, Uuhilahti	6981704	538122	hunted	LT	1			Teuvo Laitinen		1	1		LT	1							
+221	1	9	2013	Juuka, Raholajärvi	7008969	589104	hunted	LT	1			Teuvo Laitinen		1	1		LT	1							
+222	19	11	2013	?	?	?	hunted	LT	?			Sarvine?		1	1		LT	1							
+223	11	2	2014	Oulainen, Irvanperä	7128900	388292	hunted	LT	1			Pekka Seppinen		1	1	1	LT	1							
+224	8	1	2014	Liperi, Vaivio	6952165	627103	hunted	LT	1			Seppo Pietarinen		1	1		LT	1							
+225	14	10	2013	Liperi, Vaivio	6952165	627103	hunted	LT	1			Seppo Pietarinen		1	1		LT	1							
+226	16	9	2013	Liperi, Vaivio	6952165	627103	hunted	LT	5			Seppo Pietarinen	LT based on RADseq	1	1	1	LT	1							
+227	18	1	2014	Ruokolahti, Talkkuna	6810749	575704	hunted	LE?	3			Toni Tynkkynen		1	1		LE	1							
+228	7	12	2013	Joensuu, Utra	6946763	646775	hit by car	LE	5			Rauni Nyman		1	1		LE	1							
+229	23	12	2013	Kajaani, Salmijärvi	7130419	541578	hunted	LE	5			Tuomas Niskanen		1	1	1	LE	1							1
+230	9	2	2014	Siilinjärvi, Mikkajärvi	7005751	526435	hunted	LE?	3			Erkki Saarijärvi		1	1		LT	1							
+231	4	2	2014	Ruokolahti, Talkkuna	6810749	575704	hunted	LT	1			Toni Tynkkynen		1	1		LT	1							
+232	21	12	2013	Ala-Temmes, Parras	7187736	431333	hunted	LT	1			Hannu Pietiläinen		1	1		LT	1							
+233		9	2013	Ala-Temmes, Vaaranmaa	7182942	431909	hunted	LT	1			Hannu Pietiläinen		1	1		LT	1							
+234	29	12	2013	Tyrnävä, Teerikaarto	7175386	434410	hunted	LT	1			Hannu Pietiläinen		1	1	1	LT	1							
+235	15	10	2013	Kuhmo, Lammasperä, Tyvelä	7105362	638496	hunted	LT	1			Kauko Huotari		1	1		LT	1							
+236	2	9	2013	Kuhmo, Lammasperä, Tyvelä	7105362	638496	hunted	LT	1			Kauko Huotari		1	1		LT	1							
+237			2013	Kuhmo, Lammasperä, Tyvelä	7105362	638496	hunted	LT	1			Kauko Huotari		1	1		LT	1							
+238	22	11	2013	Kuhmo, Lammasperä, Tyvelä	7105362	638496	hunted	LT	1			Kauko Huotari		1	1		LE	1							1
+239	3	12	2013	Kuhmo, Korpisalmi, Purnuvaara	7137320	605558	hunted	LT	1			Kauko Huotari		1	1		X	1							
+240	9	2	2014	Joensuu, Siikavaara	6973022	670853	hunted	LT	1			Jaakko Pohjoismäki		1	1		LT	1							
+241	25	1	2014	Sastamala, Seposentie 10	6815749	294006	hunted	LE	5	M		Mika Lauhamo		1	1		LE	1							
+242	3	9	2014	Kutala, pelto	6815648	293895	hunted	LE	5	F		Mika Lauhamo		1	1		LE	1							
+243			2014	Lappeenranta	6769424	563267	hunted	LE	5			Riku Aapro		1	1		LE	1							
+244			2014	Lappeenranta	6769424	563267	hunted	LE	5			Riku Aapro		1	1	1	LE	1							
+245			2014	Lappeenranta	6769424	563267	hunted	LE	5			Riku Aapro		1	1		LT	1							
+246			2014	Lappeenranta	6769424	563267	hunted	LE	5			Riku Aapro		1	1		LE	1							
+247			2014	Lappeenranta	6769424	563267	hunted	LT	1			Riku Aapro		1	1		LT	1							
+248			2014	Lappeenranta	6769424	563267	hunted	LT	1			Riku Aapro		1	1	1	LT	1							
+249			2014	Lappeenranta	6769424	563267	hunted	LT	1			Riku Aapro		1	1		LT	1							
+250			2014	Lappeenranta	6769424	563267	hunted	LT	1			Riku Aapro		1	1		LT	1							
+251			2014	Lappeenranta	6769424	563267	hunted	LT	1			Riku Aapro		1	1		LT	1							
+252			2014	Lappeenranta	6769424	563267	hunted	LT	1			Riku Aapro		1	1		LT	1							
+253			2014	Lappeenranta	6769424	563267	hunted	LT	1			Riku Aapro		1	1		LT	1							
+254			2014	Lappeenranta	6769424	563267	hunted	LT	1			Riku Aapro		1	1		LT	1							
+255			2014	Lappeenranta	6769424	563267	hunted	LT	1			Riku Aapro		1	1		LT	1							
+256	4	2	2014	Elimäki, Villikkala	6729651	476977	hunted	LE	5			Paavo Arola		1	1		LE	1							1
+257	6	2	2014	Pyhtää, Hirvikoski	6718662	480610	hunted	LT	1			Paavo Arola		1	1	1	LT	1							
+258	23	2	2014	Yli-Olhava	7270488	434175	hunted	LT	1			Janne Ervasti		1	1		LT	1							
+259	24	1	2014	Yli-Olhava	7270488	434175	hunted	LT	1			Janne Ervasti		1	1		LT	1							
+260	9	11	2013	Yli-Olhava	7270488	434175	hunted	LT	1			Janne Ervasti		1	1		LT	1							
+261	19	9	2013	Yli-Olhava	7270488	434175	hunted	LT	1			Janne Ervasti		1	2	1	X	1							
+262	9	2	2014	Yli-Olhava	7270488	434175	hunted	LT	1			Janne Ervasti		1	1		LT	1							
+263	30	11	2013	Rautjärven Latvajärvi, Longanmäki	6810219	614949	hunted	LE?	3			Jorma Sorvali		1	1	1	LT	1							
+264	25	1	2014	Ruokolahti, Lassila, Savisienkylä	6788267	610248	hunted	LE	5			Jorma Sorvali	DNA sakkainen	1	1	1	LE	1							
+265	4	12	2014	Ruokolahti, Lassila, Vaitti	6786867	607878	hunted	LT	1			Jorma Sorvali		1	1		LT	1							
+266	13	2	2014	Pedersören kunta, Lövö, Vilttorpet	7055720	288293	hunted	LT	1			Mattias Kanchos		1	1		LT	1							1
+267	11	2	2014	Pedersören kunta, Sundby, Degernäs	7062432	282289	hunted	LT	1			Mattias Kanchos		1	1		LT	1							
+268	12	3	2014	Pedersören kunta, Pännäinen, keskusta	7059510	291505	hunted	LE	5			Mattias Kanchos		1	1	1	LE	1							
+269	17	11	2013	Tuusniemi	6965565	575862	hunted	LT	1			Heidi Lukin		1	1		LT	1							
+270	12	1	2014	Tuusniemi	6965565	575862	hunted	LT	1			Heidi Lukin		1	1		LT	1							
+271	8	12	2013	Rautalampi?	6943618	491165	hunted	LE?	3			Heidi Lukin		1	1		LT	1							
+272	24	10	2013	Tuusniemi	6965565	575862	hunted	LT	1			Heidi Lukin		1	1		LT	1							
+273	28	9	2013	Rantasalmi	6882538	567955	hunted	LE?	3			Heidi Lukin		1	1		LT	1							
+274	13	10	2013	Rantasalmi	6882538	567955	hunted	LT	1			Heidi Lukin		1	1		LT	1							
+275	13	11	2013	Tuusniemi	6965565	575862	hunted	LT	1			Heidi Lukin		1	1		LT	1							
+276	2	2	2014	Sotkamo, Kiviranta	7103390	558062	hunted	LT	1			Ilkka Määttä		1	1		X	1							
+277	2	2	2014	Sotkamo, Kiviranta	7103390	558062	hunted	LT	1			Ilkka Määttä		1	1		LT	1							
+278	23	2	2014	Sotkamo, Vaarankylä	7107958	559442	hunted	LE	5			Ilkka Määttä		1	1		LE	1							
+279	29	9	2013	Sotkamo, Laajanniemi	7107216	564053	hunted	LE	5			Ilkka Määttä	DNA sakkainen	1	1		X	1							
+280	22	12	2013	Sotkamo, Kantola (?)	7112566	567273	hunted	LE	5			Ilkka Määttä		1	1	1	LE	1							
+281	6	12	2013	Sotkamo, Kiviranta, Laitila	7101858	558570	hunted	LT	1			Ilkka Määttä		1	1		LT	1							
+282	6	10	2013	Sotkamo, Paakinmäki	7130232	558623	hunted	LE?	3			Ilkka Määttä	NÄYTE LOPPUNUT! Pakastimessa eristettyä DNA:ta		1		LT	1							
+283	29	12	2013	Sotkamo, Laajanniemi	7107216	564053	hunted	LT	1			Ilkka Määttä		1	1		LT	1							
+284	29	9	2013	Sotkamo, Laajanniemi	7107216	564053	hunted	LE	5			Ilkka Määttä	DNA sakkainen	1	1		LE	1							
+285	3	11	2013	Sotkamo, Laajanniemi	7107216	564053	hunted	LT	2			Ilkka Määttä	DNA sakkainen	1	1		LT	1							
+286	23	2	2014	Vuokatti, Tikantie	7114548	561431	hunted	LE	5			Ilkka Määttä		1	1		LE	1							
+287		2	2014	Ylivieska	7107185	380504	hunted	LT	1			Miikka Moilanen		1	1		LT	1							
+288		2	2014	Ylivieska	7107185	380504	hunted	LT	1			Miikka Moilanen		1	1		LT	1							
+289		2	2014	Ylivieska	7107185	380504	hunted	LT	1			Miikka Moilanen		1	1		LT	1							
+290	13	11	2013				hunted	LE	5			Miikka Moilanen		1	1		LE	1							
+291	25	1	2014	Mynämäki	6738580	226317	hunted	LE	5			Miikka Moilanen		1	1		LE	1							
+292	3	10	2013	Tikkala, Keski-Suomi	6891468	420169	hunted	LT	1			Marko Oksanen	DNA sakkainen	1	1		LT	1							
+293	3	2	2014	Tikkala, Keski-Suomi	6891468	420169	hunted	LT	1			Marko Oksanen		1	1		LT	1							
+294	13	10	2013	Nilsiä	7009163	554426	hunted	LT	1			Marko Oksanen		1	1		LT	1							
+295	10	9	2013	Tikkala, Keski-Suomi	6891468	420169	hunted	LT	1			Marko Oksanen		1	1		LT	1							
+296	6	2	2014	Nilsiä	7009163	554426	hunted	LT	1			Marko Oksanen		1	1		LT	1							
+297	5	12	2013	Nilsiä	7009163	554426	hunted	LT	1			Marko Oksanen		1	1		LT	1							
+298	11	11	2013	Hankasalmi	6917788	470848	hunted	LT	1			Marko Oksanen		1	1		LT	1							
+299	5	9	2013	Hankasalmi	6917788	470848	hunted	LT	1			Marko Oksanen		1	1		LT	1							
+300	30	10	2013	Tikkala, Keski-Suomi	6891468	420169	hunted	LT	1			Marko Oksanen		1	1		LT	1							
+301	10	2	2014	Helsinki, Viikki	6677754	390525	hunted	LE	5			Antti Piironen		1	1		LE	1							
+302	10	2	2014	Helsinki, Viikki	6677754	390525	hunted	LE	5			Antti Piironen		1	1		LE	1							
+303	10	2	2014	Helsinki, Viikki	6677754	390525	hunted	LE	5			Antti Piironen		1	1		LE	1							
+304	10	2	2014	Helsinki, Viikki	6677754	390525	hunted	LE	5			Antti Piironen		1	1		LE	1							
+305	10	2	2014	Helsinki, Viikki	6677754	390525	hunted	LE	5			Antti Piironen		1	1		LE	1							
+306	12	1	2014	Helsinki, Viikki	6677754	390525	hunted	LE	5			Antti Piironen		1	1		LE	1							
+307	12	1	2014	Helsinki, Viikki	6677754	390525	hunted	LE	5			Antti Piironen		1	1	1	LE	1							
+308	12	1	2014	Helsinki, Viikki	6677754	390525	hunted	LE	5			Antti Piironen		1	1		LE	1							
+309	12	1	2014	Helsinki, Viikki	6677754	390525	hunted	LE	5			Antti Piironen		1	1		LE	1							
+310	12	1	2014	Helsinki, Viikki	6677754	390525	hunted	LE	5			Antti Piironen		1	1		LE	1							
+311			2014	Juva, Vehmaan kylä	6866416	538758	hunted	LT	1			Raimo Kokkonen		1	1		LT	1							
+312			2014	Juva, Vehmaan kylä	6866416	538758	hunted	LE	5			Raimo Kokkonen		1	1		LE	1							
+313	17	2	2014	Liperi, Vaivio	6952165	627103	hunted	LT	1			Seppo Pietarinen		1	1	1	LT	1							
+314	4	2	2014	Joensuu, Pielisensuu, Onttola	6949115	638126	hunted	LT	1			Seppo Pietarinen		1	1		LT	1							
+315	22	2	2014	Kotkan saaristo	6703258	496764	hunted	LT	1			Simo ja Paula Laukkanen	Näyte pilaantunut? DNA sakkainen	1	1	1	LT	1							
+316	6	11	2013	Konnevesi, Välimäki	6953915	457655	hunted	LT	1			Elisa Helasniemi		1	1	1	LT	1							
+317	13	10	2013	Konnevesi, Särkisalo	6963381	457180	hit by car	LT	2			Elisa Helasniemi		1	1		LT	1							
+318	11	11	2013	Konnevesi, Särkisalo	6963381	457180	hunted	LT	1			Elisa Helasniemi		1	1		LT	1							
+319	24	2	2014	Kangasniemi, Luusniemi	6871312	498858	hunted	LE	5			Elisa Helasniemi		1	1		LE	1							
+320	11	11	2013	Konnevesi, Särkisalo	6963381	457180	hunted	LT	1			Elisa Helasniemi		1	1		LT	1							
+321	27	1	2014	Konnevesi, Välimäki	6953915	457655	hunted	LT	1			Elisa Helasniemi	DNA sakkainen	1	1	1	LT	1							
+322	27	10	2013	Konnevesi, Välimäki	6953915	457655	hunted	LT	1			Elisa Helasniemi		1	2		LT	1							
+323	15	10	2013	Konnevesi, Välimäki	6953915	457655	hunted	LT	1			Elisa Helasniemi		1	1		LT	1							
+324	9	2	2014	Heinlahti, Pyhtää	6704979	488500	hunted	LE	5			Antti Piironen		1	1		LE	1							
+325	5	2	2014	Viikki, Helsinki	6677754	390525	hunted	LE	5			Antti Piironen		1	1	1	LE	1							
+326	19	1	2014	Konnevesi, Välimäki	6953915	457655	hunted	LT	1			Ei lähettäjän tietoja		1	1		LT	1							
+327	25	10	2014	Konnevesi, Välimäki	6953915	457655	hunted	LE	4			Ei lähettäjän tietoja		1	1	1	LE	1							
+328	12	1	2014	Konnevesi, Välimäki	6953915	457655	hunted	LT	1			Ei lähettäjän tietoja		1	1		LT	1							
+329	6	12	2013	Konnevesi, Välimäki	6953915	457655	hunted	LT	1			Ei lähettäjän tietoja		1	1		LT	1							
+330	8	1	2014	Konnevesi, Välimäki	6953915	457655	hunted	LT	2			Ei lähettäjän tietoja	DNA sakkainen	1	1	1	LT	1							
+331	24	9	2013	Konnevesi, Välimäki	6953915	457655	hunted	LT	1			Ei lähettäjän tietoja		1	1		LT	1							
+332	22	9	2013	Konnevesi	6944270	463552	hunted	LE	5			Ei lähettäjän tietoja		1	1	1	X	1							
+333	4	10	2013	Konnevesi, Särkisalo	6963381	457180	hunted	LT	1			Ei lähettäjän tietoja		1	1		LT	1							
+334	11	11	2013	Konnevesi, Särkisalo	6963381	457180	hunted	LT	1			Ei lähettäjän tietoja		1	1		LT	1							
+335	1	12	2013	Kangasniemi, Luusniemi	6871312	498858	hunted	LE	4			Ei lähettäjän tietoja	DNA sakkainen	1	1		LE	1							
+336	14	2	2014	Limingan kylä	7188989	424215	hunted	LT	1			Jarmo Karjalainen		1	1		LT	1							
+337	4	10	2014	Limingan kylä	7188989	424215	hunted	LE	5			Jarmo Karjalainen		1	2	1	X	1							
+338	21	12	2013	Limingan kylä	7188989	424215	hunted	LE	5			Jarmo Karjalainen		1	2	1	LE	1							1
+339	10	1	2014	Limingan kylä	7188989	424215	hunted	LE	5			Jarmo Karjalainen		1	1		LE	1							
+340	18	11	2013	Limingan kylä	7188989	424215	hunted	LT	1			Jarmo Karjalainen		1	1		LT	1							
+341	14	11	2013	Limingan kylä	7188989	424215	hunted	LT	1			Jarmo Karjalainen		1	1		LT	1							
+342	27	11	2013	Limingan kylä	7188989	424215	hunted	LE	5			Jarmo Karjalainen		1	1		LE	1							
+343	11	2	2014	Limingan kylä	7188989	424215	hunted	?	?			Jarmo Karjalainen		1	1		LT	1							
+344	21	2	2014	Limingan kylä	7188989	424215	hunted	LE	3			Jarmo Karjalainen		1	1	1	LE	1							
+345	24	2	2014	Limingan kylä	7188989	424215	hunted	LE	3			Jarmo Karjalainen		1	1		LE	1							
+346	5	2	2014	Ii	7245385	424302	hunted	LE?	3			Kimmo Keltamäki	Pitkähkö häntä	1	1	1	LT	1							
+347	28	2	2014	Yli-ii, Jakkukylä	7243971	435338	hunted	LT	1			Kimmo Keltamäki		1	1		LT	1							
+348	4	2	2014	Kuivaniemi	7274130	416420	hunted	LT	1			Kimmo Keltamäki		1	1		LT	1							
+349	22	2	2014	Kuivaniemi	7274130	416420	hunted	LT	1			Kimmo Keltamäki		1	1	1	LT	1							
+350	2	2	2014	Puumala, Hiisniemi	6832342	562588	hunted	LT	1			Janne Hellsten	DNA sakkainen	1	1		LT	1							
+351	24	2	2014	Puumala, Hiisniemi	6832342	562588	hunted	LT	1			Janne Hellsten		1	1	1	LT	1							
+352	23	2	2014	Kotka, Pernoo	6715004	489389	hunted	LE	5			Janne Hellsten		1	1	1	LE	1							
+353	19	2	2014	Ruokolahti, Hauklappi	6813553	580403	hunted	LT	1			Toni Tynkkynen		1	1		LT	1							
+354	27	10	2013	Puumala, Hiisniemi	6832342	562588	hunted	LT	1			Janne Hellsten		1	1	1	LT	1							
+355	21	10	2013	Puumala, Hiisniemi	6832342	562588	hunted	LT	1			Janne Hellsten		1	1	1	LT	1							
+356	26	1	2014	Puumala, Pistohiekka	6825398	553593	hunted	LT	1			Janne Hellsten		1	1		LT	1							1
+357	17	9	2013	Puumala, Vesiniemi	6829468	564993	hunted	LT	1			Janne Hellsten		1	1		LT	1							
+358	17	9	2013	Puumala, Vesisaari	6830382	565485	hunted	LE	4			Janne Hellsten		1	1	1	LE	1							
+359	13	11	2013	Siikajoki, Louhua	7158600	417188	hunted	LT	1			Jaakko Laitala		1	1		LT	1							
+360	8	1	2014	Siikajoki, Louhua	7158600	417188	hunted	LT	1			Jaakko Laitala	Näyte kuiva	1	1		LT	1							
+361	2	12	2013	Siikajoki, Louhua	7158600	417188	hunted	LT	1			Jaakko Laitala		1	1		LT	1							
+362	31	10	2013	Siikajoki, Louhua, Ylipää	7158360	414378	hunted	LT	1			Jaakko Laitala		1	1		LT	1							
+363			2014	Louhua, Laitamaa, Siikajoki	7156550	416318	hunted	LE	5			Jaakko Laitala		1	1		LE	1							1
+364	13	11	2013	Siikajoki, Louhua	7158600	417188	hunted	LT	1			Jaakko Laitala		1	1		LT	1							
+365	15	2	2014	Siikajoki, Louhua	7158600	417188	hunted	LT	3			Juho Junnila	Was marked as LE?	1	1		LT	1							
+366	9	12	2013	Siikajoki, Louhua	7158600	417188	hunted	LT	1			Jaakko Laitala		1	1		LT	1							
+367			2014	Haapaselkä, Louhua	7155290	412978	hunted	LT	1			Kalevi Pura		1	1	1	LT	1							
+368	5	1	2014	Haapaselkä, Louhuan Ylipää	7155290	412978	hunted	LT	1			Kalevi Pura		1	1		LT	1							
+369			2014	Louhua, Jääräsuo, Nuolimaa	7159761	414180	hunted	LE?	3			Kalevi Pura		1	1		LT	1							
+370	8	1	2014	Pohjoisenkangas, Louhua, Ylipää	7158360	414378	hunted	LT	1			Kalevi Pura		1	1		LT	1							
+371			2014	Louhua, Laitamaa	7156550	416318	hunted	LT	1			Kalevi Pura		1	1		LT	1							
+372			2014	Louhua, Hautakangas	7164151	393703	hunted	LT	1			Kalevi Pura		1	1		LT	1							
+373	2	1	2014	Louhua, Jääräkangas	7229072	463153	hunted	?	?			Kalevi Pura		1	1		LT	1							
+374	10	2	2014	Joensuu, Suhmura	6930701	648682	hunted	LT	1			Ismo Pölönen		1	1		LT	1							
+375	23	2	2014	Outokumpu	6957923	601670	hunted	LT	1			Jaakko Pohjoismäki		1	1		LE	1							
+376	24	2	2014	Outokumpu	6957923	601670	hunted	LT	1			Jaakko Pohjoismäki	DNA sakkainen	1	1		LT	1							
+377	23	2	2014	Outokumpu	6957923	601670	hunted	LE	5			Jaakko Pohjoismäki		1	1		LE	1							
+378	11	3	2014	Joensuu, Linnunlahti	6944551	640041	found dead	LE	5	M	AD	UEF	"""Laila"""	1	1		LE	1							
+379	22	2	2014	Punkaharju, Enonniemi	6851678	627299	hunted	LT	1			Markku Tiainen		1			LT	1							1
+380	25	11	2013	Juuka, Timovaara	6999822	617173	hunted	LT	1			Markku Haapalainen	Näyte kuiva, DNA sakkainen	1	1		LT	1							
+381	24	1	2014	Sotkamo, Eevala	7109258	557231	hunted	LT	1			Markku Haapalainen		1	1		LT	1							
+382	5	1	2014	Juuka, Timovaara	6999312	617855	hunted	LT	1			Markku Haapalainen	Näyte kuiva, DNA sakkainen	1	1		LT	1							
+383	6	3	2014	Joensuu, Yliopistokatu	6944398	640840	hit by car	LE	5			Mervi Kunnasranta		1	1		LE	1							
+384	12	3	2014	Muhos (25 km Kajaanin suuntaan)	7183976	468757	hit by car	LT	1			RKTL		1	1		LT	1							
+385	28	1	2014	Rautalampi, Tervaharju	6952383	474356	hunted	LT	1			Vesa ja Sirpa Rautio	DNA sakkainen	1	1		LT	1							
+386	6	2	2014	Putkisaari, Tervo	6991991	478486	hunted	LT	1			Vesa ja Sirpa Rautio		1	1		LT	1							
+387	11	2	2014	Konnevesi, Istunmäki, Heinämäki	6949765	472364	hunted	LT	1			Vesa ja Sirpa Rautio		1	1		LT	1							
+388	9	2	2014	Konnevesi,  Mäkäräniemi, Iisilä	6944517	476818	hunted	LT	1			Vesa ja Sirpa Rautio		1	1		LT	1							
+389	13	2	2014	Rautalampi, Kerkonkoski, Vihtajärvi	6964624	481559	hunted	LT	1			Vesa ja Sirpa Rautio		1	1		LT	1							
+390	10	2	2014	Sääksjärvi, Rantala, Rautalampi	6951786	483799	hunted	LT	1			Vesa ja Sirpa Rautio		1	1		LT	1							
+391	12	2	2014	Lierosaari, Haukivuori, Taipale	6886602	492358	hunted	LT	1			Vesa ja Sirpa Rautio	DNA sakkainen	1	1		LT	1							
+392	12	2	2014	Lierosaari, Haukivuori, Taipale	6886602	492358	hunted	LT	1			Vesa ja Sirpa Rautio		1	1		LT	1							
+393	12	2	2014	Lierosaari, Haukivuori, Taipale	6886602	492358	hunted	LT	1			Vesa ja Sirpa Rautio		1	1		LT	1							
+394	26	1	2014	Konnevesi, Heinämäki	6949765	472364	hunted	LT	1			Vesa ja Sirpa Rautio	DNA sakkainen	1	1		LT	1							
+395	10	1	2014	Pieksämäki, Heinämäki	6913317	516375	hunted	LT	1			Vesa ja Sirpa Rautio	Näyte kuiva	1	1		LT	1							
+396	24	2	2014	Haukivuori, Taipale, Lierosaari	6886602	492358	hunted	LT	1			Vesa ja Sirpa Rautio		1	1		LT	1							
+397	18	2	2014	Mikkeli, Alamaa	6852731	518293	hunted	LT	1			Kari Hämäläinen		1	1	1	LT	1							
+398	7	12	2013	Punkaharju, Ruununmäki	6847628	634074	hunted	LT	1			Aku Sarjanen		1	1	1	LT	1							
+399	7	12	2013	Punkaharju, Ruununmäki	6847628	634074	hunted	LT	2			Aku Sarjanen		1	1		LT	1							
+400	9	2	2014	Punkaharju, Enanniemi	6851678	627299	hunted	LT	2			Aku Sarjanen	DNA samea	1	1	1	LT	1							
+401	2	2	2013	Punkaharju, Ristiniemi	6827247	619450	hunted	LE	5			Aulis Uimonen		1	1		LE	1							1
+402			2014	Joensuu, Iiksenvaara	6943027	646933	hunted	LT	1			Kari Ratilainen		1	1		LT	1							1
+403			2014	Joensuu, Iiksenvaara	6943027	646933	hunted	LT	1			Kari Ratilainen		1	1		LT	1							
+404			2014	Joensuu, Iiksenvaara	6943027	646933	hunted	LT	1			Kari Ratilainen		1	1	1	LT	1							
+405			2014	Joensuu, Iiksenvaara	6943027	646933	hunted	LT	1			Kari Ratilainen		1	1		LT	1							
+406			2014	Joensuu, Iiksenvaara	6943027	646933	hunted	LT	1			Kari Ratilainen		1	1		LT	1							
+407			2014	Joensuu, Iiksenvaara	6943027	646933	hunted	LT	1			Kari Ratilainen		1	1		LT	1							
+408			2014	Joensuu, Iiksenvaara	6943027	646933	hunted	LT	1			Kari Ratilainen		1	1	1	LT	1							
+409			2014	Joensuu, Iiksenvaara	6943027	646933	hunted	LT	1			Kari Ratilainen		1	1		LT	1							
+410			2014	Joensuu, Iiksenvaara	6943027	646933	hunted	LT	1			Kari Ratilainen		1	1		LT	1							
+411			2014	Joensuu, Iiksenvaara	6943027	646933	hunted	LT	1			Kari Ratilainen		1	1	1	LT	1							
+412			2014	Joensuu, Iiksenvaara	6943027	646933	hunted	LT	1			Kari Ratilainen		1	1		LT	1							
+413			2014	Joensuu, Iiksenvaara	6943027	646933	hunted	LT	1			Kari Ratilainen		1	1		LT	1							
+414	8	1	2014	Suhmura	6930701	648682	hunted	LT	1			Ismo Pölönen		1	1		LT	1							
+415	23	2	2014	Suhmura	6930701	648682	hunted	LT	1			Ismo Pölönen	DNA samea	1	1	1	LT	1							
+416	11	1	2014	Punkaharju, Ruununmäki	6847628	634074	hunted	LT	1			Esa Niemi	DNA samea	1	1		LT	1							
+417	2	2	2014	Punkaharju, Ruununmäki	6847628	634074	hunted	LT	1			Jukka Lehto/Aku Sarjanen		1	1		LT	1							
+418	2	2	2014	Punkaharju, Sorvasranta	6843448	628581	hunted	LE	5			Matti Vahimaa/ Aku Sarjanen		1	1		LE	1							
+419	9	2	2014	Punkaharju, Sorvasranta	6843448	628581	hunted	LE	5			Jukka Lehto/Aku Sarjanen		1	1		LE	1							
+420	22	12	2014	Punkaharju, Ruununmäki	6847628	634074	hunted	LT	2			Aku Sarjanen		1	1		LT	1							
+421	1	1	2014	Punkaharju, Ruununmäki	6847628	634074	hunted	LT	1			Aku Sarjanen	Paino: 4,27 kg	1	1		LT	1							
+422	6	1	2014	Punkaharju, Vaahterikko	6843448	366207	hunted	LT	1			Jukka Lehto/Aku Sarjanen		1	1		LT	1							
+423	28	12	2014	Punkaharju, Ruununmäki	6847628	634074	hunted	LT	2			Jukka Lehto/Aku Sarjanen	mtDNA tulos epäselvä	1	1	1									
+424	26	2	2014	Joensuu, Linnunniemi	6943815	639591	found dead	LT	1			Mervi Kunnasranta ja Helmi	Löydetty jalka, näyte kuiva ja lihasta vähän	1	1		LT	1							
+425	16	2	2014	Joensuu, Kuusitie 5	6944490	639920	found dead	LE	5			Mervi Kunnasranta ja Helmi	Löydetty jalka, näyte kuiva ja lihasta vähän	1	2	1	X	1							
+426	9	2	2014	Rantasalmi, Putkisalo	6876880	575340	hunted	LT	1			Axel Werterstråhle	Tumman ruskeat silmät, valkea	1	1		LT	1							
+427	9	2	2014	Rantasalmi, Putkisalo	6876880	575340	hunted	LT	2			Axel Werterstråhle	Pitkät korvat, ruskeat silmät, valkea	1	1		LT	1							
+428	2	2	2014	Rantasalmi, Putkisalo	6876880	575340	hunted	LE	5			Axel Werterstråhle		1	1		LE	1							
+429	9	2	2014	Rantasalmi, Putkisalo	6876880	575340	hunted	LE	5			Axel Werterstråhle	Ruskea karva, vaaleat silmät	1	1		LE	1							
+430	2	2	2014	Rantasalmi, Putkisalo	6876880	575340	hunted	LE	5			Axel Werterstråhle	mtDNA tulos epäselvä	1	1	1									
+431	2	2	2014	Rantasalmi, Putkisalo	6876880	575340	hunted	LT	1			Axel Werterstråhle	Mustat silmät, DNA samea	1	1		LT	1							
+432	2	2	2014	Rantasalmi, Putkisalo	6876880	575340	hunted	LE?	3			Axel Werterstråhle	Melko valkoinen	1	1		LT	1							
+433	11	1	2014	Hirvensalmi	6834159	488689	hunted	LT	1			Veini Tyyskä		1	2	1	LT	1							
+434	23	11	2013	Hirvensalmi	6834159	488689	hunted	LT	1			Veini Tyyskä		1	2	1	LT	1							
+435	5	2	2014	Hirvensalmi, Hurrilan kylä	6839300	479438	hunted	LT	1			Juha Kämppi		1	2	1	LT	1							
+436	1	1	2014	Hirvensalmi, Hurrilan kylä	6839300	479438	hunted	LT	1			Juha Kämppi		1	1		LT	1							
+437	5	2	2014	Hirvensalmi, Hurrilan kylä	6839300	479438	hunted	LT	1			Juha Kämppi		1	1	1	LT	1							
+438	2	2	2014	Hirvensalmi, Hämeenmäki	6838581	477912	hunted	LT	2			Juha Kämppi		1	1	1	LT	1							
+439	25	1	2014	Hirvensalmi, Hämeenmäki	6838581	477912	hunted	LT	2			Juha Kämppi		1	1		LT	1							
+440	25	1	2014	Hirvensalmi, Hämeenmäki	6838581	477912	hunted	LT	1			Juha Kämppi		1	1	1	LT	1							
+441	12	1	2014	Hirvensalmi, Hämeenmäki	6838581	477912	hunted	LT	1			Juha Kämppi		1	1	1	LT	1							
+442	4	1	2014	Hirvensalmi, Malvanniemi	6841774	491248	hunted	LT	1			Juha Kämppi		1	1	1	LT	1							
+443	8	2	2014	Sulkava	6851526	572671	hunted	LT	1			Juha Kämppi	DNA sakkainen	1	1	1	LT	1							
+444	4	1	2014	Hirvensalmi, Malvanniemi	6841774	491248	hunted	LT	1			Juha Kämppi	DNA sakkainen	1	1	1	LT	1							
+445	28	1	2014	Hirvensalmi, Hämeenmäki	6838581	477912	hunted	LT	1			Juha Kämppi	DNA sakkainen	1	1		LT	1							
+446	8	2	2014	Sulkava	6851526	572671	hunted	LT	1			Juha Kämppi		1	1		LT	1							
+447	2	3	2014	Nurmes, Särkivaara	7032460	601985	hit by car	LT	1			Mervi Kunnasranta		1	1		LT	1							
+448	17	10	2013	Salla, Palotunturi	7308504	583117	hunted	LT	1			Veijo Hämäläinen		1	1		X	1							
+449	23	2	2014	Rasiaho	6863600	508908	hunted	LE?	3			Pekka Oinonen	DNA sakkainen	1	1		X	1							
+450	28	2	2014	Kouvola, Valkeala, Anttila, Soidinsuo	6766739	493494	hunted	LT	1			Tarja ja Jussi Kolkka		1	1		LT	1							
+451	22	1	2014	Imatra	6783580	594318		LE	4	F	AD	Evira	E20140129-032	1	2	1	X	1							
+452	24	2	2014	Kouvola, Anttila, Mustankorvensuo	6767843	491239	hunted	LT	2			Tarja ja Jussi Kolkka		1	1	1	LT	1							
+453		4	2014	Iisalmi, Likovaara	7053837	514274	found dead	LT	1			Teemu Tolonen		1	1	1	LT	1							
+454	27	4	2014	Kesälahti, Hummovaara	6885254	638802	hit by car	LT	1			Mervi Kunnasranta		1	1	1	LT	1							
+455	6	12	2013	Ylitornio, Koivistonpää	7365720	363426		LT	1			Evira	E20131217-020, mädän oloinen	1	1	1	LT	1							
+456	19	1	2014	Kuopio	6973853	535023		LT	2	M	AD	Evira	E20140121-047	1	1		LT	1							
+457	16	11	2013	Muhos	7188276	452257		LE	5		JUV	Evira	E20131120-096	1	1		LE	1							1
+458	20	11	2013	Kannonkoski	6984168	411976		LT	1	F	JUV	Evira	E20131122-019	1	1		LT	1							
+459	14	12	2013	Hyvinkää	6723910	382333		LE	5	F	JUV	Evira	E20131220-056	1	1		LE	1							
+460	1	2	2014	Muonio	7541614	360479		LT	1	F	AD	Evira	E20140214-065	1	1		LT	1							
+461	27	11	2013	Jyväskylä	6901595	436020		LE	4	M	JUV	Evira	E20131129-023	1	1		LE	1							
+462	14	11	2013	Pyhäjärvi	7061959	449830		LT	1	M	JUV	Evira	E20131118-028	1	2	1	X								
+463	29	10	2013	Hyvinkää	6723910	382333		LT	1	F	AD	Evira	E20131203-013	1	1	1	LT	1							
+464	30	10	2013	Hyvinkää	6723910	382333		LE	5	M	JUV	Evira	E20131203-013	1	2	1	LE	1							
+465	11	2	2014	Lapinlahti	7025525	518596		LT	2	F	AD	Evira	E20140214-046	1	2	1	LT	1							
+466	28	11	2013	Tuusniemi	6965565	575862		LT	1	F	AD	Evira	E20140114-029	1	2	1	LT	1							
+467	31	10	2013	Jaala, Kimola (Kouvola)	6768747	471985		LE	5	F	JUV	Evira	E20131104-022	1	2	1	LE	1							
+468	3	11	2013	Ruokolahti	6797006	597740		LT	1	F	JUV	Evira	E20131107-048, DNA sakkainen	1	1	1	LT	1							
+469			2014	Haapavesi	7113208	420396		LT	1	M	JUV	Evira	E20131112-028	1	1		LT	1							1
+470	22	1	2014	Eura	6787091	238094		LT	2	F	JUV	Evira	E20140128-034	1	1		LT	1							1
+471	21	11	2013	Jyväskylä	6901595	436020		LE	5	M	JUV	Evira	E20131122-022	1	1		LE	1							
+472	25	1	2014	Lapinlahti	7025525	518596		LE?	5	M	AD	Evira	E20140205-060	1	1		LE	1							1
+473	16	7	2013	Juuka	7014304	613232		LT	1	F	JUV	Evira	E20131129-016, DNA sakkainen	1	1	1	LT	1							
+474	19	11	2013	Varkaus	6909918	545452		LE	5	M	JUV	Evira	E20131121-035	1	1		LE	1							
+475	30	1	2014	Pernaja	6701589	446688		LT	1	F	AD	Evira	E20140204-044	1	2	1	LT	1							1
+476	29	11	2013	Vaasa	7007298	228381		LE	4	F	JUV	Evira	E20131203-108	1	1		LE	1							
+477	12	12	2013	Kauniainen	6678003	373893		LE	4	M	JUV	Evira	E20131213-132	1	1		LE	1							
+478	23	1	2014	Juva	6863260	545156		LT	2	F	JUV	Evira	E20140128-057, DNA sakkainen	1	1	1	LT	1							
+479	18	1	2013	Rovaniemi	7376184	442076		LT	1	M	AD	Evira	E20140122-090	1	1	1	LT	1							
+480	6	3	2014	Savonlinna	6861104	598799		LE?	3	M	AD	Evira	E20140310-029	1	1		LE	1							
+481	28	1	2014	Läyliäinen, Loppi	6723823	361069		LE	4	M	AD	Evira	E20140207-117	1	1		LE	1							
+482	11	5	2013	Laukaa	6920826	446270		LE	5	M	JUV	Evira	E20131108-056	1	1		LE	1							
+483	11	11	2013	Hailuoto	7211365	392117		LT	1	F	AD	Evira	E20131113-086	1	1		LT	1							
+484	12	11	2013	Hirvensalmi	6834159	488689		LE	5	M	JUV	Evira	E20131115-003	1	1		LE	1							
+485	30	12	2013	Laihia, Jokikylä	6979949	255082	hunted	LT	1			Pekka Palo		1	1	1	LT	1							
+486	15	4	2014	Joensuu, Linnunlahti, pienvenesatama	6943726	639932	found dead	LE	5			Mervi Kunnasranta ja Helmi		1	1	1	LE	1							
+487	3	6	2014	Joensuu, Botania	6944238	639754	found dead	LT	1			Vilma Lehtovaara		1	2	1	LE	1							
+488	26	1	2014	Helsinki, Viikki	6677754	390525	hunted	LE	5			Antti Piironen		1	2	1	LE	1							
+489	26	1	2014	Helsinki, Viikki	6677754	390525	hunted	LE	5			Antti Piironen		1	1		LE	1							
+490	26	1	2014	Helsinki, Viikki	6677754	390525	hunted	LE	5			Antti Piironen		1	1	1	LE	1							
+491	26	1	2014	Helsinki, Viikki	6677754	390525	hunted	LE	5			Antti Piironen		1	1		LE	1							
+492	21	2	2004	Korpilahti, Putkilahti	6862604	432831	hunted	LT	1			RKTL		1	1		LT	1							
+493	21	5	2014	Joensuu, Linnunlahti	6944551	640041	lopetettu, huonokuntoinen	LT	1			Jaakko Pohjoismäki		1	1		LT	1							
+494	30	11	2003	Oulu, Neittävä, Vaala	7153920	484950	hunted	LT	1			RKTL		1	1		LT	1							
+495	27	10	2009	Oulu, Neittävä, Vaala	7153920	484950	hunted	LT	1			RKTL	mtDNA tulos epäselvä	1	1	1									1
+496	11	11	2009	Oulu, Neittävä, Vaala	7153920	484950	hunted	LT	1			RKTL		1	1	1	LT	1							
+497	25	10	2003	Korpilahti, Putkilahti	6862604	432831	hunted	LT	1			RKTL		1	1		LT	1							
+498	24	11	2003	Korpilahti, Putkilahti	6862604	432831	hunted	LT	1			RKTL		1	1		LT	1							
+499	13	12	2003	Luhanka, Vanhonen	6852226	431661	hunted	LE	5			RKTL		1	1		LE	1							
+500	26	11	2003	Korpilahti, Putkilahti	6862604	432831	hunted	LE	5			RKTL		1	1		LE	1							1
+501	9	1	2004	Utajärvi	7182034	471163	hunted	LT	1			RKTL		1	1		LT	1							
+502	6	1	2004	Korpilahti, Oittila	6869464	433875	hunted	LE	5			RKTL		1	1		LE	1							
+503	31	12	2003	Korpilahti, Putkilahti	6862604	432831	hunted	LT	1			RKTL		1	1		LT	1							
+504	6	1	2004	Korpilahti, Oittila	6869464	433875	hunted	LE	5			RKTL		1	1		LE	1							
+505	3	2	2004	Korpilahti, Putkilahti	6862604	432831	hunted	LT	1			RKTL		1	1		LT	1							
+506	15	9	2005	Korpilahti, Putkilahti	6862604	432831	hunted	LE	5			RKTL		1	1		LE	1							
+507	20	10	2003	Puolanka, Luupponen	7194613	531992	hunted	LT	1			RKTL		1	1		LT	1							
+508	13	9	2003	Jourkuma, Utajärvi	7182034	471163	hunted	LT	1			RKTL		1	1		LT	1							
+509	13	11	2003	Jourkuma, Utajärvi	7182034	471163	hunted	LT	1			RKTL		1	1	1	LT	1							
+510	14	1	2004	Korpilahti, Putkilahti	6862604	432831	hunted	LE	5			RKTL		1	1	1	LE	1							
+511	10	12	2003	Korpilahti, Putkilahti	6862604	432831	hunted	LE	5			RKTL		1	1		LE	1							
+512	3	2	2004	Korpilahti, Putkilahti	6862604	432831	hunted	LT	1			RKTL		1	1		LT	1							
+513	29	2	2004	Korpilahti, Putkilahti	6862604	432831	hunted	LE	5			RKTL		1	1	1	LE	1							
+514	15	1	2004	Korpilahti, Putkilahti	6862604	432831	hunted	LT	1			RKTL		1	1	1	LT	1							
+515	20	2	2003	Korpilahti, Putkilahti, Korospohja	6865505	431979	hunted	LT	1			RKTL		1	1		LT	1							
+516	31	1	2004	Korpilahti, Putkilahti	6862604	432831	hunted	LT	1			RKTL		1	1	1	LT	1							
+517	30	12	2003	Korpilahti, Putkilahti	6862604	432831	hunted	LT	1			RKTL		1	1	1	LT	1							
+518	21	2	2004	Korpilahti, Putkilahti	6862604	432831	hunted	LT	1			RKTL		1	1		LT	1							
+519	22	10	2003	Korpilahti, Putkilahti	6862604	432831	hunted	LT	1			RKTL		1	1		LT	1							
+520	30	12	2003	Korpilahti, Putkilahti	6862604	432831	hunted	LE	5			RKTL		1	1		LE	1							
+521	20	1	2004	Korpilahti, Putkilahti	6862604	432831	hunted	LE	5			RKTL		1	1		LE	1							
+522	27	2	2003	Korpilahti, Putkilahti, Pirttisaari	6867179	428228	hunted	LT	1			RKTL		1	1		LT	1							
+523	25	1	2004	Korpilahti, Putkilahti	6862604	432831	hunted	LT	1			RKTL		1	1		LT	1							
+524	28	10	2004	Jourkuma, Utajärvi	7182034	471163	hunted	LT	1			RKTL		1	2	1	X	1							
+525	16	10	2014	Ilomantsi, Paha-oinasvaara	6996302	680481	hunted	LT	1			Jaakko Pohjoismäki		1	2	1	LT	1							
+526	6	11	2014	Volsintie 126, Kirkkonummi	6669228	356880	hit by car	LE 	5			Sture Strandberg		1	1		LE	1							
+527	21	11	2014	Tutjunniemi, Liperi	6922391	634066	hunted	LT?	3			Ville Luolamo	Epäilee risteymää	1	1		LT	1							
+528	15	11	2014	Mählänsaari, Pälkäne	6806843	357323	hunted	LT	1			Jari Huuho		1	1		LT	1							
+529	16	11	2014	Ristisaari, Pälkäne	6805936	357495	hunted	LT?	3			Jari Huuho	"""rusakon pää, metsäjäniksen kroppa"""	1	1		LT	1							
+530	8	11	2014	Ristisaari, Pälkäne	6805936	357495	hunted	LT?	3			Martti Myllö	"""rusakon pää, metsäjäniksen kroppa"""	1	1		LT	1							
+531	3	11	2014	Rautalampi, Hanhiniemi	6938858	489305	hunted	LE 	5			Vilho Hänninen		1	1		LE	1							
+532	13	11	2014	Pieksämäki, Vanaja	6918671	487300	hunted	LE 	5			Vilho Hänninen		1	1		LE	1							
+533	8	11	2014	Konnevesi, Mäkäräniemi	6944517	476818	hunted	LE 	5			Vilho Hänninen		1	1		LE	1							
+534	5	10	2014	Rautalampi, Talliniemi	6941507	491321	hunted	LT	1			Vilho Hänninen		1	1		LT	1							
+535	11	9	2014	Lieksa, Vuonisjärvi	7006272	656055	hunted	LT?	3			Seppo Nesterinen		1	1		LT	1							
+536	14	9	2014	Lieksa, Keikonvaara	6995576	655773	hunted	LE	5			Seppo Nesterinen		1	1		LT	1							
+537	21	9	2014	Lieksa, Keikonvaara	6995576	655773	hunted	LT	1			Seppo Nesterinen		1	1		LT	1							
+538	14	9	2014	Lieksa Haisu	7023935	650517	hunted	LT	1			Seppo Nesterinen		1	1		LT	1							
+539	14	9	2014	Lieksa Haisu	7023935	650517	hunted	LT	1			Seppo Nesterinen		1	1		LT	1							
+540	29	9	2014	Joensuu, Linnunlahti (satama)	6943680	640014	found dead	LE	5			Mervi Kunnasranta (Helmi)		1	1	1	X	1							
+541	21	10	2014	Joensuu, Noljakka	6947001	637687	found dead	LT	1	M	AD	Pertti Aro	Raita	1	1		LT	1							
+542			2013	Nokia	6820845	314730	hunted	LT	1			Kimmo Ulvelin	Korvassa kasvoi hometta	1	1	1	X	1							
+543	9	9	2014	Lieksa, Vuonisjärvi	7006272	656055	hunted	LT	1			Seppo Nesterinen		1	1		LT	1							
+544	12	9	2014	Lieksa, Kelvä	6997924	656166	hunted	LT	1			Seppo Nesterinen		1	1		LT	1							
+545	10	9	2014	Lieksa, Vuonisjärvi	7006272	656055	hunted	LT	1			Seppo Nesterinen		1	1		LT	1							
+546			2014	Kurikka	6951548	264050	hunted	LT	2			Pasi Rantamäki	Iso metsäjänikseksi	1	1		LT	1							1
+547	18	10	2014	Kotka, Vassaari	6700516	502868	hunted	LT	1			Tero Halme		1	1		LT	1							
+548	15	1	2014	Lemi, Sorvarila	6768858	545468	hit by car	LT	1			Veli-Matti Nisonen		1	1	1	LT	1							
+549	2	2	2014	Lemi, Nisola	6773745	541031	hunted	LE	4			Veli-Matti Nisonen		1	1		LE	1							
+550	17	2	2014	Lemi, Nisola	6773745	541031	hunted	LE	5			Veli-Matti Nisonen		1	1		LE	1							
+551	11	1	2014	Lemi, Sairala	6773745	541031	hunted	LT	2			Veli-Matti Nisonen		1	1	1	LT	1							
+552	8	2	2014	Lemi, Nisola	6773745	541031	hunted	LE	5			Veli-Matti Nisonen		1	1		LE	1							
+553	15	11	2014	Lemi, Nisola	6773745	541031	hunted	LT	2			Veli-Matti Nisonen		1	1		LT	1							
+554	4	4	2014	Hyvinkää	6723910	382333		LT	1	F	AD	Evira	E20140409-034	1	1		LT	1							
+555	16	9	2014	Polvijärvi	6971910	619234		LT	1	F	JUV	Evira	E20140917-005	1	1		LT	1							
+556	15	9	2014	Valtimo	7062846	589615		LT	1	F	AD	Evira	E20140919-060	1	1		LT	1							
+557	16	9	2014	Leppävirta	6928791	541101		LE	5	F	JUV	Evira	E20140919-034	1	1		LE	1							
+558	16	5	2014	Rautavaara	7041185	564910		LT	1	F	AD	Evira	E20140521-034	1	1		LT	1							
+559	11	6	2014	Sonkajärvi	7060671	526041		LT	1	F	AD	Evira	E20140612-015	1	1		LT	1							
+560	13	4	2014	Siilinjärvi	6994817	532104		LE	5	F	AD	Evira	E20140416-036	1	1		LT	1							
+561	9	9	2014	Hyvinkää	6723910	382333		LE	5	M	JUV	Evira	E20140912-035	1	1		LE	1							1
+562	26	5	2014	Salo	6701088	285993		LE	5	F	AD	Evira	E20140527-105	1	1		LE	1							
+563	25	4	2014	Tampere	6823700	326225		LE	5	F	AD	Evira	E20140429-048	1	1	1	LE	1							
+564			2014	Nivala	7090783	399684		LE	5	F	JUV	Evira	E20140911-027	1	1		LE	1							1
+565	6	9	2014	Kitee	6889665	664394		LE	5	M	JUV	Evira	E20140910-035	1	1		LE	1							
+566	29	5	2014	Polvijärvi	6971910	619234		LE	5	M	AD	Evira	E20140604-045	1	1		LE	1							1
+567	15	9	2014	Luumäki	6754109	530349		LE	5	M	JUV	Evira	E20140916-127	1	1	1	LE	1							
+568	19	8	2014	Pyhäjärvi	7061959	449830		LT	1	F	JUV	Evira	E20140820-050	1	1		LT	1							
+569	31	7	2014	Joensuu	6943348	639393		LE	5	M	JUV	Evira	E20140804-027	1	1	1	LT	1							
+570	5	9	2014	Tornio	7306339	370105		LT	1	F	JUV	Evira	E20140909-048	1	1	1	LT	1							
+571	26	6	2014	Paltamo	7142904	540105		LT	1	F	AD	Evira	E20140701-029	1	1		LT	1							
+572	20	3	2014	Joensuu	6943348	639393		LT	1	M	AD	Evira	E20140325-068	1	1		LT	1							
+573	16	5	2014	Iisalmi	7047963	509288		LE	5	M	JUV	Evira	E-20140519-032	1	1	1	LE	1							
+574	1	4	2014	Salo	6701088	285993		LE	5	M	JUV	Evira	E20140402-027	1	1	1	X	1							
+575	1	5	2014	Veteli	7042975	339705		LE	5	F	AD	Evira	E20140507-037	1	1		LE	1							
+576	19	6	2014	Parikkala	6826974	631793		LT	1	M	AD	Evira	E20140626-039	1	1		LT	1							
+577			2014	Outokumpu	6957923	601670		LE	5	F	JUV	Evira	E20140902-046	1	1		LE	1							
+578	2	5	2014	Sodankylä	7477630	481529		LT	1	M	AD	Evira	E20140507-040	1	1		LT	1							1
+579	8	9	2014	Kuopio	6973853	535023		LT	1	F	JUV	Evira	E20140910-102	1	1		LT	1							
+580	23	3	2014	Ranua	7312633	478130		LT	1	F	AD	Evira	E20140324-124	1	1		LT	1							
+581	17	3	2014	Kajaani	7121928	534735		LT	1	M	JUV	Evira	E20140319-102	1	1		LT	1							
+582	26	8	2014	Sotkamo	7112566	567273		LT	1	M	JUV	Evira	E-20140827-027	1	1		LT	1							
+583	2	8	2014	Tohmajärvi	6903843	673225		LE	5	F	JUV	Evira	E20140805-049	1	1		LE	1							
+584	30	9	2014	Joensuu, Linnunlahti	6944551	640041	found dead	LE	5			Mervi Kunnasranta (+Helmi)	Ruho toimitettu Eviraan: F1 hybrid!	1	1		LE	1							
+585	10	12	2014	Joensuu, Varaslampi	6943950	643324	found dead	LE	5			Helena Haakana	Ruho toimitettu Eviraan	1	1		LE	1							
+586	23	11	2013	Iiksenvaara	6943027	646933	hunted	LT	2			Kari Ratilainen		1	1		LT	1							
+587	1	2	2014	Kuhmoinen, Isojärvi	6843638	395735	hunted	LT	1			Heikki Rantanen		1	1		LT	1							
+588	14	12	2013	Juupajoki, Kalliojärji	6867139	368038	hunted	LT	1			Heikki Rantanen		1			LT	1							1
+589	11	1	2014	Juupajoki, Kalliojärji	6867139	368038	hunted	LT	1			Heikki Rantanen		1	1	1	X	1							
+590	1	2	2014	Kuhmoinen, Isojärvi	6843638	395735	hunted	LT	1			Heikki Rantanen		1	1		LT	1							
+591	16	2	2014	Juupajoki Karviovuori	6855441	360699	hunted	LT	1			Heikki Rantanen		1	1		LT	1							
+592	11	1	2014	Juupajoki	6855441	360699	hunted	LT	1			Heikki Rantanen		1	1	1	LT	1							
+593	8	2	2014	Juupajoki, Lyly	6864512	367266	hunted	LT	1			Heikki Rantanen		1	1		LT	1							
+594	29	12	2013	Orivesi, Pukala	6840936	349940	hunted	LT	1			Heikki Rantanen		1	1		LT	1							
+595	27	2	2014	Pälkäne Laippa	6803505	353425	hunted	LT	1			Heikki Rantanen		1	1		LT	1							
+596	27	10	2014	Hausjärvi, Hautalankulma	6729524	395617	hunted	LT	1			Erkki Vuorinen		1	1	1	X	1							
+597	14	1	2015	Hausjärvi, Hautalankulma	6729524	395617	hunted	LT	1			Erkki Vuorinen		1	1		LT	1							
+598	10	2	2015	Hyvinkää, Kytäjä	6720978	373228	hit by car	LT	2			Erkki Vuorinen		1	1	1	LT	1							
+599	26	2	2015	Hämeenlinna, Lieso	6783340	387727	hunted	LT	1			Erkki Vuorinen	Näytteen pinnalla hometta	1	2	1	LT	1							1
+600	26	1	2014	Yli-Ii, Isterinsuo	7252721	460349	hunted	LT	1			Jukka Forsman		1	1	1	LT	1							
+601	16	11	2014	Yli-Ii	7250385	446332	hunted	LT	1			Jukka Forsman		1	1		LT	1							
+602	4	5	2014		7224302	445513	hit by car	LT	1			Jukka Forsman		1	1	1	LE	1							
+603	15	11	2013	Yli-Ii, Kontuansuo	7252497	457628	hunted	LT	1			Jukka Forsman		1	1		LT	1							
+604		4	2014	Oulu, Keskusta	7210861	427992	hit by car	LE	5			Jukka Forsman		1	1	1	X	1							
+605	11	1	2014	Yli-Ii, Luisansuo	7249345	460596	hunted	LT	1			Jukka Forsman		1	1		LT	1							
+606	15	1	2015	Ylivieska	7107398	379702	hunted	LT	1			Mikko Moilanen		1	1		LT	1							
+607	14	11	2014	Ylivieska	7107398	379702	hunted	LT	1			Mikko Moilanen		1	1	1	X	1							
+608	10	11	2014	Ylivieska	7107398	379702	hunted	LT	1			Mikko Moilanen		1	1	1	X	1							
+609	30	11	2014	Ylivieska	7107398	379702	hunted	LT	1			Mikko Moilanen		1	1		LT	1							
+610	10	11	2014	Ylivieska	7107398	379702	hunted	LT	1			Mikko Moilanen		1	1		LT	1							
+611	30	11	2014	Ylivieska	7107398	379702	hunted	LT	1			Mikko Moilanen		1	1		LT	1							
+612	4	2	2015	Ylivieska	7107398	379702	hunted	LT	1			Mikko Moilanen		1	1		LT	1							
+613	19	1	2014	Halkia	6710853	407670	hunted	LE	5			Mikko Moilanen		1	1		LE	1							
+614			2015	Ylivieska	7107398	379702	hunted	LT	1			Mikko Moilanen		1	1		LT	1							
+615	14	11	2014	Ylivieska	7107398	379702	hunted	LT	1			Mikko Moilanen		1	1		LT	1							
+616	29	11	2014	Ylivieska	7107398	379702	hunted	LT	1			Mikko Moilanen		1	1		LT	1							
+617	14	11	2014	Ylivieska	7107398	379702	hunted	LT	1			Mikko Moilanen		1	1		LT	1							
+618	20	1	2015	Pornainen	6705629	410561	hunted	LE	5			Mikko Moilanen		1	1		LE	1							1
+619	18	2	2015	Pornainen	6705629	410561	hunted	LE	5			Mikko Moilanen		1	1		LE	1							
+620	6	10	2014	Nurmijärvi, Kirkonkylä	6704740	379420	found dead	LE	5			Mikko Moilanen		1		1	LT	1							1
+621	4	11	2014	Ylivieska	7107398	379702	hunted	LT	1			Mikko Moilanen		1	1		LT	1							
+622	28	2	2015	Ylivieska	7107398	379702	hunted	LT	1			Mikko Moilanen		1	1		LT	1							
+623	2	11	2014	Ylivieska	7107398	379702	hunted	LT	1			Mikko Moilanen		1	1		LT	1							
+624	2	11	2014	Ylivieska	7107398	379702	hunted	LT	1			Mikko Moilanen		1	1	1	LT	1							
+625	1	12	2014	Pieksämäki, Vanaja	6918671	487300	hunted	LT	1			Vilho Hänninen		1	1		LE	1							
+626	11	2	2015	Pieksämäki, Alakylä	6915268	487855	hunted	LT	1			Vilho Hänninen		1	1		LT	1							
+627	7	2	2015	Rautalampi, Koipiniemi	6955707	476903	hunted	LE	5			Vilho Hänninen		1	1		LE	1							
+628	4	2	2015	Konnevesi, Mäkäräniemi	6944517	476818	hunted	LE	5			Vilho Hänninen		1	1		LE	1							
+629	17	1	2015	Pieksämäki, Vanaja	6918671	487300	hunted	LT	1			Vilho Hänninen		1	1		LT	1							
+630	15	1	2015	Mikkeli, Hirvijärventie	6885468	494602	hunted	LT	1			Vilho Hänninen		1	1		LT	1							
+631	30	12	2014	Mikkeli, Häkkilä, Lievsaari	6879261	502168	hunted	LT	1			Vilho Hänninen		1	1		LT	1							
+632	11	12	2014	Pieksämäki, Vanaja	6918671	487300	hunted	LT	1			Vilho Hänninen		1	1	1	LT	1							
+633	17	1	2015	Pieksämäki, Vanaja	6918671	487300	hunted	LE	5			Vilho Hänninen		1	1		LE	1							
+634	7	2	2015	Laihia, Jokiperä	6973179	258599	hunted	LT	1			Pekka Palo		1	1	1	LT	1							
+635	20	2	2015	Laihia, Jokiperä	6973179	258599	hunted	LT	1			Pekka Palo		1	1	1	LE	1							
+636	5	10	2014	Haukivuori, Häkkilä, Juoksuntie	6885291	494286	hunted	LT	1			Vilho Hänninen		1	1		LT	1							
+637	6	9	2014	Haukivuori, Häkkilä, Juoksuntie	6885291	494286	hunted	LT	1			Vilho Hänninen		1	1		LT	1							
+638	25	2	2015	Pieksämäki, Vanaja	6918671	487300	hunted	LE	5			Vilho Hänninen		1	1	1	LE	1							
+639	4	2	2015	Konnevesi, Mäkäräniemi, Sänkimäki	6945325	475690	hunted	LE	5			Vilho Hänninen		1	1	1	LE	1							
+640	4	2	2015	Konnevesi, Mäkäräniemi, Jyrkkäpuro	6944517	476818	hunted	LE	5			Vilho Hänninen		1	1		LE	1							
+641	20	2	2015	Rautalampi, Koipiniemi	6955707	476903	hunted	LE	5			Vilho Hänninen		1	1	1	LE	1							
+642	4	2	2015	Konnevesi, Mäkäräniemi, Jyrkkäpuro	6944517	476818	hunted	LE	5			Vilho Hänninen		1	1	1	X	1							
+643	3	9	2014	Mikkeli, Häkkilä, Juoksuntie	6885291	494286	hunted	LT	1			Vilho Hänninen		1	1		LT	1							
+644	14	12	2014	Pihtipudas	7027645	428721	hunted	LT	1			Erkki Turpeinen		1	1		LT	1							1
+645	18	11	2014	Pihtipudas	7027645	428721	hunted	LT	2			Erkki Turpeinen		1	1		LT	1							
+646	18	11	2014	Pihtipudas	7027645	428721	hunted	LT	1			Erkki Turpeinen		1	1		LT	1							
+647	16	11	2014	Pihtipudas	7027645	428721	hunted	LT?	3			Erkki Turpeinen		1	1		LT	1							
+648	14	12	2014	Pihtipudas	7027645	428721	hunted	LT	2			Erkki Turpeinen		1	1		LT	1							
+649	20	11	2014	Pihtipudas	7027645	428721	hunted	LT	1			Erkki Turpeinen		1	1		LT	1							
+650	15	11	2014	Pihtipudas	7027645	428721	hunted	LT	1			Erkki Turpeinen		1	1		LT	1							
+651	20	12	2014	Lemi, Muukankylä	6774576	540625	hunted	LT	1			Veli-Matti Nisonen		1	1		LT	1							
+652	31	12	2014	Lemi, Nisola	6773745	541031	hunted	LE	5			Veli-Matti Nisonen		1	1		LE	1							
+653	11	1	2015	Lemi, Sairala	6776234	538717	hunted	LE	4			Veli-Matti Nisonen		1	1		LE	1							
+654	11	1	2015	Lemi, Nisola	6773745	541031	hunted	LE	4			Veli-Matti Nisonen		1	1		LE	1							
+655	16	2	2015	Lemi, Urola	6772860	538955	hunted	LE	4			Veli-Matti Nisonen		1	1	1	X	1							
+656	1	2	2015	Lemi, Sairala	6776234	538717	hunted	LE	4			Veli-Matti Nisonen		1	1		LE	1							
+657	11	1	2015	Lemi, Sairala	6776234	538717	hunted	LE	4			Veli-Matti Nisonen		1	1		LE	1							
+658	25	1	2015	Lemi, Nisola	6773745	541031	hunted	LE	4			Veli-Matti Nisonen		1	1		LE	1							
+659			2015	Ala-Temmes	7183186	431133	hunted	LT	1			Hannu Pietiläinen	"""Kaoottiset korvat"", oikea"	1	1		LE	1							
+660			2015	Ala-Temmes	7183186	431133	hunted	LT	1			Hannu Pietiläinen	"""Kaoottiset korvat"", oikea"	1	1		LT	1							
+661			2015	Ala-Temmes	7183186	431133	hunted	LT	1			Hannu Pietiläinen	"""Kaoottiset korvat"", oikea"	1	1		LT	1							
+662			2015	Ala-Temmes	7183186	431133	hunted	LT	1			Hannu Pietiläinen	"""Kaoottiset korvat"", oikea"	1	1		LT	1							
+663			2015	Ala-Temmes	7183186	431133	hunted	LT	1			Hannu Pietiläinen	"""Kaoottiset korvat"", oikea"	1	1		LT	1							
+664			2015	Ala-Temmes	7183186	431133	hunted	LT	1			Hannu Pietiläinen	"""Kaoottiset korvat"", oikea"	1	1	1	LT	1							
+665			2015	Ala-Temmes	7183186	431133	hunted	LT	1			Hannu Pietiläinen	"""Kaoottiset korvat"", oikea"	1	1		LT	1							
+666			2015	Ala-Temmes	7183186	431133	hunted	LT	1			Hannu Pietiläinen	"""Kaoottiset korvat"", oikea"	1	1		LT	1							
+667			2015	Ala-Temmes	7183186	431133	hunted	LT	1			Hannu Pietiläinen	"""Kaoottiset korvat"", vasen"	1	1		LT	1							
+668			2015	Ala-Temmes	7183186	431133	hunted	LT	1			Hannu Pietiläinen	"""Kaoottiset korvat"", vasen"	1	1		LT	1							
+669			2015	Ala-Temmes	7183186	431133	hunted	LT	1			Hannu Pietiläinen	"""Kaoottiset korvat"", vasen"	1	1		LT	1							
+670			2015	Ala-Temmes	7183186	431133	hunted	LT	1			Hannu Pietiläinen	"""Kaoottiset korvat"", vasen"	1	1		LE	1							
+671			2015	Ala-Temmes	7183186	431133	hunted	LE	5			Hannu Pietiläinen	"""Kaoottiset korvat"", oikea"	1	1		LE	1							
+672			2015	Ala-Temmes	7183186	431133	hunted	LE	5			Hannu Pietiläinen	"""Kaoottiset korvat"", oikea"	1	1		LE	1							
+673			2015	Ala-Temmes	7183186	431133	hunted	LE	5			Hannu Pietiläinen	"""Kaoottiset korvat"", oikea"	1	1		LE	1							
+674			2015	Ala-Temmes	7183186	431133	hunted	LE	5			Hannu Pietiläinen	"""Kaoottiset korvat"", oikea"	1	1		LE	1							
+675			2015	Ala-Temmes	7183186	431133	hunted	LE	5			Hannu Pietiläinen	"""Kaoottiset korvat"", vasen"	1	1		LE	1							
+676			2015	Ala-Temmes	7183186	431133	hunted	LE	5			Hannu Pietiläinen	"""Kaoottiset korvat"", vasen"	1	1	1	X	1							
+677			2015	Ala-Temmes	7183186	431133	hunted	LE	5			Hannu Pietiläinen	"""Kaoottiset korvat"", oikea"	1	1	1	LE	1							
+678			2015	Ala-Temmes	7183186	431133	hunted	LE	5			Hannu Pietiläinen	"""Kaoottiset korvat"", oikea"	1	1	1	LE	1							
+679			2015	Ala-Temmes	7183186	431133	hunted	LE	5			Hannu Pietiläinen	"""Kaoottiset korvat"", oikea"	1	1		LE	1							
+680			2015	Ala-Temmes	7183186	431133	hunted	LE	5			Hannu Pietiläinen	"""Kaoottiset korvat"", oikea"	1	1		LE	1							
+681			2015	Ala-Temmes	7183186	431133	hunted	LE	5			Hannu Pietiläinen	"""Kaoottiset korvat"", oikea"	1	1		LE	1							
+682			2015	Ala-Temmes	7183186	431133	hunted	LE	5			Hannu Pietiläinen	"""Kaoottiset korvat"", oikea"	1	1		LE	1							
+683			2015	Ala-Temmes	7183186	431133	hunted	LE	5			Hannu Pietiläinen	"""Kaoottiset korvat"", oikea"	1	1		LE	1							
+684			2015	Ala-Temmes	7183186	431133	hunted	LE	5			Hannu Pietiläinen	"""Kaoottiset korvat"", oikea"	1	1		LE	1							
+685			2015	Ala-Temmes	7183186	431133	hunted	LE	5			Hannu Pietiläinen	"""Kaoottiset korvat"", vasen"	1	1		LE	1							
+686			2015	Ala-Temmes	7183186	431133	hunted	LE	5			Hannu Pietiläinen	"""Kaoottiset korvat"", vasen"	1	1	1	X	1							
+687			2015	Ala-Temmes	7183186	431133	hunted	LE	5			Hannu Pietiläinen	"""Kaoottiset korvat"", vasen"	1	1	1	X	1							
+688			2015	Ala-Temmes	7183186	431133	hunted	LE	5			Hannu Pietiläinen	"""Kaoottiset korvat"", vasen"	1	1		LE	1							
+689	29	9	2014	Kuhmo, Jyrkäntie, Kylkelä	7105038	624948	hunted	LT	1			Pentti Willman		1	1	1	LT	1							
+690	27	10	2014	Kuhmo, Viitavaarantie, Lemetinvaara	7116372	592867	hunted	LT	1			Pentti Willman		1	1		LT	1							
+691	3	11	2014	Kuhmo, Hukkajärventie, Heikkilä (Mustalampi)	7113728	629014	hunted	LT	1			Pentti Willman		1	1		LT	1							
+692	6	11	2014	Kuhmo, Pohjoispuolentie, Multikangas	7115734	616294	hunted	LT	1			Pentti Willman		1	1		LT	1							
+693	18	11	2014	Kuhmo, Jyrkäntie, Kylkelä	7105038	624948	hunted	LT	1			Pentti Willman		1	1		LT	1							
+694	20	11	2014	Kuhmo, Jyrkäntie, Kylkelä	7105038	624948	hunted	LT	1			Pentti Willman		1	1	1	LT	1							
+695	21	11	2014	Kuhmo, Hukkajärventie, Heikkilä (Mustalampi)	7113728	629014	hunted	LT	1			Pentti Willman		1	1		LT	1							
+696	23	11	2014	Kuhmo, Hukkajärventie, Heikkilä (Mustalampi)	7113728	629014	hunted	LT	1			Pentti Willman		1	1	1	LT	1							
+697	23	11	2014	Kuhmo, Hukkajärventie, Heikkilä (Mustalampi)	7113728	629014	hunted	LT	1			Pentti Willman		1	1		LT	1							
+698	25	11	2014	Kuhmo, Kaskelantie	7117141	613843	hunted	LT	1			Pentti Willman		1	1		LT	1							
+699	17	12	2014	Kuhmo, Kaskelantie	7117141	613843	hunted	LT	1			Pentti Willman		1	1		LT	1							
+700	19	12	2014	Kuhmo, Jyrkäntie, Kylkelä	7105038	624948	hunted	LT	1			Pentti Willman		1	1		LT	1							
+701	12	5	2015	Kauhajoki, Aronkylä, Tökerötie	6934145	253791	hit by car	LT	1			Pilvi Vuolle		1	1		LT	1							
+702	21	9	2014	Kauhajoki	6930830	251092	hunted	LT?	3			Pilvi Vuolle		1	1		LT	1							
+703	21	1	2015	Kauhajoki, Kirkonkylä	6930830	251092	hunted	LE	5			Pilvi Vuolle		1	1		LE	1							
+704	21	9	2014	Kauhajoki, Kantokylä	6931919	246716	hunted	LE	5			Pilvi Vuolle		1	1		LE	1							
+705	14	12	2014	Kauhajoki, Luomankylä	6933970	248430	hunted	LE	5			Pilvi Vuolle		1	1		LE	1							
+706			2015	Ala-Temmes	7183186	431133	hunted	LE	5			Hannu Pietiläinen	Paljon mustaa kärjessä	1	1		LE	1							
+707			2015	Ala-Temmes	7183186	431133	hunted	LT	1			Hannu Pietiläinen	Valkea korva	1	1		LT	1							
+708			2015	Ala-Temmes	7183186	431133	hunted	LE	5			Hannu Pietiläinen	Paljon mustaa kärjessä	1	1		LE	1							
+709			2015	Ala-Temmes	7183186	431133	hunted	LT	1			Hannu Pietiläinen	Korva puoliksi valkea, kärjessä vain vähän mustaa	1	1		LT	1							
+710	28	12	2014	Orivesi, Löytäne	6829447	382786	hunted	LT	1			Esko Apo		1	1		LT	1							
+711	1	1	2015	Orivesi, Löytäne	6829447	382786	hunted	LT	1			Esko Apo		1	1		LT	1							
+712	21	1	2015	Tuusula, Vanhakylä	6707252	391240	hunted	LE	4			Esko Apo		1	1		X	1							
+713	21	1	2015	Tuusula, Vanhakylä	6707252	391240	hunted	LE	4			Esko Apo		1	1	1	LE	1							
+714	22	1	2015	Tuusula, Vanhakylä	6707252	391240	hunted	LE	5			Esko Apo		1	1		LE	1							
+715	23	1	2015	Tuusula, Vanhakylä	6707252	391240	hunted	LE	5			Esko Apo		1	1	1	LE	1							
+716	24	1	2015	Tuusula, Ruskeala	6703918	391254	hunted	LE	4			Esko Apo		1	1	1	X	1							
+717	24	1	2015	Tuusula, Ruskeala	6703918	391254	hunted	LE	5			Esko Apo		1	1	1	LE	1							
+718	31	1	2015	Orivesi, Västilä	6836417	378431	hunted	LT	1			Esko Apo		1	1	1	LT	1							
+719	1	2	2015	Orivesi, Löytäne	6829447	382786	hunted	LE	5			Esko Apo		1	1		LE	1							
+720	1	2	2015	Orivesi, Löytäne	6829447	382786	hunted	LT	1			Esko Apo		1	1		LT	1							
+721	1	2	2015	Orivesi, Löytäne	6829447	382786	hunted	LT	1			Esko Apo		1	1		LT	1							
+722	21	2	2015	Orivesi, Löytäne	6829447	382786	hunted	LT	1			Esko Apo		1	1		LT	1							
+723	24	2	2015	Tuusula, Vanhakylä	6707252	391240	hunted	LE	5			Esko Apo		1	1		LE	1							
+724	25	2	2015	Tuusula, Vanhakylä	6707252	391240	hunted	LE?	3			Esko Apo	Rusakkomainen, pitkä, korvan taus poikkeuksellisen vaalea	1	1		LE	1							
+725			2015	Lappeenranta, Pulsa	6755283	552961	hunted	LT	1			Riku Aapro	Useita näytteitä samassa pussissa	1	1		LT	1							
+726			2015	Lappeenranta, Pulsa	6755283	552961	hunted	LT	1			Riku Aapro	Useita näytteitä samassa pussissa	1	1		LT	1							
+727			2015	Lappeenranta, Pulsa	6755283	552961	hunted	LT	1			Riku Aapro	Useita näytteitä samassa pussissa	1	1		LT	1							
+728			2015	Lappeenranta, Pulsa	6755283	552961	hunted	LT	1			Riku Aapro	Useita näytteitä samassa pussissa	1	1		LT	1							
+729			2015	Lappeenranta, Pulsa	6755283	552961	hunted	LT	1			Riku Aapro	Useita näytteitä samassa pussissa	1	1		LT	1							
+730			2015	Lappeenranta, Pulsa	6755283	552961	hunted	LE	5			Riku Aapro	Useita näytteitä samassa pussissa	1	1		LE	1							1
+731			2015	Lappeenranta, Pulsa	6755283	552961	hunted	LE	5			Riku Aapro	Useita näytteitä samassa pussissa	1	1		LE	1							
+732			2015	Lappeenranta, Pulsa	6755283	552961	hunted	LE	5			Riku Aapro	Useita näytteitä samassa pussissa	1	1		LE	1							
+733			2015	Lappeenranta, Pulsa	6755283	552961	hunted	LT	1			Riku Aapro	Useita näytteitä samassa pussissa	1	1		LT	1							
+734			2015	Lappeenranta, Pulsa	6755283	552961	hunted	LT	1			Riku Aapro	Useita näytteitä samassa pussissa	1	1		LT	1							
+735	8	2	2015	Ii	7245385	424302	hunted	LT	1			Kimmo Keltamäki		1	1		LT	1							
+736	12	9	2014	Kuusamo, Lämsänkylä	7304705	634018	hunted	LT	1			Kimmo Keltamäki		1	1	1	X	1							
+737	29	11	2014	Kuivaniemi	7274130	416420	hunted	LT	1			Kimmo Keltamäki		1	1		LT	1							
+738	18	10	2014	Kuivaniemi	7274130	416420	hunted	LT	1			Kimmo Keltamäki		1	1		LT	1							
+739	6	9	2014	Kuivaniemi	7274130	416420	hunted	LT	1			Kimmo Keltamäki		1	1	1	LT	1							
+740	4	1	2015	Ii, Ojakylä	7241524	423232	hunted	LT	1			Kimmo Keltamäki		1	1		LT	1							
+741	18	2	2015	Ii, Koni	7247049	421662	hunted	LT	1			Kimmo Keltamäki		1	1		LT	1							
+742	7	9	2014	Kuivaniemi	7274130	416420	hunted	LT	1			Kimmo Keltamäki		1	1		LT	1							
+743	21	2	2015	Ii, Pihlajakari	7251849	399238	hunted	LT	1			Kimmo Keltamäki		1	1		LT	1							
+744	2	1	2015	Ii, Koirankari	7247769	420075	hunted	LT	1			Kimmo Keltamäki		1	1		LT	1							
+745	27	9	2014	Kuivaniemi	7274130	416420	hunted	LT	1			Kimmo Keltamäki		1	1		LT	1							
+746	11	9	2014	Kuusamo, Lämsänkylä	7304705	634018	hunted	LT	1			Kimmo Keltamäki		1	1		LT	1							1
+747	7	12	2014	Ii, Pihlajakari	7251849	399238	hunted	LT	1			Kimmo Keltamäki		1	1	1	X	1							
+748	18	11	2014	Ii	7245385	424302	hunted	LT	1			Kimmo Keltamäki		1	1		LT	1							
+749	5	10	2014	Kuivaniemi	7274130	416420	hunted	LT	1			Kimmo Keltamäki		1	1		LT	1							
+750	23	11	2014	Ii	7245385	424302	hunted	LT	1			Kimmo Keltamäki		1	1		LT	1							
+751			2015	Liminka, Heinijärvi	7176932	422636	hunted	LT	1			Jyrki Oikarinen		1	1		LT	1							
+752			2015	Liminka, Heinijärvi	7176932	422636	hunted	LT	1			Jyrki Oikarinen		1	1	1	X	1							
+753			2015	Liminka, Heinijärvi	7176932	422636	hunted	LT	1			Jyrki Oikarinen		1	1		LT	1							
+754			2015	Liminka, Heinijärvi	7176932	422636	hunted	LT	2			Jyrki Oikarinen	Vähän erikoisemman värinen, nuori jänis?	1	1		LT	1							
+755	1	1	2015	Tuusniemi, Viitajärven kylä	6966059	564382	hunted	LE	5			Toimi Kokkonen		1	1		LE	1							
+756	1	1	2015	Tuusniemi, Viitajärven kylä	6966059	564382	hunted	LE	5			Toimi Kokkonen		1	1		LE	1							
+757	5	1	2015	Vehmersalmi	6959455	552542	hunted	LE	5			Toimi Kokkonen		1	1		LE	1							
+758	17	1	2015	Vesilahti, Kehro, Lepolantie	6791671	310538	hunted	LE?	3			Antti Nuutero		1	1		LE	1							
+759	17	1	2015	Vesilahti, Kehro, Lepolantie	6791671	310538	hunted	LE?	3			Antti Nuutero		1	1	1	LE	1							
+760	31	12	2014	Vesilahti	6801489	319414	hunted	LE	5			Antti Nuutero		1	1	1	X	1							
+761	30	11	2014	Vieremä, Halkomäki	7058326	508546	hunted	LT	1			Markus Laakso		1	1		LT	1							
+762	15	11	2014	Vieremä, Kaarteenmäki	7061180	507745	hunted	LE	4			Markus Laakso		1	1		LE	1							
+763	9	11	2014	Rautalampi, Pukkiharju	6949468	488680	hunted	LE	5			Jere Haaraoja		1	1		LE	1							
+764	31	1	2015	Pukkiharju	6949468	488680	hunted	LE	5			Erkki Matilainen		1	1		LE	1							
+765	28	2	2015	Liminka, Heinijärvi	7176932	422636	hunted	LT	1			Jyrki Oikarinen		1	1		LT	1							
+766	1	2	2015	Tuusniemi	6965565	575862	hunted	LE	5			Tomi Kokkonen		1	2	1	LT	1							1
+767	24	1	2015	Tuusniemi, Kosula, Nurkkalantie 165	6946525	573281	hunted	LE	5			Teuvo Parkkonen		1	1		LE	1							
+768			2015	Mikkeli, Lintuniemi	6813497	516751	hunted	LT	1			Osmo Siilin	Näytteet mahd. pilalla, voimakas haju	1	1		LT	1							
+769			2015	Puumala, Löykkiö	6821484	562768	hunted	LT	1			Osmo Siilin	Näytteet mahd. pilalla, voimakas haju	1	1		LT	1							
+770			2015	Ruokolahti, Rautionhovi	6800320	603855	hunted	LT?	3			Osmo Siilin		1	1		LT	1							
+771	9	1	2015	Siikajoki, Tuomioja	7166052	639305	hunted	LE	5			Ei yhteystietoja	Voimakas haju, näytteet leikattu korvan yläosasta	1	1		LE	1							1
+772	9	1	2015	Siikajoki, Tuomioja	7166052	639305	hunted	LE	5			Ei yhteystietoja	Voimakas haju, näytteet leikattu korvan yläosasta	1	1		LE	1							
+773	9	1	2015	Siikajoki, Tuomioja	7166052	639305	hunted	LE?	3			Ei yhteystietoja	Voimakas haju, näytteet leikattu korvan yläosasta	1	1		LE	1							
+774	9	1	2015	Siikajoki, Tuomioja	7166052	639305	hunted	LE	5			Ei yhteystietoja	Voimakas haju, näytteet leikattu korvan yläosasta	1	1		LE	1							
+775	9	1	2015	Siikajoki, Tuomioja	7166052	639305	hunted	LE?	3			Ei yhteystietoja	Voimakas haju, näytteet leikattu korvan yläosasta	1	1		LE	1							
+776	24	1	2015	Siikajoki, Tuomioja	7166052	639305	hunted	LE	5			Ei yhteystietoja	Voimakas haju, näytteet leikattu korvan yläosasta	1	1		LE	1							
+777	27	1	2014	Siikajoki, Tuomioja	7166052	639305	hunted	LE	5			Ei yhteystietoja	Voimakas haju, näytteet leikattu korvan yläosasta	1	1		LE	1							
+778	3	10	2014	Saarijärvi, Kuoppala	6956172	392406	hunted	LT	1			Erkki Vuorinen		1	1		LT	1							
+779	5	12	2014	Saarijärvi, Kuoppala	6956172	392406	hunted	LT	1			Erkki Vuorinen		1	1		LT	1							
+780			2015	Karijoki	6919774	225687	hunted	LE	5			Jari Muurimäki		1	1		LE	1							
+781	20	1	2015	Mikkeli, Porrassalmenkadun ja Pillipiiparinkujan risteys	6842010	514996	hit by car	LE	5			Ei yhteystietoja		1	1		LE	1							
+782	14	3	2015	Joensuu, Botania	6944238	639754	Seurantaeläin	LE	5	M	AD	UEF	Matilda	1	1		LE	1							
+783	4	3	2015	Joensuu, Botania	6944238	639754	seurantaeläin	LT	1	M	AD	UEF	Arsi	1	1		LT	1							
+784	25	2	2015	Ilomantsi, Kelovaara	6998011	682531	hunted	LT	1			Jaakko Pohjoismäki		1	1		LT	1							
+785	25	9	2014	Limingan kylä	7188203	424587	hunted	LT	1			Jarmo Karjalainen		1	1		LT	1							
+786	10	10	2014	Limingan kylä	7188203	424587	hunted	LE	5			Jarmo Karjalainen		1	1	1	X	1							
+787	10	10	2014	Limingan kylä	7188203	424587	hunted	LE	5			Jarmo Karjalainen		1	1		LE	1							
+788	12	10	2014	Limingan kylä	7188203	424587	hunted	LT	1			Jarmo Karjalainen		1	1	1	LT	1							
+789	26	10	2014	Limingan kylä	7188203	424587	hunted	LT	1			Jarmo Karjalainen		1	1	1	LT	1							
+790	6	11	2014	Limingan kylä	7188203	424587	hunted	LE	5			Jarmo Karjalainen		1	1	1	LE	1							
+791	9	11	2014	Limingan kylä	7188203	424587	hunted	LT	1			Jarmo Karjalainen		1	1		LT	1							
+792	10	11	2014	Limingan kylä	7188203	424587	hunted	LT	1			Jarmo Karjalainen		1	1		LT	1							
+793	27	11	2014	Limingan kylä	7188203	424587	hunted	LE	5			Jarmo Karjalainen		1	1		LE	1							
+794	13	12	2014	Limingan kylä	7188203	424587	hunted	LE	5			Jarmo Karjalainen		1	1		LE	1							
+795	13	1	2015	Limingan kylä	7188203	424587	hunted	LE	5			Jarmo Karjalainen		1	1	1	LE	1							
+796	18	1	2015	Limingan kylä	7188203	424587	hunted	LE	5			Jarmo Karjalainen		1	1		LE	1							
+797	23	1	2015	Limingan kylä	7188203	424587	hunted	LE	5			Jarmo Karjalainen		1	1		LE	1							
+798	31	1	2015	Limingan kylä	7188203	424587	hunted	LE	5			Jarmo Karjalainen		1	1		LE	1							
+799	13	2	2015	Limingan kylä	7188203	424587	hunted	LE	5			Jarmo Karjalainen		1	1		LE	1							
+800	22	1	2015	Lappajärvi, Itäkylä	7017896	332589	hit by car	LE	4			Mattias Kanchos		1	1		LE	1							1
+801			2015	Liminka, Heinijärvi	7176684	421667	hunted	LE?	3			Jyrki Oikarinen	Korva vaalea, kärjen tumma osa rusakkomainen	1	1		LE	1							
+802	7	12	2014	Punkaharju, Kontusentie	6827850	601008	hunted	LT	1			Eija Ristola		1	1		LT	1							
+803	7	12	2014	Punkaharju, Kontusentie	6827850	601008	hunted	LT	1			Eija Ristola		1	1		LT	1							
+804	1	10	2014	Inari, Juutua	7642510	498207	hunted	LT	1			Miiko Sokka		1	1		LT	1							
+805	14	12	2014	Varpaisjärvi, Ruunakorpi	7024013	543322	hunted	LE	5			Eija Järveläinen		1	1		LE	1							
+806	27	9	2014	Lapinlahti, Urimolahti	7024669	545455	hunted	LE	5			Eija Järveläinen		1	1	1	LT	1							
+807	30	1	2015	Varpaisjärvi, Urimolahti	7025929	537736	hunted	LE	5			Eija Järveläinen		1	1	1	LT	1							
+808	1	11	2014	Ilomantsi, Haukivaara	6941874	702766	hunted	LT	1			Ismo Pölönen	Näytteet samassa pussissa	1	1	1	LT	1							
+809	1	11	2014	Ilomantsi, Haukivaara	6941874	702766	hunted	LT	1			Ismo Pölönen	Näytteet samassa pussissa	1	1	1	LT	1							
+810	1	11	2014	Ilomantsi, Haukivaara	6941874	702766	hunted	LT	1			Ismo Pölönen	Näytteet samassa pussissa	1	1		LT	1							
+811	1	11	2014	Ilomantsi, Haukivaara	6941874	702766	hunted	LT	1			Ismo Pölönen	Näytteet samassa pussissa	1	1		LT	1							
+812	1	11	2014	Ilomantsi, Haukivaara	6941874	702766	hunted	LT	1			Ismo Pölönen	Näytteet samassa pussissa	1	1		LT	1							
+813	1	11	2014	Ilomantsi, Haukivaara	6941874	702766	hunted	LT	1			Ismo Pölönen	Näytteet samassa pussissa	1	1		LT	1							
+814	1	11	2014	Ilomantsi, Haukivaara	6941874	702766	hunted	LT	1			Ismo Pölönen	Näytteet samassa pussissa	1	1		LT	1							
+815	4	2	2015	Hirvensalmi, Ripatinkylä	6830216	481065	hunted	LT	1			Juha Kämppi		1	1		LT	1							
+816	27	11	2014	Hirvensalmi, Hurrila	6839300	479438	hunted	LT	1			Juha Kämppi		1	1		LT	1							
+817	12	9	2014	Hirvensalmi, Tuukkala	6843393	477452	hunted	LT	1			Juha Kämppi		1	1		LT	1							
+818	3	9	2014	Hirvensalmi, Vahvamäki	6837761	481968	hunted	LT	1			Juha Kämppi		1	1		LT	1							
+819	14	12	2014	Hirvensalmi, Hurrila	6839300	479438	hunted	LE	5			Juha Kämppi		1	1		LE	1							
+820	23	11	2014	Hirvensalmi, Hurrila	6839300	479438	hunted	LT	1			Juha Kämppi		1	1		LT	1							
+821	7	9	2014	Hirvensalmi, Tuukkala	6843393	477452	hunted	LT	1			Juha Kämppi		1	1		LT	1							
+822	1	10	2014	Hirvensalmi, Hämeenmäki	6838581	477912	hunted	LT	1			Juha Kämppi		1	1		LT	1							
+823	23	11	2014	Hirvensalmi, Hurrila	6839300	479438	hunted	LE	5			Juha Kämppi		1	1		LE	1							
+824	27	11	2014	Hirvensalmi, Hurrila	6839300	479438	hunted	LT	1			Juha Kämppi		1	1		LT	1							
+825	23	2	2014	Hirvensalmi	6834462	488203	hunted	LT	1			Jorma Sanisalo		1	1	1	X	1							
+826	21	10	2014	Puolanka, Tossuperä	7207637	523930	hunted	LT	1			Marja Niemi		1	1		LT	1							
+827	8	11	2014	Vihanti	7152557	403480	hit by car	LE	5			Mervi Kunnasranta ja Sari Oksanen		1	1		LE	1							
+828	4	10	2014	Hirvensalmi	6834462	488203	hunted	LT	1			Jarmo Liukkonen		1	2	1	LT	1							1
+829	17	1	2015	Hirvensalmi	6834462	488203	hunted	LE	4			Jarmo Liukkonen		1	1		LE	1							
+830	1	2	2015	Hirvensalmi	6834462	488203	hunted	LT	1			Jarmo Liukkonen		1	1		LT	1							
+831	2	1	2015	Hirvensalmi	6834462	488203	hunted	LE	5			Veini Tyyskä		1	1		LE	1							
+832	19	12	2014	Joensuu, Botania	6944238	639754	Seurantaeläin	LT	1	F	AD	UEF	Iikka	1	1		LT	1							
+833	11	3	2015	Joensuu, Pilkko	6946889	639305	Seurantaeläin	LT	1	M	AD	UEF	Torkel	1	1		LT	1							
+834	1	2	2015	Hirvensalmi	6834462	488203	hunted	LT	1			Veini Tyyskä		1	1		LT	1							
+835			2015	Mikkeli, Vehmaskylä	6852997	521480	hunted	LT	2			Jarmo Liukkonen		1	1		LT	1							
+836	7	2	2015	Hirvensalmi	6834462	488203	hunted	LE?	3			Veini Tyyskä		1	1		LE	1							
+837	31	12	2014	Hirvensalmi	6834462	488203	hunted	LE	4			Jarmo Liukkonen		1	1		LE	1							
+838	25	1	2015	Hirvensalmi	6834462	488203	hunted	LE	5			Veini Tyyskä		1	1		LE	1							
+839	15	1	2015	Joensuu, Botania	6944238	639754	Seurantaeläin	LE	5	F	AD	UEF	Solja	1	1		LE	1							
+840	31	3	2015	Joensuu, Botania	6944238	639754	Seurantaeläin	LT	1	M	AD	UEF	Irmeli	1	1		LT	1							
+841	17	12	2014	Joensuu, Botania	6944238	639754	Seurantaeläin	LT	1	M	AD	UEF	Ilkka	1	1		LT	1							
+842	1	12	2014	Joensuu, Botania	6944238	639754	Seurantaeläin	LT	1	F	AD	UEF	Oskari	1	1		LT	1							
+843	13	3	2015	Joensuu, Botania	6944238	639754	Seurantaeläin	LE?	3	M	AD	UEF	Ernesti	1	1		LE	1							
+844	13	2	2015	Joensuu, Botania	6944238	639754	Seurantaeläin	LE	5	M	AD	UEF	Anelma	1	1		LE	1							
+845	21	3	2015	Joensuu, Botania	6944238	639754	Seurantaeläin	LT	1	M	AD	UEF	Kaapo	1	1		LT	1							
+846	8	4	2015	Joensuu, Botania	6944238	639754	Seurantaeläin	LT	1	F	AD	UEF	Rea	1	1		LT	1							
+847	11	12	2014	Joensuu, Botania	6944238	639754	Seurantaeläin	LE	5	M	AD	UEF	Tatu	1	1	1	X	1							
+848	30	3	2015	Joensuu, Botania	6944238	639754	Seurantaeläin	LE	5	M	AD	UEF	Ahvo	1	1		LE	1							
+849	15	7	2015	Joensuu, Linnunlahti	6944552	640042	found dead	LE	5			Mervi Kunnasranta & Helmi	rusakon poikanen	1	1	1	LT	1							
+850	26	7	2005	Vantaa	6686279	389828	found dead	LE	5			Marja Niemi		1	1	1	LE	1							
+851	26	1	2016	Joensuu, Botania	6944238	639754	Seurantaeläin	LE	5	M	AD	UEF	Annukka	1	1		LE	1							
+852	23	12	2015	Joutsa	6845568	453041	found dead	LE	5	M	JUV	Evira	E20151229-017	1	1		LE	1							
+853	11	12	2015	Oulun pyhäjärvi	7210861	427992	found dead	LE	5	M	JUV	Evira	E20151215-026	1	1		LE	1							
+854	3	11	2016	Pieksämäki, Naarajärvi	6906164	503104	found dead	LE	4	F	AD	Evira	E20151105-042	1	1		LE	1							
+855	11	1	2015	Loviisa	6702641	457298	found dead	LE	5	M		Evira	E20150115-037, sukupuoli uros	1	1		LE	1							
+856	9	10	2015	Pyhtää	6706316	474993	found dead	LE	5	M	JUV	Evira	E20151013-027	1	1		LE	1							
+857	7	9	2015	Helsinki, Hietaniemen hautausmaa	6672574	383697	found dead	LE	5	F	JUV	Evira	E20120908-048	1	1		X	1							
+858			2015	Kuusankoski	6752483	479619	found dead	LE	4	F	JUV	Evira	E20151029-130	1	1		X	1							
+859	13	10	2015	Kotka	6703258	496764	found dead	LE	5	F	JUV	Evira	E20151014-038	1	1		LE	1							
+860	5	10	2015	Salo	6700495	286552	found dead	LE	5	F	JUV	Evira	E20151007-106	1	1		LE	1							
+861	30	12	2015	Salo	6700495	286552	found dead	LE	5	M	JUV	Evira	E20151231-046	1	1		X	1							
+862	1	9	2015	Salo	6700495	286552	found dead	LE	5	M	JUV	Evira	E20151007-106	1	1		LE	1							
+863	12	10	2015	Mäntyharju	6809385	493347	found dead	LE	5	F	JUV	Evira	E20151014-040	1	1		LE	1							
+864	30	7	2015	Alvettula	6787783	364921	hunted	LE	5			Kimmo Honkamäki		1	1		X	1							
+865	5	12	2015	Alvettula	6787783	364921	hunted	LE	5			Kimmo Honkamäki		1	1		X	1							
+866			2015	Alvettula	6787783	364921	hunted	LE	5			Kimmo Honkamäki		1	1		X	1							
+867	7	2	2015	Alvettula	6787783	364921	hunted	LE	5			Kimmo Honkamäki		1	1		X	1							
+868	23	3	2015	Alvettula	6787783	364921	hunted	LE	5			Kimmo Honkamäki		1	1		X	1							
+869	22	11	2015	Nummela	6691767	352385	found dead	LE	5	M	JUV	Evira	E20151125-024	1	1		LE	1							
+870			2015	Nurmijärvi, Palojoki	6704740	379420	found dead	LE	5	M	JUV	Evira	E20150930-061	1	1		LE	1							
+871	6	11	2015	Hyvinkää, Kytäjä, Nukarinojantie 88	6723593	382992	found dead	LE	4	M	JUV	Evira	E20151106-037	1	1		X	1							
+872	7	9	2015	Hietaniemen hautausmaa	6672574	383697	found dead	LE	5	M	JUV	Evira	E20150908-048	1	1		LE	1							
+873	25	9	2015	Hämeenlinna	6765016	362869	found dead	LE	5	M	JUV	Evira	E20151007-049	1	1		LE	1							
+874	4	10	2015	Hyvinkää	6723593	382992	found dead	LE	5	F	AD	Evira	E20151007-102	1	1		X	1							
+875			2016	Oulu	7210861	427992	hunted	LE	5					1	1		LE	1							
+876	11	10	2015	Oulu, Oulunsuu	7210322	431147	found dead	LE	5	M	AD	Evira	E20151012-032	1	1		X	1							
+877	13	11	2015	Peräseinäjoki, Amerikanneva	6938075	304602	hunted	LE	5			Teuvo Toivonen	5.7 kg	1	1		LE	1							
+878	22	11	2015	Peräseinäjoki, Haukineva	6942301	291462	hunted	LE	5			Teuvo Toivonen	3.8 kg	1	1		X	1							
+879	28	12	2015	Oulu	7210861	427992	found dead	LE	5	M	AD	Evira	E20151229-020	1	1		LE	1							
+880	13	10	2015	Tampere	6822513	327629	found dead	LE	5	F	AD	Evira	E20151015-032	1	1		LE	1							
+881	8	9	2015	Vaala, Niemenkuja	7159534	492364	found dead	LE	5	M	JUV	Evira	E20150910-038	1	1		LE	1							
+882	26	8	2015	Oulu, Peltola	7210725	430207	found dead	LE	5	M	JUV	Evira	E20150826-020, sukupuoli uros	1	1		X	1							
+883	9	9	2015	Oulu	7210861	427992	found dead	LE	5			Antero Okkonen	E20150910-103	1	1		LE	1							
+884	24	1	2016	Kristiinankaupunki	6917461	208484	hunted	LE	5				3.4 kg	1	1		X	1							
+885	24	1	2016	Kristiinankaupunki	6917461	208484	hunted	LE	5				3.9 kg	1	1		LE	1							
+886	28	2	2016	Karijoki	6919774	225687		LE	5					1	1		LE	1							
+887	19	8	2015	Joensuu, Kottaraisentie 5	6945005	640444	found dead	LE	5	M	JUV	UEF	Toimitettu Eviraan	1	1		LE	1							
+888	3	2	2016	Linnunlahti, Joensuu	6944552	640042	found dead	LE	5			Mervi + Helmi		1	1		LE	1							
+889	12	7	2015	Joensuu, Kuusitie	6944285	641652	lopetettu, huonokuntoinen	LE	5			Mervi Kunnasranta	Toimitettu Eviraan	1	1		X	1							
+890	1	1	2016	Joensuu, Saukonkatu 15	6944285	641652	found dead	LE	5			T. Tahvanainen	Toimitettu Eviraan	1	1		X	1							
+891	18	9	2015	Joensuu	6944285	641652	found dead	LE	5			Mervi Kunnasranta		1	1		LE	1							
+892	30	10	2015	Juankoski, Kellolahti	6996222	570224	hunted	LE?	3			Eljas Pylväs	oli osaksi ruskea pää kuin rusakolla	1	1		X	1							
+893			2016	Joensuu	6944285	641652	hunted	LE	5				Riikan hakema, suolistettu	1	1		X	1							
+894	26	2	2016	Valtimo	7062664	589715	hunted	LE	5			Eeva Lipponen		1	1		LT	1							
+895	10	6	2015	Juuka	7014304	613232	found dead	LE	5	F	JUV	Evira	E20151007-029	1	1		X	1							
+896	10	4	2015	Liperi	6935958	621824	hunted	LE	5			Eeva Kuhlman		1	1		X	1							
+897	25	1	2015	Valtimo, Haapakylä	7059240	589907	hunted	LE	5			Väinö K. 		1	1		LT	1							
+898	27	9	2015	Juuka	7014304	613232	found dead	LE	5	F	AD	Evira	E20150930-014	1	1		LE	1							
+899	10	8	2015	Maaninka	7002977	515123	found dead	LE	5	M	JUV	Evira	E20151013-004	1	1		LT	1							
+900	21	9	2015	Juva	6863056	545055	found dead	LE	5	F	JUV	Evira	E20150924-033	1	1		X	1							
+901			2015	Kuopio	6973853	535023	found dead	LE	5	M	JUV	Evira	E20151102-130	1	1		LE	1							
+902	11	4	2015	Lieksa	7024581	651669	found dead	LE?	3	F	JUV	Evira	E20151105-041	1	1		LE	1							
+903	28	9	2015	Tohmajärvi, Peräkorventie	6909436	675994	found dead	LE	5	M	JUV	Evira	E20150930-062	1	1		X	1							
+904	15	2	2015	Mikkeli, Anttola	6827447	533540	found dead	LE	5	M	AD	Evira	E20151218-020	1	1		LE	1							
+905	27	9	2015	Rautavaara, Varpaisjärventie 45	7041801	563566	found dead	LE	5	M	JUV	Evira	E20150929-023	1	1		LE	1							
+906	10	5	2015	Vieremä	7075370	496622	found dead	LE	5	F	JUV	Evira	E20151021-077	1	1		LE	1							
+907	13	8	2015	Juuka, Joensuunkylä	7012451	616847	found dead	LE?	3	F	JUV	Evira	E20150902-098	1	1		LT	1							
+908	19	8	2015	Sotkamon kirkonkylä	7112462	567550	found dead	LE	5	F	JUV	Evira	E20150821-059	1	1		LE	1							
+909	25	9	2015	Kitee, Suorlahti, Orpolan tila	6890920	655221	found dead	LE	5	M	JUV	Evira	E20150929-018	1	1		LE	1							
+910	10	9	2015	Liperi	6935958	621824	found dead	LE	5	M	JUV	Evira	E20151014-028	1	1		LE	1							
+911			2016	Joensuu	6944285	641652	hunted	LE	5				Riikka hakenut	1	1		LE	1							
+912			2016	Joensuu	6944285	641652	hunted	LE	5				Riikka hakenut	1	1		LE	1							
+913			2016	Joensuu	6944285	641652	hunted	LE	5				Riikka hakenut	1	1		LE	1							
+914			2016	Joensuu	6944285	641652	hunted	LE	5				Riikka hakenut	1	1		LE	1							
+915			2016	Joensuu	6944285	641652	hunted	LE	5				Riikka hakenut	1	1		LE	1							
+916	31	10	2015	Joensuu, Kottaraisentie 5	6944610	639703	found dead	LE	5	F	AD	Evira	E20151103-052, sama kuin 887	1	1		LE	1							
+917	26	2	2016	Valtimo, Haapajärven ranta	7062664	589715	hunted	LE	5			Eeva Lipponen		1	1		LT	1							
+918	24	2	2013	Valtimo, Tuovila	7062664	589715	hunted	LE	5			Eeva Lipponen		1	1		LE	1							
+919	24	2	2013	Valtimo, Tuovila	7062664	589715	hunted	LE	5			Eeva Lipponen		1	1		LE	1							
+920	16	2	2013	"Valtimo; Tetrivaara"	7062664	589715	hunted	LE	5			Eeva Lipponen		1	1		X	1							
+921	2	10	2013	Valtimo, Marjokangas	7062664	589715	hunted	LE?	3			Eeva Lipponen		1	1		X	1							
+922			2013	"Valtimo; Verkkojoki"	7062664	589715	hunted	LE?	3			Eeva Lipponen		1	1		X	1							
+923	15	1	2015	"Valtimo; Haapakylä"	7062664	589715	hunted	LE	5			Eeva Lipponen		1	1		X	1							
+924	18	1	2015	Valtimo	7062664	589715	hunted	LE?	3			Eeva Lipponen/Valtimon rhy		1	1		X	1							
+925	24	2	2013	Valtimo	7062664	589715	hunted	LE	5			Eeva Lipponen		1	1										
+926			2013	"Valtimo; Verkkojoki"	7062664	589715	hunted	LE	5			Eeva Lipponen		1	1										
+927	24	2	2013	Valtimo	7062664	589715	hunted	LE	5			Eeva Lipponen		1	1										
+928	2	10	2013	Valtimo	7062664	589715	hunted	LE	4			Eeva Lipponen		1	1										
+929	2	10	2013	"Valtimo; Marjokangas"	7062664	589715	hunted	LE	4			Eeva Lipponen		1	1										
+930	28	2	2016	Liperi	6935958	621824	hunted	LE	5			Markus Pekkinen		1	1										
+931	4	12	2015	Nurmes/Nurmijärvi?			found dead	LT 	1					1	1										
+932	9	3	2015	Ruokolahti	6796694	597297	hunted	LT	1			Osmo Siilin		1	1										
+933	9	9	2015	Lökkiö	6817935	592606	hunted	LT	1			Osmo Siilin		1	1										
+934	9	12	2015	Lieviskä	6825098	591705	hunted	LT	1			Osmo Siilin		1	1										
+935	13	9	2015	Ruokolahti	6796694	597297	hunted	LT	1			Osmo Siilin		1	1										
+936	21	9	2015	Lökkiö	6817935	592606	hunted	LT	1			Osmo Siilin		1	1										
+937	10	6	2015	Ruokolahti	6796694	597297	hunted	LT	1			Osmo Siilin		1	1										
+938	20	10	2015	Lieviskä	6825098	591705	hunted	LT	1			Osmo Siilin		1	1										
+939	11	11	2015	Lökkiö	6817935	592606	hunted	LT	1			Osmo Siilin		1	1										
+940	14	12	2015	Ruokolahti	6796694	597297	hunted	LT	1			Osmo Siilin		1	1										
+941	14	10	2015	Kaavi	6983665	575068	hunted	LT	1			Osmo Siilin		1	1										
+942	10	9	2015	Nurmes	7047999	606011	found dead	LT	1	F	JUV	Evira	E20150917-079	1	1										
+943	29	9	2015	Juva, Pihlajasalo	6838153	544208	hunted	LT	1	M	AD	Evira	E20151005-015	1	1										
+944	22	9	2015	Kiihtelysvaara	6933569	667447	found dead	LT	1	M	AD	Evira	E20150928-040	1	1										
+945	18	11	2015	Kerimäki, Savonlinna	6866338	619872	found dead	LT	1	M	JUV	Evira	E20151123-045	1	1										
+946	28	10	2015	Kuopio	6973853	535023	found dead	LT	2	F	AD	Evira	E20151030-030	1	1										
+947	6	12	20125	Joutseno	6776888	581281	found dead	LT	1			Evira	E20151216-018	1	1										
+948	9	6	2015	Siilinjärvi	6993968	533331	lopetettu, huonokuntoinen	LT	1	F	JUV	Evira	E20150908-051, naaras	1	1										
+949	25	8	2015	Tohmajärvi	6903843	673225	found dead	LT	1		AD	Evira	E20150827-030	1	1										
+950	11	4	2015	Joensuu	6944285	641652	found dead	LT	1	F	JUV	Evira	E20151106-040	1	1										
+951	12	8	2015	Lieksa	7024581	651669	found dead	LT	1	M	JUV	Evira	E20151209-043	1	1										
+952	10	3	2015	Polvijärvi	6971857	620594	found dead	LT	1	F	JUV	Evira	E20151007-032	1	1										
+953	20	12	2015	Mikkeli, Attola	6839424	514457	hunted	LT?	3			Marko	päässä ruskeat täplät, 3,1 kg suolistettuna	1	1										
+954	27	2	2016	Vehmersalmi	6959455	552542	hunted	LE	5					1	1										
+955	29	2	2016	Vehmersalmi	6894934	499505	hunted	LT	2					1	1										
+956	7	11	2015	Kemi	7292711	388797	found dead	LT 	1	M	JUV	Evira	E20151111-057	1	1										
+957	11	5	2015	Isokyrö	6994235	263012	found dead	LT	1	F	AD	Evira	E20151109-011	1	1										
+958	30	1	2016	Liperi	6935958	621824	hunted	LE	1					1	1										
+959	1	11	2015	Joensuu	6944610	639703	found dead	LT	1	F	AD	UEF	IIKKA, myös 832 & 962	1	1		LT	1							
+960	14	9	2015	Liperi, Käsämä	6935958	621824		LE?	3			Jukka Pusa		1	1										
+961	14	11	2015	Pudasjärvi	7251752	495315	hunted	LT	1					1	1										
+962	1	11	2015	Joensuu, Jalavatie 20	6944285	641652	found dead	LT	1	F	AD	Evira	E20151103-052, IIKKA myös 832 & 959	1	1		LT	1							
+963	20	10	2015	Kangasniemi	6872967	481267	lopetettu, huonokuntoinen	LT	1	M	JUV	Evira	E20151021-064, löydetty elävänä	1	1										
+964	2	10	2013	Valtimo, Tetrivaara	7062664	589715	hunted	LT	1			Eeva Lipponen		1	1										
+965			2013	Valtimo, Halmejärvi	7071641	587270	hunted	LT	1			Eeva Lipponen		1	1										
+966	7	12	2015	Hämeenlinna	6765016	362869		LT	1					1	1										
+967	29	1	2016	Hämeenlinna	6765016	362869		LT	1					1	1										
+968	10	3	2016	Hämeenlinna	6765016	362869		LT	1					1	1										
+969	11	12	2015	Sotkamo	7112462	567550	found dead	LT	1	M	AD	Evira	E20151117-054	1	1										
+970	19	10	2015	Kemi	7292387	388282	found dead	LT	1	M	JUV	Evira	E20151015-029	1	1										
+971	21	8	2015	Kemijärvi, Kostamontie	7406572	520679	found dead	LT	1	M	JUV	Evira	E20150826-065	1	1										
+972	9	7	2015	Sodankylä	7477693	482457	found dead	LT	2	F	JUV	Evira	E20150908-036	1	1										
+973	11	7	2015	Rovaniemi	7376530	443432	found dead	LT	1	F	AD	Evira	E20151110-028	1	1										
+974	20	10	2015	Rovaniemi	7376530	443432	found dead	LT	1	M	AD	Evira	E20151021-045	1	1										
+975	22	11	2015	Peräseinäjoki	6943752	297956	hunted	LT	2			Teuvo Toivonen	4,8 kg	1	1										
+976	11	7	2015	Keminmaa	7306214	395839	hunted	LT	1					1	1										
+977	3	10	2016					LE	5					1	1										
+978	28	2	2016	Ruokolahti, Sikiölä	6803711	599917		LE?	2					1	1										
+979	28	2	2016	Kirkkonummi	6667607	357693		LE	5					1	1										
+980	27	2	2016	Nummi-Pusula	6713976	338318	hunted	LE	5			Voitto Jäppinen	Poikkeuksellisen vaalea	1	1										
+981	27	2	2016	Nummi-Pusula	6713976	338318	hunted	LE	5			Voitto Jäppinen	Perinteinen rusakko	1	1										
+982	25	1	2016	Lieksa, Läpikäytävä	6998234	652700	hunted	LT	1			Kyösti Turunen		1	1										
+983	2	10	2016	Lieksa, Läpikäytävä	6998234	652700	hunted	LT	1			Kyösti Turunen	Ruskeat merkit naamassa ja korvissa	1	1										
+984	28	2	2016	Lieksa, Läpikäytävä	6998234	652700	hunted	LT	1			Kyösti Turunen	Turvassa ruskeaa	1	1										
+985	10	2	2016	Lieksa, Läpikäytävä	6998234	652700	hunted	LT	1			Kyösti Turunen	Ruskeat merkit naamassa ja korvissa	1	1										
+986	24	1	2016	Kyyrö	6990445	659965	hunted	LT	1			Kyösti Turunen	Ruskeat merkit silmissä ja korvan tyvessä	1	1										
+987	18	2	2016	Lieksa, Läpikäytävä	6998234	652700	hunted	LT	1			Kyösti Turunen		1	1										
+988	30	1	2016	Reisjärvi	7054580	397726	hunted	LE	4			Mirva Vippola		1	1										
+989	4	3	2016	Joensuu, Pilkko	6946389	640083	found dead	LT	1	F	AD	UEF	Sipi (myös 1104)	1	1		LT	1							
+990	20	2	2016	Kitee	6888936	664178	hunted	LT	1			Petri Vartiainen 		1											
+991	20	2	2016	Kitee	6888936	664178	hunted	LE	4			Petri Vartiainen 		1	1		LE	1							
+992	21	2	2016	Kitee	6888936	664178	hunted	LT	1			Ohto Salo		1											
+993	20	12	2015	Lieksa, Läpikäytävä	6998234	652700	hunted	LT	1			Kyösti Turunen		1	1		X	1							
+994	20	12	2015	Lieksa, Läpikäytävä	6998234	652700	hunted	LT	1			Kyösti Turunen	mtDNA tulos epäselvä	1	1										
+995	20	12	2015	Lieksa, Läpikäytävä	6998234	652700	hunted	LT?	3			Kyösti Turunen		1	1		LT	1							
+996	29	1	2016	Lieksa, Läpikäytävä	6998234	652700	hunted	LT	2			Kyösti Turunen		1	1		X	1							
+997	24	1	2016	Lieksa, Läpikäytävä	6998234	652700	hunted	LE	5			Kyösti Turunen		1	1		X	1							
+998	28	2	2016	Parkano	6881752	291759	hunted	LE	5			Ari Sillanpää	3.7kg	1	1		LE	1							
+999	16	2	2016	Kuusamo, Lämsänkylä	7304705	634018	hunted	LT	2				Isot vaaleat silmät	1											
+1000	6	12	2015				hunted	LT	1					1											
+1001	28	2	2016	Parkano	6881752	291759	hunted	LE	5			Ari Sillanpää	4.1kg	1	1		LE	1							
+1002	29	2	2016	Parkano	6881752	291759	hunted	LE	5			Ari Sillanpää	3.7kg	1	1		LE	1							
+1003	29	2	2016	Parkano	6881752	291759	hunted	LE	5			Ari Sillanpää	4.0kg	1	1		LE	1							
+1004	29	11	2015	Lapinlahti	7026262	519378	hunted	LE	5			Eija Järveläinen	4.6kg	1	1		LT	1							
+1005	1	10	2015	Lapinlahti	7026262	519378	hunted	LE	5			Eija Järveläinen	3.0kg	1	1		LE	1							
+1006	7	11	2015	Lapinlahti	7026262	519378	hunted	LE	5			Eija Järveläinen	3.9 kg suolistettuna	1	1		X	1							
+1007	24	10	2015	Varpaisjärvi	7025847	537774	hunted	LE	5			Eija Järveläinen		1	1		X	1							
+1008	18	2	2016	Säkylä	6777143	248318	hunted	LE	5			Mauri Krusberg	4.6kg	1	1		LE	1							
+1009	13	2	2016	Säkylä	6777143	248318	hunted	LE	5			Mauri Krusberg	3.6kg	1	1		LE	1							
+1010	22	2	2016	Säkylä, Köyliö	6793385	241884	hunted	LE	5			Antti Härkälä	4kg	1	1		X	1							
+1011	14	10	2015	Aura	6731073	260403	hit by car	LE	5			Antti Härkälä	2.8kg	1	1		X	1							
+1012	4	2	2016	Säkylä, Köyliö	6794704	243397	hunted	LE	5			Antti Härkälä	4.18kg	1	1		LE	1							
+1013	22	3	2016	Säkylä, Köyliö	6788394	249801	hit by car	LT	1			Antti Härkälä	2.8kg	1											
+1014	15	4	2016	Pöytyä, Yläne	6763435	251892	hit by car	LT	1			Antti Härkälä	4.3kg	1											
+1015	7	4	2016	Säkylä, Köyliö	6784312	247597	hit by car	LE	5			Antti Härkälä		1	1		LE	1							
+1016	4	11	2014	Nurmes	7047999	606011	found dead	LE	5	M		Evira	E20141106-040	1	1		LE	1							
+1017	8	10	2014	Oulu	7210861	427992	found dead	LE	5	F		Evira	E20141009-033	1	1		X	1							
+1018	19	2	2015	Imatra	6783180	595165	found dead	LE	5	M		Evira	E20150225-049	1	1		X	1							
+1019	6	4	2015	Sievi	7088934	378372	found dead	LE	5	M		Evira	E20150408-053	1	1		LE	1							
+1020	20	10	2014	Polvijärvi	6971857	620594	found dead	LE	5	M		Evira	E20141028-008	1	1		LE	1							
+1021	2	10	2014	Heinola	6786031	448137	found dead	LE	5	F		Evira	E20141007-070	1	1		X	1							
+1022	11	1	2015	Laihia	6992942	247300	found dead	LE	5	F		Evira	E20150113-077	1	1		LE	1							
+1023	15	10	2014	Imatra	6783180	595165	found dead	LE	5	F		Evira	E20141017-015	1	1		X	1							
+1024	22	11	2014	Mäntyharju	6809385	493347	found dead	LE	5	M		Evira	E20141127-016	1	1		X	1							
+1025	27	11	2014	Kuopio	6973853	535023	found dead	LE	5	F		Evira	E20141203-014	1	1		X	1							
+1026	28	10	2014	Kitee	6888936	664178	found dead	LE	5	F		Evira	E20141030-048	1	1		LE	1							
+1027	26	9	2014	Polvijärvi	6971857	620594	found dead	LE	5	M		Evira	E20140930-084	1	1		X	1							
+1028	3	5	2015	Ylivieska	7107398	379702	found dead	LE	5	M		Evira	E20150805-041	1	1		X	1							
+1029	9	1	2015	Kajaani	7122482	535321	lopetettu, huonokuntoinen	LE	5	M		Evira	E20150109-065	1	1		LE	1							
+1030	8	10	2014	Savonlinna	6861105	598800	found dead	LE	5	F		Evira	E20141010-117	1	1		X	1							
+1031	20	6	2015	Merikarvia	6870849	211139	found dead	LE	5	F		Evira	E20150724-045	1	1		X	1							
+1032	28	7	2015	Lapinlahti	7026262	519378	found dead	LE	5	M		Evira	E20150730-040	1	1		X	1							
+1033	1	12	2014	Kurikka	6951548	264050	found dead	LE	5	F		Evira	E20141205-087	1	1		LE	1							
+1034	9	10	2014	Äänekoski	6942039	434538	lopetettu, huonokuntoinen	LE	5	F		Evira	E20141010-056	1	1		X	1							
+1035	27	7	2015	Oulu, Pateniemi	7218228	425463	found dead	LE	5	F		Evira	E20150728-071	1	1		X	1							
+1036	3	1	2016	Liminka, Ala-Temmes	7183186	431133	found dead	LE	5	M	JUV	Evira	E20160104-024	1	1		LE	1							
+1037	31	3	2015	Posio	7332639	553048	found dead	LT	1	F		Evira	E20150402-036	1											
+1038	25	2	2015	Kuusamo	7317680	599456	found dead	LT	1	F		Evira	E20150225-108	1											
+1039	2	1	2015	Alavieska	7118353	369105	hunted	LT	1	M		Evira	E20150105-039	1											
+1040		1	2015	Suomussalmi	7196865	590203	found dead	LT	1	F		Evira	E20150130-047	1											
+1041	15	11	2014	Nummi	6702010	338140	found dead	LT	1	F		Evira	E20141118-144	1											
+1042	5	5	2015	Kuusamo	7317680	599456	found dead	LT	1	F		Evira	E20150505-029	1											
+1043	16	11	2014	Iisalmi	7047964	509289	found dead	LT	2	M		Evira	E20141118-037	1											
+1044	13	12	2014	Kannonkoski	6984168	411976	found dead	LT	1	F		Evira	E20150107-029	1											
+1045	15	11	2014	Utajärvi	7182024	472259	hunted	LT	1	F		Evira	E20141117-130	1											
+1046	7	5	2015	Kontiolahti	6962775	645192	found dead	LT	1	F		Evira	E20150511-019	1											
+1047	23	3	2015	Paltamo	7142904	540105	found dead	LT	1	F		Evira	E20150330-044	1											
+1048	19	5	2015	Hyrynsalmi	7173323	571139	lopetettu, huonokuntoinen	LT	1	F		Evira	E20150520-043, lopetettu	1											
+1049	15	5	2015	Pielavesi	7011501	487719	found dead	LT	1	M		Evira	E20150519-038, runsaasti punkkeja	1											
+1050	11	1	2015	Rauma	6789533	204574	hunted	LT	1	F		Evira	E20150114-034, rupea leuassa ja suun ympärillä	1											
+1051	1	11	2014	Rovaniemi	7376530	443432	found dead	LT	1	M		Evira	E20141107-055	1											
+1052	15	11	2014	Hirvensalmi	6834462	488203	hunted	LT	1			Evira	E20141119-023	1											
+1053	6	5	2015	Kuopio	6973853	535023	found dead	LT	1	M		Evira	E20150512-027	1											
+1054	6	1	2015	Tampere	6822513	327629	found dead	LT	1	F		Evira	E20150100-022	1											
+1055	10	12	2014	Taivalkoski	7273243	557236	found dead	LT	1	M		Evira	E20141210-093	1											
+1056	15	12	2014	Kitee	6888936	664178	found dead	LT	1	M		Evira	E20141217-050	1											
+1057	16	5	2015	Nurmes	7047999	606011	found dead	LT	1	M		Evira	E20150521-036	1											
+1058	9	7	2015	Liminka	7188203	424587	found dead	LT	1	M		Evira	E20150710-046	1											
+1059	27	8	2014	Juuka	7014304	613232	found dead	LT	1	M		Evira	E20141111-064	1											
+1060	2	10	2014	Vieremä	7068496	500255	found dead	LT	1	M		Evira	E20141003-043	1											
+1061	22	5	2015	Maaninka	7002977	515123	found dead	LT	1	F		Evira	E20150527-024	1											
+1062			2016	Hovinkylä, Lappeenranta	6761610	559185	hunted	LE	5					1	1		LE	1							
+1063	22	2	2016	Pieksämäki	6907454	508064	hunted	LT 	1					1											
+1064			2016	Lappeenranta	6769913	564116	hunted	LT	2					1											
+1065			2016	Lappeenranta	6769913	564116	hunted	LE	3					1	1		LT	1							
+1066			2016	Vilkjärvi, Lappeenranta	6759132	553106	hunted	LT	2					1											
+1067	21	2	2016	Pieksämäki	6907454	508064	hunted	LT	1					1											
+1068	24	2	2016	Kannonkoski, Mannilankylä	6982237	414643	hunted	LE	5			Reijo Vesterinen		1	1		LE	1							
+1069	21	2	2016	Pieksämäki	6907454	508064	hunted	LT	1					1											
+1070	1	12	2015	Hirvijärvi, Haukivuori	6848456	500266	hunted	LE	5					1	1		LE	1							
+1071	28	2	2016	Häkkilä, Rautalampi	6930556	482182	hunted	LE	5					1	1		LE	1							
+1072	16	10	2015	Hirvijärvi, Haukivuori	6848456	500266	hunted	LT	1					1											
+1073	28	2	2016	Häkkilä, Rautalampi	6930556	482182	hunted	LT	1					1											
+1074	12	2	2016	Vanaja, Pieksämäki	6918671	487300	hunted	LT	1					1											
+1075	24	1	2016	Rautalampi	6943389	491556	hunted	LT	1					1											
+1076	28	1	2016	Rautalampi, Kuorekoski	6928743	490218	hunted	LT	1					1											
+1077	21	2	2016	Rautalampi	6943389	491556	hunted	LT	1					1											
+1078	7	2	2016	Rautalampi	6943389	491556	hunted	LE	5					1	1		X	1							
+1079	22	2	2016	Pieksämäki	6907454	508064	hunted	LT	1					1											
+1080	19	2	2016	Pieksämäki	6907454	508064	hunted	LT	1					1											
+1081	23	1	2016	Valtimo	7062664	589715	hunted	LE	5			Terhi Lipponen 		1	1		X	1							
+1082	28	2	2016	Haapakylä, Valtimo	7062664	589715	hunted	LE?	3			Antti Lipponen 		1	1		LT	1							
+1083	14	2	2016	Haapakylä, Valtimo	7062664	589715	hunted	LE?	3			Antti Lipponen 		1	1		LE	1							
+1084	6	2	2016	Haapakylä, Valtimo	7062664	589715	hunted	LE	5			Teuvo Tuovinen 		1	1		X	1							
+1085	23	1	2016	Valtimo	7062664	589715	hunted	LE	5			Jussi Lipponen 	mtDNA tulos epäselvä	1	1										
+1086	3	1	2016	Haapakylä, Valtimo	7062664	589715	hunted	LE	5			Antti Lipponen 		1	1		LT	1							
+1087	28	2	2016	Valtimo	7062664	589715	hunted	LE	5			Teuvo Tuovinen 		1	1		X	1							
+1088	1	1	2016	Valtimo	7062664	589715	hunted	LE	5			Antti Lipponen 	4,8 kg ennen suolistusta	1	1		X	1							
+1089	23	1	2016	Valtimo	7062664	589715	hunted	LE	5			Teuvo Tuovinen 	4.6kg ennen suolistusta	1	1		LT	1							
+1090	6	2	2016	Haapakylä, Valtimo	7062664	589715	hunted	LE	5			Terhi Lipponen 	4.3kg	1	1		X	1							
+1091	27	2	2016	Haapakylä, Valtimo	7062664	589715	hunted	LE	5			Martti Rytkunen 	7.8kg	1	1		LE	1							
+1092	13	2	2016	Valtimo	7062664	589715	hunted	LE	5			Timo Karppinen 	4.3kg	1	1		X	1							
+1093	6	2	2016	Haapakylä, Valtimo	7062664	589715	hunted	LE	5			Lipponen 	4.5kg	1	1		LT	1							
+1094	14	2	2016					LE	5				Ei sijainti- eikä metsästäjätietoja	1	1		X	1							
+1095	14	2	2016					LE	5				Ei sijainti- eikä metsästäjätietoja	1	1		LE	1							
+1096	14	2	2016					LT	1				Ei sijainti- eikä metsästäjätietoja	1											
+1097	14	2	2016					LT	1				Ei sijainti- eikä metsästäjätietoja	1											
+1098	24	1	2016					LE	5				Ei sijainti- eikä metsästäjätietoja	1	1		LE	1							
+1099	29	11	2015	Juva	6863056	545055	hunted	LE?	3			Iiro Hämäläinen 		1	1		LT	1							
+1100	19	2	2016	Pieksämäki	6907454	508064	hunted	LE?	3			Iiro Hämäläinen 		1	1		X	1							
+1101	7	2	2016	Rautalampi	6943389	491556	hunted	LE?	3			Iiro Hämäläinen 		1	1		LE	1							
+1102	23	2	2016	Joensuu, Botania	6944196	639802	Seurantaeläin	LE	5	M	AD	UEF	Disa	1	1		LE	1							
+1103	18	3	2016	Joensuu, Botania	6944196	639802	Seurantaeläin	LE	5	M	AD	UEF	Edvard	1	1		LE	1							
+1104	16	2	2016	Joensuu, Botania	6944196	639802	Seurantaeläin	LT	1	F	AD	UEF	Sipi	1	1		LT	1							
+1105	15	3	2016	Joensuu, Pilkko	6947055	639179	Seurantaeläin	LE	5	M	AD	UEF	Kristoffer	1	1		LE	1							
+1106	8	4	2016	Joensuu, Botania	6944196	639802	Seurantaeläin	LT	1	M	AD	UEF	Suoma	1	1										
+1107	30	3	2016	Joensuu, Kyyrönsuo	6949470	640173	Seurantaeläin	LE	5	F	AD	UEF	Usko	1	1		LE	1							
+1108	1	2	2016	Joensuu, Botania	6944196	639802	Seurantaeläin	LE	5	F	AD	UEF	Riitta	1	1		LE	1							
+1109	2	3	2016	Joensuu, Botania	6944196	639802	Seurantaeläin	LE	5	M	AD	UEF	Virva	1	1		LE	1							
+1110	17	3	2016	Joensuu, Pilkko	6947055	639179	Seurantaeläin	LT	1	F	AD	UEF	Kerttuli	1	1										
+1111	16	2	2016	Joensuu, Botania	6944196	639802	Seurantaeläin	LT	1	M	AD	UEF	Kai 	1	1										
+1112	10	2	2016	Joensuu, Pilkko	6947055	639179	Seurantaeläin	LE	5	F	AD	UEF	Elna	1	1		LE	1							
+1113	1	2	2016	Joensuu, Botania	6944196	639802	Seurantaeläin	LE	5	F	AD	UEF	Berit	1	1		LE	1							
+1114	27	12	2015					LE	5				Ei tietoa lähettäjästä eikä paikasta	1	1		LE	1							
+1115	2	1	2016					LE	5				Ei tietoa lähettäjästä eikä paikasta	1	1		X	1							
+1116	22	11	2013					LT	1				Ei tietoa lähettäjästä eikä paikasta	1											
+1117	23	1	2016					LE	5				Ei tietoa lähettäjästä eikä paikasta	1	1		LE	1							
+1118	10	1	2016					LE	5				Ei tietoa lähettäjästä eikä paikasta	1	1		LE	1							
+1119	2	1	2016					LE	5				Ei tietoa lähettäjästä eikä paikasta, näyte kuivahtanut	1	1		LE	1							
+1120	27	12	2015					LE	5				Ei tietoa lähettäjästä eikä paikasta	1	1		LE	1							
+1121	19	12	2015					LT	1				Ei tietoa lähettäjästä eikä paikasta	1											
+1122	27	12	2015					LE	5				Ei tietoa lähettäjästä eikä paikasta	1	1		LE	1							
+1123	27	12	2015					LE	5				Ei tietoa lähettäjästä eikä paikasta	1	1		LE	1							
+1124	9	1	2016					LE	5			J. Karjalainen		1	1		LE	1							
+1125	22	11	2015	Liminka	7188203	424587	hunted	LT	1			Jarmo Karjalainen		1											
+1126	9	12	2015	Liminka	7188203	424587	hunted	LE	5			Jarmo Karjalainen	1	1	1		LE	1							
+1127	15	12	2015	Liminka	7188203	424587	hunted	LE	5			Jarmo Karjalainen	iso	1	1		X	1							
+1128	9	12	2015	Liminka	7188203	424587	hunted	LE	5			Jarmo Karjalainen	2	1	1		LE	1							
+1129	13	12	2015	Liminka	7188203	424587	hunted	LE	5			Jarmo Karjalainen	pieni	1	1		LE	1							
+1130	21	12	2015	Liminka	7188203	424587	hunted	LT	1			Jarmo Karjalainen		1											
+1131	11	10	2015	Liminka	7188203	424587	hunted	LT	1			Jarmo Karjalainen		1											
+1132	22	11	2015	Liminka	7188203	424587	hunted	LE	5			Jarmo Karjalainen		1	1		LE	1							
+1133	28	12	2015	Liminka	7188203	424587	hunted	LE	5			Jarmo Karjalainen		1	1		X	1							
+1134	24	11	2015	Liminka	7188203	424587	hunted	LT	1			Jarmo Karjalainen		1											
+1135	23	11	2015	Liminka	7188203	424587	hunted	LE	5			Jarmo Karjalainen		1	1		X	1							
+1136	19	11	2015	Liminka	7188203	424587	hunted	LT	1			Jarmo Karjalainen		1											
+1137			2016	Kausala, Iitti	6750601	463220	hunted	LE	5			Jarmo Sakki		1	1		LE	1							
+1138			2016	Kausala, Iitti	6750601	463220	hunted	LE	5			Jarmo Sakki		1	1		LE	1							
+1139			2016	Kausala, Iitti	6750601	463220	hunted	LE	5			Jarmo Sakki		1	1		X	1							
+1140	5	11	2015	Haukivuori	6848456	500266	hunted	LT	1			Vilho Hänninen		1											
+1141	11	12	2015	Pieksämäki	6907454	508064	hunted	LT	1			Vilho Hänninen		1											
+1142	11	2	2016	Pieksämäki	6907454	508064	hunted	LT	1			Vilho Hänninen		1											
+1143			2016	Kausala, Iitti	6750601	463220	hunted	LE	5			Jarmo Sakki		1	1		LE	1							
+1144			2016	Kausala, Iitti	6750601	463220	hunted	LE	5			Jarmo Sakki		1	1		LE	1							
+1145			2016	Kausala, Iitti	6750601	463220	hunted	LE	5			Jarmo Sakki		1	1		LE	1							
+1146			2016	Kausala, Iitti	6750601	463220	hunted	LE	5			Jarmo Sakki		1	1		X	1							
+1147	28	2	2016	Oulainen	7128536	394222	hunted	LE	5			Pekka Seppinen		1	1		LE	1							
+1148	23	2	2016	Siikajoki, Tuomioja	7218582	457391	hunted	LE	5			Pekka Seppinen		1	1		X	1							
+1149	29	2	2016	Siikajoki, Tuomioja	7218582	457391	hunted	LE	5			Pekka Seppinen		1	1		LE	1							
+1150	5	12	2015	Oulainen	7128536	394222	hunted	LT	2			Pekka Seppinen		1											
+1151	11	3	2016	Oulainen	7128536	394222	hit by car	LE	5			Pekka Seppinen		1	1		LE	1							
+1152	29	2	2016	Siikajoki, Tuomioja	7218582	457391	hunted	LE	5			Pekka Seppinen		1	1		LE	1							
+1153	23	2	2016	Siikajoki, Tuomioja	7218582	457391	hunted	LE	5			Pekka Seppinen		1	1		X	1							
+1154			2015	Nivala	7090783	399684	hunted	LE	5			Esa Konttila	 vaalea, hyväkuntoinen, näytteet samassa pussissa	1	1		X	1							
+1155			2015	Nivala	7090783	399684	hunted	LE	5			Esa Konttila	 vaalea, hyväkuntoinen, näytteet samassa pussissa	1	1		LE	1							
+1156			2015	Nivala	7090783	399684	hunted	LE	5			Esa Konttila	 vaalea, hyväkuntoinen, näytteet samassa pussissa	1	1		LE	1							
+1157			2015	Nivala	7090783	399684	hunted	LE	5			Esa Konttila	 vaalea, hyväkuntoinen, näytteet samassa pussissa	1	1		LE	1							
+1158			2015	Nivala	7090783	399684	hunted	LE	5			Esa Konttila	 vaalea, hyväkuntoinen, näytteet samassa pussissa	1	1		X	1							
+1159			2015	Nivala	7090783	399684	hunted	LE	5			Esa Konttila	 vaalea, hyväkuntoinen, näytteet samassa pussissa	1	1		LE	1							
+1160			2015	Nivala	7090783	399684	hunted	LE	5			Esa Konttila	 vaalea, hyväkuntoinen, näytteet samassa pussissa	1	1		LE	1							
+1161			2015	Nivala	7090783	399684	hunted	LE	5			Esa Konttila	 vaalea, hyväkuntoinen, näytteet samassa pussissa	1	1		X	1							
+1162			2015	Nivala	7090783	399684	hunted	LE	5			Esa Konttila	 vaalea, hyväkuntoinen, näytteet samassa pussissa	1	1		X	1							
+1163	24	1	2016	Juva	6863056	545055	hunted	LE	5			Iiro Hämäläinen 		1	1		LE	1							
+1164	25	1	2016	Juva	6863056	545055	hunted	LE	5			Iiro Hämäläinen 		1	1		X	1							
+1165	16	1	2016	Juva	6863056	545055	hunted	LE	5			Iiro Hämäläinen 		1	1		LE	1							
+1166	24	1	2016	Juva	6863056	545055	hunted	LT	1			Iiro Hämäläinen 		1											
+1167	30	1	2016	Juva	6863056	545055	hunted	LE	5			Sauli Pasanen		1	1		LE	1							
+1168	30	1	2016	Juva	6863056	545055	hunted	LE	5			Iiro Hämäläinen 		1	1		LE	1							
+1169	27	12	2015	Haavisto, Karkkila	6712394	354327	hunted	LE	5			Markku Sundström	4.06kg	1	1		LE	1							
+1170	17	1	2016	Haavisto, Karkkila	6712394	354327	hunted	LE	5			Markku Sundström	3.86kg	1	1		LE	1							
+1171	7	2	2016	Haavisto, Karkkila	6712394	354327	hunted	LE	5			Markku Sundström	3.81kg	1	1		X	1							
+1172	24	2	2016	Haavisto, Karkkila	6712394	354327	hunted	LE	5			Markku Sundström	3.50kg	1	1		X	1							
+1173	26	2	2016	Haavisto, Karkkila	6712394	354327	hunted	LE	5			Markku Sundström	3.51kg	1	1		LE	1							
+1174	28	2	2016	Haavisto, Karkkila	6712394	354327	hunted	LE	5			Markku Sundström	2.90kg	1	1		X	1							
+1175	27	2	2016	Ylivieska	7107398	379702	hunted	LT	1			Miika Moilanen		1											
+1176	12	2	2016	Pohjois-Paippinen, Sipoo	6694636	404530	hunted	LE	5			Miika Moilanen		1	1		LE	1							
+1177	7	11	2015	Ylivieska	7107398	379702	hunted	LT	1			Miika Moilanen		1											
+1178	22	2	2016	Pohjois-Paippinen, Sipoo	6694636	404530	hunted	LE	5			Miika Moilanen		1	1		X	1							
+1179	20	2	2016	Ylivieska	7107398	379702	hunted	LT	1			Miika Moilanen		1											
+1180	7	11	2015	Ylivieska	7107398	379702	hunted	LT	1			Miika Moilanen		1											
+1181	20	12	2015	Ylivieska	7107398	379702	hunted	LT	1			Miika Moilanen		1											
+1182	28	2	2016	Ylivieska	7107398	379702	hunted	LT	1			Miika Moilanen		1											
+1183	18	11	2015	Koutuansuo, Yli-Ii	7243701	462515	hunted	LT	1			Jukka Forsman	Paino suolistettuna 2,2 kg	1											
+1184	29	11	2015	Koutuansuo, Yli-Ii	7243701	462515	hunted	LT	1			Jukka Forsman	Paino suolistettuna 2,35 kg	1											
+1185	28	10	2015	Isterinjärvi	7252917	462003	hunted	LT	1			Jukka Forsman	Paino suolistettuna 2,4 kg	1											
+1186	6	11	2016	Isterinjärvi	7252917	462003	hunted	LT	1			Jukka Forsman	Paino suolistettuna 2,2 kg, huono näyte	1											
+1187	31	10	2015	Isterinjärvi	7252917	462003	hunted	LT	1			Jukka Forsman	Paino suolistettuna 2,5 kg	1											
+1188	14	2	2016	Koutuansuo, Yli-Ii	7243701	462515	hunted	LT	1	F		Jukka Forsman	Paino 1,9 kg ilman suolia	1											
+1189	25	10	2015	Isterinjärvi	7252917	462003	hunted	LT	1			Jukka Forsman	Paino suolistettuna 2,3 kg	1											
+1190	20	2	2016	Taivalkoski, Lanakumpu	7278751	572310	hunted	LT	1	M		Jukka Forsman	Paino suolistettuna 2,4 kg	1											
+1191	16	1	2016	Jännesuo	7193974	552540	hunted	LT	1			Jukka Forsman	Paino suolistettuna 2,3 kg, huono näyte	1											
+1192	21	2	2016	Isterinjärvi	7252917	462003	hunted	LT	1	M		Jukka Forsman	Paino suolistettuna 2,2 kg	1											
+1193	29	9	2015	Rautalampi	6943389	491556	hit by car	LT	1			Vilho Hänninen	Raato maantieltä	1											
+1194	24	1	2016	Rautalampi, Kuorenkoskentie	6943389	491556	hunted	LT	1			Vilho Hänninen	Huono näyte	1											
+1195	7	12	2016	Rautalampi	6943389	491556	hunted	LT	1			Vilho Hänninen		1											
+1196	18	12	2015	Pieksämäki, Vanaja	6918671	487300	hunted	LE	5			Vilho Hänninen	Huono näyte	1											
+1197	12	9	2015	Rautalampi, Hanhiniemi	6938858	489305	hunted	LT	1			Vilho Hänninen		1											
+1198	24	1	2016	Kontuansuo, Yli-Ii	7243701	462515	hunted	LT	1			Jukka Forsman	Paino suolistettuna 2,3 kg, huono näyte (kuivahtanut)	1											
+1199	6	11	2015	Isterinjärvi	7252917	462003	hunted	LT	1			Jukka Forsman	Paino suolistettuna 2,4 kg	1											
+1200	10	10	2015	Ähtäri, Soukanjärvi	6924292	349542	hunted	LT	2			Jukka Forsman	Paino suolistettuna 2,5 kg, eläimellä ruumiiseen nähden pieni pää ja pitkät korvat	1											
+1201	27	2	2016	Ähtäri, Silmäsuo, Savilampi	6927202	349546	hunted	LT	1	F		Jukka Forsman	Paino suolistettuna 2,0 kg	1											
+MJ1	24	1	2013	Joensuu, Linnunlahti	6944551	640041	found dead	LT	1			Miina Auttila	eaten, only leg	1	1		LT		MJ	MJ	MJ	MJ	MJ		
+R1	13	12	2012	Joensuu, Noljakka	6947001	637687	hunted	LE	5			Jaakko Pohjoismäki		1	1		LE		R	R	R	R	R		
