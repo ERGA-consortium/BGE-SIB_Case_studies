@@ -1,0 +1,74 @@
+##Path to your raw data folder
+# this will be the location that your raw paired-end fastq files are located.
+# They do not have to be inside the snakemake folder.
+RawDataFolder: "/scratch/reichel/projects/ArnicaSNP/02_Data/2024_33_ArnicaRAD-Rescue1-2/"
+
+
+#Path and name of where to put the results
+#This will be where all your results are stored.
+## You do not need to create this folder yourself - the pipeline will do it automatically.
+Results: "/scratch/reichel/projects/ArnicaSNP/03_Preprocessed/RescueTest"
+
+
+### The files in the below data folder MUST have names matching exactly to the names assigned the in the FlexbarSheet.tsv       ###
+### You do not need to include parts of the filename that do not differ between libraries.  For example if our libraries        ###
+### in our below data folder are named as follows:                                                                              ###
+###        Library-1_S1_L001_R1_001.fastq.gz                                                                                     ###
+###        Library-1_S1_L001_R2_001.fastq.gz                                                                                     ###
+###        Library-2_S2_L001_R1_001.fastq.gz                                                                                     ###
+###        Library-2_S2_L001_R2_001.fastq.gz                                                                                     ###
+###        Library-3_S3_L001_R1_001.fastq.gz                                                                                     ###
+###        Library-3_S3_L001_R2_001.fastq.gz                                                                                     ###
+### You can name your libraries in the FlexbarSheet.tsv as only the part which changes, and is not relating to the forward      ###
+### and reverse read indicator (i.e. R1 and R2, 1 and 2, FWD and REV):                                                          ###
+###        Library-1_S1                                                                                                         ###
+###        Library-2_S2                                                                                                         ###
+###        Library-3_S3                                                                                                         ###
+
+#Then you can specify what the remaining text of the filenames are (known as a suffix) below, up until the fastq extension (e.g .fastq.gz).
+#For example, in the above example, the suffix would be "_L001_R1_001" for the forward read, and "_L001_R2_001" for the reverse read.  I have
+suffixForwardRead: "_L001_R1_001"
+# R2 is the reverse index used for PCR demultiplexing
+suffixReverseRead: "_L001_R3_001"
+
+#e.g. [S117-Crb3773-2-161620_S117][_L001_R2_001][.fastq.gz]
+#               Library                 suffix    extension
+
+
+#are your fastq files gzipped (.gz extension): "yes" or "no"
+gzipped: "yes"
+
+#is your fastq file in the form of "fastq" or "fq"
+fqORfastq: "fastq"
+
+## Do you want to run ONLY up until step 4 (Merge paired-end reads together and plot read lengths of these merged reads) of the pipeline?
+getLengthsOnly: "no"
+
+#Are you intending to use a filter PCR duplicates step:  "yes" or "no"
+PCRFiltering: "yes"
+
+UserDefined_RestrictionEnzyme: "/home/reichel/tools/rad/radseq-preprocessing-pipeline-main/enzymes/enzyme.XbaI.EcoRI.NheI"
+
+### Here we define the "inline_barcodes.fasta" corresponding to the run.  If you are using double inline barcodes (P5 and P7),
+### then you must provide a path for both of these files respectively.  If you are only using one inline barcode, then please simply provided
+### the path to this respective fasta file, and leave the other path blank. In this case, it also doesn't really matter if you put this single
+### barcode fasta as the P5 or P7 (in the case that you are unsure).
+
+UserDefined_BarcodeP5Fasta: "/home/reichel/tools/rad/radseq-preprocessing-pipeline-main/barcodes_fasta/2019_11_Internal_indexes_LIB_P5.fasta"
+UserDefined_BarcodeP7Fasta: "/home/reichel/tools/rad/radseq-preprocessing-pipeline-main/barcodes_fasta/2019_11_Internal_indexes_LIB_P7.fasta"
+
+trimmomatic: 30      ## Trimmomatic Q-value cutoff
+
+#######################################
+## Parallelisation
+
+Bowtie2Threads : 12      ## Bowtie2 Parameters
+
+DemultiplexThreads : 12    ## flexbar Parameters
+
+PEARthreads : 12     ## PEAR Parameters
+
+######################################
+
+#path to PhiX indexes as downloaded from illumina https://support.illumina.com/sequencing/sequencing_software/igenome.html
+Phix_index: "phix_index/phix.fasta"

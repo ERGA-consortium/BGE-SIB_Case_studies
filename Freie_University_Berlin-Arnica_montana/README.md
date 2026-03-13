@@ -4,7 +4,10 @@ This repository includes all the scripts used to process raw data, genotype samp
 # Authors 
 Katja REICHEL, Freie Universität Berlin, Kaiserswerther Str. 16-18, Germany
 
+with contributions from 
+
 Elisabeth HERTEL, Freie Universität Berlin, Kaiserswerther Str. 16-18, Germany
+
 Yuwei NAN, Freie Universität Berlin, Kaiserswerther Str. 16-18, Germany
 
 # Acknowledgements
@@ -17,6 +20,7 @@ We warmly thank our collaboration partners for this project:
 - Fabienne VAN ROSSUM, Botanical Garden Meise, Belgium
 - Sascha LIEPELT, University of Marburg, Germany
 - Eva MOSNER and Loris CAPRIA, Geisenheim University, Germany
+
 as well as all sample collectors and lab staff within their respective teams.
 
 We are indebted to the team of BeGenDiv and the Mazzoni group at IZW, Berlin, for methodological support, to the CCGA Kiel for sequencing services and to the HPC Service of FUB-IT, Freie Universität Berlin, for computing time.
