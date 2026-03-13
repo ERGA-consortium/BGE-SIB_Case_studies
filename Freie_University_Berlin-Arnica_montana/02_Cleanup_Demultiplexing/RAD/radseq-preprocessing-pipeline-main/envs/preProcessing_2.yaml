@@ -1,0 +1,9 @@
+channels:
+  - defaults
+  - conda-forge
+  - anaconda
+  - bioconda
+dependencies:
+  - python >=2.7
+  - biopython >=1.76
+  - bowtie2 =2.3.5

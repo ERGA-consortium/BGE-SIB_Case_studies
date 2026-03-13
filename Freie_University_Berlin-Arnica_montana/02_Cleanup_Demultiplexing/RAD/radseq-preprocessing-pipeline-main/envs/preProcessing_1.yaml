@@ -1,0 +1,14 @@
+channels:
+  - anaconda
+  - bioconda
+  - conda-forge
+dependencies:
+  - python >=3.7.6
+  - flexbar =3.5
+  - bowtie2 =2.3.5
+  - samtools =1.7
+  - seqan-library =2.4
+  - biopython >=1.76
+  - pear =0.9.6
+  - bedtools =2.29.2
+  - trimmomatic =0.39
