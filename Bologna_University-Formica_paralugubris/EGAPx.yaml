@@ -1,0 +1,21 @@
+genome: /DATABIG/giobbeforni/paralugubris/FPar_CuratedAssembly.Correction/ForPara1_curated.final.1.primary.curated.fa 
+taxid: 258705 
+short_reads:
+ - ERR12342478
+ - ERR2360035
+ - DRR042101
+ - ERR2360036
+ - DRR042079
+ - DRR042115
+ - DRR042112
+long_reads:
+ - /DATABIG/giobbeforni/paralugubris/EGAPx_FPara.Reference/IsoSeq_final/SRR9990001_reads.fasta
+ - /DATABIG/giobbeforni/paralugubris/EGAPx_FPara.Reference/IsoSeq_final/SRR9990002_reads.fasta
+ - /DATABIG/giobbeforni/paralugubris/EGAPx_FPara.Reference/IsoSeq_final/SRR9990003_reads.fasta
+tasks:
+  rnaseq_collapse:
+    rnaseq_collapse: -high-identity 0.8
+  convert_from_bam:
+    sam2asn: -filter 'pct_identity_gap >= 85'
+  star_wnode:
+    star_wnode: -pct-identity 85
