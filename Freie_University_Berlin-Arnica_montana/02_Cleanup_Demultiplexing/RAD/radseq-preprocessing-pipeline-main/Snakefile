@@ -1,0 +1,222 @@
+import pandas as pd
+import csv
+import os
+#Load configuration file
+configfile: "configuration/config.yaml"
+
+#Store string for the path to dultiplexed Files, used in external script to map/rename files based on Barcodes and corresponding individual sample ID's
+
+#Get information from Flexbar config Sheet
+getRunInfo = pd.read_csv("configuration/FlexbarSheet.tsv", index_col=0, delim_whitespace=True, skip_blank_lines=True, names=["col1", "col2"])
+getRunInfo=list(dict.fromkeys(list(getRunInfo.index)))
+getRunInfo= [i for i in getRunInfo if i.startswith('#')]
+getRunInfo = [e[1:] for e in getRunInfo]
+
+runNumber = getRunInfo[0]	#Get run identifier  e.g. Reference_Crb3773
+Library = getRunInfo[1:]	#Get pooled Library names e.g. ['S116-crb3773-1-161620_S116', 'S117-Crb3773-2-161620_S117', 'S118-Crb3773-3-161620_S118', 'S119-Crb3773-4-161620_S119']
+
+resultsString=os.path.join(config['Results'], runNumber +  "_0_PreProcessing/02_individualDemultiplex/beforeConcat/")
+renamingPath = "configuration/renamingFileLocation.tsv"
+with open(renamingPath, 'w', newline='\n') as r_output:
+    tsv_output = csv.writer(r_output, delimiter='\n')
+    tsv_output.writerow([resultsString])
+    tsv_output.writerow([runNumber])
+
+#Get the sequence of the first enzyme in enzyme.Enz1.Enz2[.Enz3] file
+firstEnzymeOrientation = pd.read_csv(config['UserDefined_RestrictionEnzyme'], index_col=1, delim_whitespace=True, skip_blank_lines=True, names=["col1", "col2", "col3", "col4","col5","col6"])
+firstEnzymeOrientation=list(dict.fromkeys(list(firstEnzymeOrientation.index)))
+firstEnzyme = firstEnzymeOrientation[0]
+
+#Get the sequence of the second enzyme in enzyme.Enz1.Enz2[.Enz3] file
+secondEnzymeOrientation = pd.read_csv(config['UserDefined_RestrictionEnzyme'], index_col=3, delim_whitespace=True, skip_blank_lines=True, names=["col1", "col2", "col3", "col4","col5","col6"])
+secondEnzymeOrientation=list(dict.fromkeys(list(secondEnzymeOrientation.index)))
+secondEnzyme = secondEnzymeOrientation[0]
+
+
+#Check:
+#1. Is the enzyme the first or second in the file?
+#2. Does the '_' come before the '^', or vice versa?
+#This indicates which strand the enzyme is digesting, and therefore what the sequence needs to be for the in silico digestion script
+if (firstEnzyme.find("^", 0, len(firstEnzyme)) < firstEnzyme.find("_", 0, len(firstEnzyme))):
+	splitOn = firstEnzyme.find("^", 0, len(firstEnzyme))
+	firstEnzyme = firstEnzyme[splitOn+1:]
+ 	firstEnzyme = firstEnzyme.replace("_","")
+elif (firstEnzyme.find("^", 0, len(firstEnzyme)) > firstEnzyme.find("_", 0, len(firstEnzyme))):
+	splitOn = firstEnzyme.find("_", 0, len(firstEnzyme))
+	firstEnzyme = firstEnzyme[splitOn+1:]
+ 	firstEnzyme = firstEnzyme.replace("^","")
+
+if (secondEnzyme.find("^", 0, len(secondEnzyme)) < secondEnzyme.find("_", 0, len(secondEnzyme))):
+	splitOn = secondEnzyme.find("_", 0, len(secondEnzyme))
+	secondEnzyme = secondEnzyme[:splitOn]
+ 	secondEnzyme = secondEnzyme.replace("^","")
+elif (secondEnzyme.find("^", 0, len(secondEnzyme)) > firstEnzyme.find("_", 0, len(secondEnzyme))):
+	splitOn = secondEnzyme.find("^", 0, len(secondEnzyme))
+	secondEnzyme = secondEnzyme[:splitOn]
+ 	secondEnzyme = secondEnzyme.replace("_","")
+
+# XbaI T^CTAG_A = CTAGA
+# EcoRI G^AATT_C = GAATT
+
+#Function to check if one of, or both the barcodeP5 and barcodeP7 fasta files are given by the user.
+#True if file is present in config.yaml. False if file is a blank, empty string, or None.
+def isNotBlank(myString):
+    if myString and myString.strip():
+        #myString is not None AND myString is not empty or blank
+        return True
+    #myString is None OR myString is empty or blank
+    return False
+
+P5fasta = [str(isNotBlank(config["UserDefined_BarcodeP5Fasta"]))]
+P7fasta = [str(isNotBlank(config["UserDefined_BarcodeP7Fasta"]))]
+
+#If both are present (not blank, empty string, or None), then double barcode demultiplexing is executed with both barcode fasta's.
+#If one is missing, then single barcode demultiplexing is executed with the single given fasta.
+singleOrDoubleBarcode = ""
+if P5fasta == ['False'] and P7fasta == ['True']:
+	singleOrDoubleBarcode = "singleP7"
+elif P5fasta == ['True'] and P7fasta == ['False']:
+	singleOrDoubleBarcode = "singleP5"
+elif P5fasta == ['True'] and P7fasta == ['True']:
+	singleOrDoubleBarcode = "double"
+elif P5fasta == ['False'] and P7fasta == ['False']:
+	singleOrDoubleBarcode =  "WARNING: You have not provided a P5 or P7 barcode fasta file, pipeline cannot run without atleast one of these."
+
+barcodeP5ID = []	#list of P5 barcodes  ['Xba01', 'Xba02', 'Xba03', 'Xba04', 'Xba05', 'Xba06', 'Xba07', 'Xba08', 'Xba09', 'Xba10', 'Xba11', 'Xba12']
+LengthOfP5List = int()	#number of P5 barcodes
+if P5fasta == ['True']:
+	BarcodesP5Fasta = config["UserDefined_BarcodeP5Fasta"]
+	barcodesP5Table = pd.read_csv(BarcodesP5Fasta, index_col=0, comment='#', delim_whitespace=True, header= None, skip_blank_lines=True)
+	barcodeP5ID=list(dict.fromkeys(list(barcodesP5Table.index)))
+	barcodeP5ID= [i for i in barcodeP5ID if i.startswith('>')]
+	barcodeP5ID = [e[1:] for e in barcodeP5ID]
+	LengthOfP5List = len(barcodeP5ID)
+else:
+	pass
+
+#barcodeP5ID = ['Xba01', 'Xba02', 'Xba03', 'Xba04', 'Xba05', 'Xba06', 'Xba07', 'Xba08', 'Xba09', 'Xba10', 'Xba11', 'Xba12']
+#LengthOfP5List = 12
+
+barcodeP7ID = []
+LengthOfP7List = int()
+if P7fasta == ['True']:
+	BarcodesP7Fasta = config["UserDefined_BarcodeP7Fasta"]
+	barcodesP7Table = pd.read_csv(BarcodesP7Fasta, index_col=0, comment='#', delim_whitespace=True, header= None, skip_blank_lines=True)
+	barcodeP7ID=list(dict.fromkeys(list(barcodesP7Table.index)))
+	barcodeP7ID= [i for i in barcodeP7ID if i.startswith('>')]
+	barcodeP7ID = [e[1:] for e in barcodeP7ID]
+	LengthOfP7List = len(barcodeP7ID)
+else:
+	pass
+
+#barcodeP7ID = ['Eco01', 'Eco02', 'Eco03', 'Eco04', 'Eco05', 'Eco06', 'Eco07', 'Eco08', 'Eco09', 'Eco10', 'Eco11', 'Eco12']
+#LengthOfP7List = 12
+
+# e.g ['Xba01' ,'Xba01' ,'Xba01' ,'Xba02' ,'Xba02' ,'Xba02' ,'Xba03' ,'Xba03' ,'Xba03' ]
+def duplicateP5(P5List, n):
+	return P5List*n
+
+# e.g ['Eco01', 'Eco02', 'Eco03', 'Eco01', 'Eco02', 'Eco03', 'Eco01', 'Eco02', 'Eco03']
+def duplicateP7(P7List, n):
+	return [ele for ele in P7List for _ in range(n)]
+
+flexbarFileOne = None	#P5 fasta for Flexbar
+flexbarFileTwo = None	#P7 fasta for Flexbar
+barcodeID = []			#List of all possible barcodes (cartesian product of P5 and P7 barcodes)
+if singleOrDoubleBarcode == "double":
+	cartesianP5List = duplicateP5(barcodeP5ID, LengthOfP7List)
+	cartesianP5List = [item + '-' for item in cartesianP5List]
+	cartesianP7List = duplicateP7(barcodeP7ID, LengthOfP5List)
+	doubleBarcodeID = [i + j for i, j in zip(cartesianP5List, cartesianP7List)] #['Xba01-Eco01', 'Xba01-Eco02', 'Xba01-Eco03', 'Xba02-Eco01', 'Xba02-Eco02', 'Xba02-Eco03'......]
+	barcodeID = doubleBarcodeID
+	flexbarFileOne = config['UserDefined_BarcodeP5Fasta']
+	flexbarFileTwo = config['UserDefined_BarcodeP7Fasta']
+elif singleOrDoubleBarcode == "singleP5":
+	barcodeID = barcodeP5ID
+	flexbarFileOne = config['UserDefined_BarcodeP5Fasta']
+elif singleOrDoubleBarcode == "singleP7":
+	barcodeID = barcodeP7ID
+	flexbarFileOne = config['UserDefined_BarcodeP7Fasta']
+
+#Make run specific directory (possibly deprecated)
+# shellcmd = "mkdir -p configuration/" + runNumber
+# shell(shellcmd)
+filePath = "configuration/barcodesList.tsv"
+with open(filePath, 'w', newline='\n') as f_output:
+    tsv_output = csv.writer(f_output, delimiter='\n')
+    tsv_output.writerow(barcodeID)
+
+# Get list of individual ID's
+inIDTable = pd.read_csv("configuration/FlexbarSheet.tsv", comment='#', index_col=1, delim_whitespace=True, skip_blank_lines=True)
+inID = list(dict.fromkeys(list(inIDTable.index)))
+try:
+	inID.remove('individualID'), inID.remove("none")
+except ValueError:
+	pass
+
+
+affirmativeUserResponse = ["YES","yes","y","Y","TRUE","true"]
+
+#Handle differences in file/foldernaming depending on if PCR filtering is included
+filenaming = ""
+folderNaming= []
+if config['PCRFiltering'] in affirmativeUserResponse:
+	filenaming = "_PCRfiltered"
+	folderNaming = ["04_mergeReads", "05_runDigestion", "06_filterRestSites", "07_filterQuality", "03_filterPCRduplicates"]
+else:
+	folderNaming = ["03_mergeReads", "04_runDigestion", "05_filterRestSites", "06_filterQuality", "02_individualDemultiplex"]
+
+EnzString = config["UserDefined_RestrictionEnzyme"] # /srv/public/users/james94/snakemakePipelines/radPreProcessing_snakemake/enzymes/enzyme.XbaI.EcoRI.NheI
+SplitEnzString = EnzString.split(".")  				# ['/......../enzyme', 'XbaI', 'EcoRI', 'NheI']
+EnzymeStringUnderFixed = ""
+try:
+	EnzymeStringUnderFixed= SplitEnzString[1] + "_" + SplitEnzString[2] + "_" + SplitEnzString[3] 	#	'XbaI_EcoRI_NheI'
+except IndexError:	#If only double digestion is used
+	EnzymeStringUnderFixed = SplitEnzString[1] + "_" + SplitEnzString[2]							#	'XbaI_EcoRI'
+
+EnzymeStringUnderhyphen = SplitEnzString[1] + "-" + SplitEnzString[2]								#	'XbaI-EcoRI'
+
+#Quality cut-off for trimmomatic
+trimQvalue = config["trimmomatic"]
+trimmomaticQvalue = str(trimQvalue)
+
+#create results folder if not existing
+if "Results" not in config:
+    config["Results"] = "results"
+
+#Single or double demultiplexing rule to be included, dictated by the presence (or lack thereof)
+whichDemultiplexRule = ""
+if singleOrDoubleBarcode == "double":
+	whichDemultiplexRule = "rules/02a_demultiplexDouble.smk"
+else:
+	whichDemultiplexRule = "rules/02b_demultiplexSingle.smk"
+
+
+#if PCR duplicates required (and affirmed in cofig.yaml, then expect '_PCRfiltered' files/rules)
+whichAll = ""
+if config['PCRFiltering'] in affirmativeUserResponse and config['getLengthsOnly'] in affirmativeUserResponse:
+	whichAll = "rules/A2_compressOutputsAndALL_getLengths_PCRfilter.smk"
+elif config['PCRFiltering'] in affirmativeUserResponse and config['getLengthsOnly'] not in affirmativeUserResponse:
+	whichAll = "rules/A2_compressOutputsAndALL_PCRfilter.smk"
+elif config['PCRFiltering'] not in affirmativeUserResponse and config['getLengthsOnly'] not in affirmativeUserResponse:
+	whichAll = "rules/A2_compressOutputsAndALL.smk"
+elif config['PCRFiltering'] not in affirmativeUserResponse and config['getLengthsOnly'] in affirmativeUserResponse:
+	whichAll = "rules/A2_compressOutputsAndALL_getLengths.smk"
+
+include: "rules/01_filterPhiX.smk"
+include: whichDemultiplexRule
+include: "rules/03_sampleStatsAndRename.smk"
+include: "rules/04_filterPCRduplicates.smk"
+include: "rules/05_mergeReads.smk"
+include: "rules/06_inSilicoDigestion.smk"
+include: "rules/07_checkRestrictionSites.smk"
+include: "rules/08_qualityTrim.smk"
+include: "rules/04a_concat.smk"
+include: "rules/A1_getAndPlotLengths.smk"
+include: whichAll
+
+rule all:
+	input:
+			os.path.join(config['Results'], runNumber + "_configuration/FlexbarSheetWithCounts.tsv"),
+			os.path.join(config['Results'], runNumber + "_configuration/config.yaml"),
+			os.path.join(config['Results'], runNumber + "_configuration/FlexbarSheet.tsv")
