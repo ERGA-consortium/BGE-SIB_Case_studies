@@ -1,5 +1,5 @@
-# Title of the case study
-This repository includes all the scripts used to [specify here the reason: taken from Notion].
+# Genomics over space and time of a keystone forest species, Formica paralugubris
+This repository includes all the scripts used in the generation of the genome assembly of the species _Formica paralugubris_.
 
 # Authors 
 [Name of applicant], [Affiliation], [Address of affiliation], [Country]
