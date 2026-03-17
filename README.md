@@ -1,6 +1,6 @@
 # Biodiversity Genomics Europe (BGE) Case studies 
 # Project description 
-This repository contains the complete set of scripts used in the 20 case studies subcontracted by the SIB Swiss Institute of Bioinformatics (Lausanne, Switzerland, https://www.sib.swiss/) under the Biodiversity Genomics Europe (BGE) project (https://biodiversitygenomics.eu/). 
+This repository contains the complete set of scripts used in the case studies subcontracted by the SIB Swiss Institute of Bioinformatics (Lausanne, Switzerland, https://www.sib.swiss/) under the Biodiversity Genomics Europe (BGE) project (https://biodiversitygenomics.eu/). 
 
 Each folder in the repository represents an individual case study. Each folder name follows this format:
 
