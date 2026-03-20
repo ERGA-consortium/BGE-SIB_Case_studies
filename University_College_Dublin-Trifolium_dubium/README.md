@@ -72,7 +72,7 @@ The `configs` directory contains additional configuration files, including:
 - `directories.sh` - Defines project directories and locations of project-related files
 - `containers.sh` - Defines singularity containers used
 - `general.sh` - Defines runtime parameters, e.g. threads, memory, singularity run settings
-- `samplesheet.csv` - Defines TRIDUBIRE sample information. Used by SRA tools to download read files and throughout as a reference through which to loop through samples.
+- `samplesheet.csv` - Defines TRIDUBIRE sample information. Used by SRA tools to download read files and throughout as a reference through which to loop through samples
 
 ## Environment requirements and set-up
 ```bash
