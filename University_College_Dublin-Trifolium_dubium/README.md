@@ -97,6 +97,7 @@ sbatch 01-setup_qc.sh
 | `06-*`                | Filtering                                               |
 | `07+`                 | Downstream QC and population analyses                   |
 
+Some of these scripts are in the `ARCHIVE`, to be updated to the more reproducible pipeline format as used with scripts `01-setup_qc.sh`, `02-run_qc.sh` and `03-run_alignment.sh`.
 
 ## Authors
 Katie Herron<sup>1</sup>, Ann M McCartney<sup>1,2</sup>, Graham M Hughes<sup>1</sup>
