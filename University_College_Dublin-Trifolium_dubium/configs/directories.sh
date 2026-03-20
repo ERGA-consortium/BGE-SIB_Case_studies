@@ -2,7 +2,7 @@
 # Project paths
 
 ROOT="${ROOT:-/home/people/22211215/scratch}"
-PROJECT_NAME="${PROJECT_NAME:-genuspopgen}"
+PROJECT_NAME="${PROJECT_NAME:-tridubire}"
 
 WD="${WD:-${ROOT}/${PROJECT_NAME}}"
 
