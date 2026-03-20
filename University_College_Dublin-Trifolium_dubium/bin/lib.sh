@@ -2,13 +2,10 @@
 
 log(){ echo "[$(date +'%F %T')] $*"; }
 
-
 die(){ echo "ERROR: $*" >&2; exit 1; }
-
 
 run_container() {
   local image="$1"; shift
-
   if [[ "${CONTAINER_MODE:-enabled}" == "disabled" || -z "${image:-}" ]]; then
     "$@"
   else
@@ -21,12 +18,10 @@ run_container() {
   fi
 }
 
-
 require_file() {
   local f="$1"
   [[ -f "$f" ]] || die "Missing file: $f"
 }
-
 
 download_sra_run() {
   local run_acc="$1"
@@ -59,18 +54,16 @@ download_sra_run() {
   local fq1="${RAW_DIR}/${run_acc}_1.fastq"
   local fq2="${RAW_DIR}/${run_acc}_2.fastq"
 
-  [[ -f "$fq1" ]] || die "Missing output FASTQ: $fq1"
-  [[ -f "$fq2" ]] || die "Missing output FASTQ: $fq2"
+  [[ -f "$fq1" ]] || die "Missing output: $fq1"
+  [[ -f "$fq2" ]] || die "Missing output: $fq2"
 
   # Compress and remove originals
   gzip -f "$fq1"
   gzip -f "$fq2"
-
-  # Explicit cleanup (extra safety)
   rm -f "$fq1" "$fq2"
 
   [[ -f "$local_r1" && -f "$local_r2" ]] || \
-    die "Missing gzipped FASTQs for $run_acc"
+    die "Missing gzips for $run_acc"
 }
 
 populate_samplesheet_reads_from_sra() {
@@ -88,7 +81,7 @@ populate_samplesheet_reads_from_sra() {
         if ($i=="read2_filename") r2_col=i
       }
       if (!run_col || !r1_col || !r2_col) {
-        print "ERROR: samplesheet must contain run_accession, read1_filename, read2_filename" > "/dev/stderr"
+        print "ERROR: samplesheet must contain columns run_accession, read1_filename, read2_filename" > "/dev/stderr"
         exit 1
       }
       next
@@ -122,5 +115,5 @@ populate_samplesheet_reads_from_sra() {
   ' "$sheet" > "$tmp_sheet"
 
   mv "$tmp_sheet" "$sheet"
-  log "Samplesheet updated in place: $sheet"
+  log "Update samplesheet: $sheet"
 }
