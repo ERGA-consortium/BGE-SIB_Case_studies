@@ -85,7 +85,7 @@ Assumes user is running on HPC with Singularity and a SLURM scheduler.
 ```bash
 sbatch 01-setup_qc.sh
 sbatch 02-run_qc.sh
-sbatch 03-run_alignment.sh
+sbatch 03-run_alignment.sh # Draft
 sbatch 04-post_alignment_qc.sh # To-Do
 sbatch 05-run_variant_calling.sh # To-Do
 ```
