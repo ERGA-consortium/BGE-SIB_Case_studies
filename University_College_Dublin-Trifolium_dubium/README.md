@@ -81,14 +81,22 @@ cd tridubire_analysis # Be in the project directory
 ```
 
 ## How to run
-Assumes user is running on HPC with Singularity and a SLURM scheduler.
+Assumes user is running on HPC with Singularity and a SLURM scheduler. Run with `sbatch <SCRIPT>.sh` in numerical order.
 ```bash
+# e.g.
 sbatch 01-setup_qc.sh
-sbatch 02-run_qc.sh
-sbatch 03-run_alignment.sh # Draft
-sbatch 04-post_alignment_qc.sh # To-Do
-sbatch 05-run_variant_calling.sh # To-Do
 ```
+
+| Script                | Description                                             |
+| --------------------- | ------------------------------------------------------- |
+| `01-setup_qc.sh`      | Download reads (SRA), download reference, build indexes |
+| `02-run_qc.sh`        | FastQC, FastQ Screen, trimming (fastp)                  |
+| `03-run_alignment.sh` | Align trimmed reads per lane, merge per sample          |
+| `04-*`                | Post-alignment QC (mosdepth, summaries)                 |
+| `05-*`                | Variant calling                                         |
+| `06-*`                | Filtering                                               |
+| `07+`                 | Downstream QC and population analyses                   |
+
 
 ## Authors
 Katie Herron<sup>1</sup>, Ann M McCartney<sup>1,2</sup>, Graham M Hughes<sup>1</sup>
